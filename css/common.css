@@ -213,6 +213,9 @@ a:hover {
   font-weight: bold;
   line-height: 72px;
 }
+.header .nav li a {
+  display: inline-block;
+}
 .container {
   width: 1140px;
   margin: 0 auto;
