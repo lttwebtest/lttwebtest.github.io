@@ -1,0 +1,229 @@
+.payView {
+  background: #fff;
+  border-radius: 15px;
+  clear: both;
+  padding: 32px;
+  margin-bottom: 32px;
+  *zoom: 1;
+}
+.payView:before,
+.payView:after {
+  display: table;
+  content: "";
+}
+.payView:after {
+  clear: both;
+}
+.payVisa {
+  display: block;
+  clear: both;
+  padding: 24px 0;
+}
+.payVisa img {
+  margin-right: 12px;
+}
+.payTitle {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+.paySubTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.paySubTitleNormal {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.paySubTitleBold {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 24px;
+  clear: both;
+  padding: 12px 0 0;
+}
+.paymentLeft {
+  float: left;
+  width: 70%;
+  padding: 0 64px 0 0;
+}
+.paymentRight {
+  float: right;
+  width: 30%;
+}
+.payForm {
+  clear: both;
+}
+.inputBox {
+  clear: both;
+  margin-bottom: 20px;
+  *zoom: 1;
+}
+.inputBox:before,
+.inputBox:after {
+  display: table;
+  content: "";
+}
+.inputBox:after {
+  clear: both;
+}
+.inputBox .inputTitle {
+  margin-bottom: 12px;
+}
+.inputBox .payInput input {
+  width: 100%;
+  max-width: 440px ;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 12px;
+}
+.inputBox .payInput select {
+  outline: none;
+  -webkit-appearance: none;
+  color: #262E46;
+  background: url(../images/common/arr.png) 95% no-repeat #fff;
+  background-size: 12px;
+  width: 100%;
+  max-width: 220px ;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 12px;
+}
+.inputBox .warning {
+  color: #f30;
+  padding: 8px 0 0;
+  display: none;
+}
+.inputBox .warning.show {
+  display: block;
+}
+.payCheck li {
+  float: left;
+  margin-right: 32px;
+  padding-left: 16px;
+  background: url(../images/common/check-green.png) left no-repeat;
+  background-size: 12px;
+  color: #2E7B50;
+}
+.creatPassword {
+  background: #FCFBFB;
+  border: 1px solid #E0D7D2;
+  border-radius: 5px;
+  padding: 20px;
+}
+.creatTitle {
+  clear: both;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.passTip {
+  padding: 8px 0 0;
+}
+.payViewText li {
+  line-height: 20px;
+  padding: 4px 0;
+}
+.payPrivacy a {
+  font-weight: bold;
+}
+.payBtn {
+  clear: both;
+  padding: 20px 0;
+}
+.payBtn a {
+  display: inline-block;
+  text-align: center;
+  width: 256px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  background: #FFC94D;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.payBtn a:hover {
+  color: #262E46;
+  background: #FFBD25;
+}
+.btnText {
+  clear: both;
+}
+.btnText p {
+  padding: 4px 0;
+}
+.rightTitle {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 0;
+}
+.rightLocation {
+  font-weight: bold;
+  padding: 8px 0;
+  font-size: 14px;
+}
+.rightInfo {
+  clear: both;
+  padding: 8px 0;
+}
+.rightPrice {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+.rightPrice .priceInfo {
+  clear: both;
+  padding: 4px 0;
+  line-height: 20px;
+}
+.rightPrice .priceInfo strong {
+  float: right;
+  font-weight: normal;
+}
+.rightPrice .priceInfo strong.fz20 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.priceUsd {
+  clear: both;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.priceText {
+  background: #F3EFEE;
+  padding: 12px;
+  line-height: 18px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 767px) {
+  .payView {
+    padding: 20px;
+  }
+  .paymentLeft {
+    float: none;
+    width: 100%;
+    padding: 24px 0 0 0;
+  }
+  .paymentRight {
+    float: none;
+    width: 100%;
+  }
+  .inputBox .seleDate {
+    margin: 0 -4px;
+  }
+  .inputBox .seleDate span {
+    width: 50%;
+    float: left;
+    padding: 0 4px;
+  }
+  .payBtn {
+    width: 100%;
+  }
+  .payBtn a {
+    width: 100%;
+  }
+}

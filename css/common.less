@@ -1,0 +1,319 @@
+@import "base";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{margin: 0;padding: 0;}
+body{ margin:0 auto; font-family: "roboto","Helvetica Neue",Helvetica,Arial,"微软雅黑",sans-serif;color:#222; font-size:12px;}
+body, button, input, select, textarea {outline:none;}
+input, select, textarea {font-size: 100%;}textarea{resize:none;}
+table {border-collapse:collapse; border-spacing:0;}
+th {text-align: inherit;}
+fieldset, img {border: 0;}
+img{vertical-align:middle;}
+iframe {display: block;}
+abbr, acronym {border: 0;font-variant: normal;}
+del {text-decoration: line-through;}
+address, caption, cite, code, dfn, em, th, var {font-style: normal;font-weight: 500;}
+menu,ol, ul {list-style: none;}
+caption, th {text-align: left;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: 500;}
+a{text-decoration:none; color:#666;}
+a:hover {text-decoration:none;cursor:pointer;}
+ins, a,a:visited {text-decoration: none;outline:none;}
+i{font-style:normal;}
+button, input, select, textarea {margin: 0;font-size: 100%;vertical-align: middle;font-family:"Helvetica Neue",Helvetica,Arial,"微软雅黑",sans-serif;}
+/*input[type="checkbox"]{ background:#2460aa; color:#fff; -webkit-text-shadow:none; border-color:#2157db; margin-right:0.08rem; border-radius:2px; -webkit-box-shadow:none;}*/
+/*去除ios浏览器中input button的风格*/
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+		-webkit-appearance:none;
+		outline:none
+}
+/*移除html5 input="number"的小箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+		-webkit-appearance: none !important;
+		margin: 0; 
+}
+input[type="number"]{-moz-appearance:textfield;}
+
+*{
+	.BS();
+}
+
+body{
+	background:#fff;
+	color:@mc;
+}
+.bgBox{
+	background:@bg;
+	clear: both;
+	padding: 40px 0;
+	.clearfix();
+}
+a{
+	color: @mc;
+	&:hover{
+		color:@vc2;
+	}
+}
+
+.header{
+	background:#fff;
+	width: 100%;
+	height: 72px;
+	border-bottom: 1px solid @gce;
+	.logo{
+		float: left;
+		width: 169px;
+		padding-top: 14px;
+		img{
+			width: 100%;
+		}
+	}
+	.nav{
+		float: right;
+		li{
+			display: inline-block;
+			margin-left: 68px;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 72px;
+		}
+	}
+}
+.container{
+	width: 1140px;
+	margin: 0 auto;
+
+}
+.footer{
+	border-top: 1px solid @gce;
+	background: #fff;
+	text-align: center;
+	padding: 48px 0;
+	.copyright{
+		font-size: 11px;
+		color: @vc2;
+		line-height: 18px;
+	}
+}
+
+.list{
+    ul{
+        .DF();
+		flex-wrap: wrap;
+		margin: 0 -7px;
+    }
+    li{
+		.DF();
+        width: 25%;
+		padding:0 7px 15px;
+		border-radius: 10px;
+		&:hover{
+			a{
+				.SD(0,5px,20px,rgba(0,0,0,0.03))
+			}
+		}
+        a{
+			.DF();
+			.DF-JC();
+			flex-direction: column;
+			align-items: stretch;
+			background: #fff;
+			border-radius: 0 0 10px 10px;
+			height: 100%;
+			width: 100%;
+            &:hover{
+                color:@mc;
+            }
+			.listCard{
+				.DF();
+				flex-direction: column;
+				align-items:flex-start;
+			}
+            .listPic{
+                position: relative;
+                height: 160px;
+				width: 100%;
+                img{
+                    position: absolute;
+                    block-size:100%;
+                    inline-size:100%;
+                    inset-block-end:0;
+                    inset-block-start:0;
+                    inset-inline-end:0;
+                    inset-inline-start:0;
+                    object-fit:cover;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            .listTitle{
+                padding: 12px;
+                span{
+                    display: block;
+                    background:url(../images/common/star.png) left no-repeat;
+                    background-size:12px;
+                    padding-left: 16px;
+                }
+                .title{
+                    font-weight: bold;
+                    font-size: 14px;
+                    padding: 8px 0 0;
+                    margin-bottom: 4px;
+                    -webkit-line-clamp:3;
+                    white-space:normal;
+                    word-break:break-word;
+                    overflow:hidden;
+                    display:-webkit-box;
+                    -webkit-box-orient:vertical;
+                }
+                p{
+                    display: block;
+                    background:url(../images/common/time.png) left no-repeat;
+                    background-size:12px;
+                    padding-left: 16px;
+                    margin: 0 0 4px;
+                }
+                strong{
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+            .listPrice{
+                padding:0 12px 12px;
+                span{
+                    color: @vc3;
+                }
+                .price{
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding: 4px 0;
+                }
+                .priceOff{
+                    font-size: 14px;
+                    color:@vc2;
+                    margin-bottom: 4px;
+                    strong{
+                        color: @mc;
+                        display: inline-block;
+                        padding-right: 8px;
+                    }
+                }
+                p{
+                    margin-bottom: 8px;
+                };
+            }
+        }
+    }
+
+	&.indexTop{
+		position: relative;
+		ul{
+			flex-wrap: nowrap;
+			margin: 0;
+			align-items:stretch
+		}
+		li{
+			align-items:stretch;
+			padding: 0;
+			height: auto;
+		}
+	}
+}
+.activityTitle{
+	font-size: 28px;
+	font-weight: bold;
+    padding-bottom: 32px;
+    line-height: 28px;
+    .breadcrumb{
+        float: right;
+        font-size: 12px;
+        font-weight: normal;
+        margin-right: -8px;
+        a{
+            padding: 0 8px;
+        }
+    }
+}
+
+.navHam{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	float: right;
+	background: url(../images/common/nav.png) center center no-repeat;
+	background-size: 24px;
+	margin-top: 10px;
+	margin-right: -10px;
+	display: none;
+}
+@media screen and (max-width:767px) {
+	.navHam{
+		-webkit-tap-highlight-color:rgba(255,255,255,0);
+		display: block;
+	}
+	.header{
+		.logo{
+			width: 150px;
+			padding-top: 16px;
+		}
+		.nav{
+			position: absolute;
+			float: none;
+			left: 0;
+			top: 72px;
+			background: #fff;
+			z-index: 999;
+			width: 100%;
+			padding: 0;
+			display: none;
+			li{
+				display: block;
+				width: 100%;
+				float: none;
+				margin-left: 0;
+				line-height: 52px;
+				height: 52px;
+				border-bottom: 1px solid #eee;
+				font-size: 16px;
+				a{
+					padding-left: 24px;
+					display: block;
+					-webkit-tap-highlight-color:rgba(255,255,255,0);
+				}
+			}
+		}
+	}
+	
+	.container{
+		width: 100%;
+		padding: 0 20px;
+	}
+	.footer{
+		padding: 24px 20px;
+	}
+	.list{
+		li{
+			a{
+				.listPic{
+					height:180px;
+				}
+			}
+		}
+	}
+	.bgBox{
+		padding: 24px 0;
+	}
+}
+@media screen and (min-width:768px) {
+	.container{
+		width: 750px;
+	}
+}
+@media screen and (min-width:992px) {
+	.container{
+		width: 970px;
+	}
+}
+@media screen and (min-width:1200px) {
+	.container{
+		width: 1140px;
+	}
+}

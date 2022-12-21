@@ -1,0 +1,125 @@
+@import "base";
+
+
+.subTitle{
+	font-size: 18px;
+	font-weight: bold;
+    padding-bottom: 32px;
+    line-height: 28px;
+}
+
+.listNav{
+    background: #fff;
+    border-radius: 10px;
+    clear: both;
+    margin-bottom: 32px;
+    padding: 12px;
+    position: relative;
+    overflow: visible;
+    ul{
+        .DF();
+        .DF-JC();
+        li{
+            .DF();
+            .DF-JC();
+            width:16.66666%;
+            a{
+                .DF();
+                .DF-JC();
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                background: url(../images/common/t1.png) right no-repeat;
+                background-size:38px;
+                border-right: 1px solid @gcd;
+                padding: 8px 0 8px 15px;
+                height: 80px; 
+            }
+            &:nth-child(2){
+                a{
+                    background: url(../images/common/t5.png) right no-repeat;
+                    background-size:38px;
+                }
+            }
+            &:nth-child(3){
+                a{
+                    background: url(../images/common/t2.png) right no-repeat;
+                    background-size:38px;
+                }
+            }
+            &:nth-child(4){
+                a{
+                    background: url(../images/common/t3.png) right no-repeat;
+                    background-size:38px;
+                }
+            }
+            &:nth-child(5){
+                a{
+                    background: url(../images/common/t4.png) right no-repeat;
+                    background-size:38px;
+                }
+            }
+            &:nth-child(6){
+                a{
+                border-right: 0;
+                    background: url(../images/common/t6.png) right no-repeat;
+                    background-size:38px;
+                }
+            }
+            strong{
+                display: block;
+                font-size: 16px;
+                max-width: 120px;
+            }
+            span{
+                display: block;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:519px) {
+    .allList{
+        ul{
+            li{
+                width: 100%;
+                a{
+                   .listPic{
+                    height: 180px;
+                   } 
+                }
+            }  
+        }
+    }
+}
+
+@media screen and (min-width:520px) {
+	.allList{
+        ul{
+            li{
+                width: 50%;
+            }  
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+	.allList{
+        ul{
+            li{
+                width: 33.333333%;
+            }  
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+	.allList{
+        ul{
+            li{
+                width:25%;
+            }  
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import "base";
+.banner{
+	width: 100%;
+	margin: 0 auto;
+	padding:0 0 40px;
+	img{
+		border-radius: 15px;
+		width: 100%;
+	}
+}
+
+.mainTitle{
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+    padding-bottom: 32px;
+}
+
+
+.swiper{
+	&.top10{
+		padding: 0 0 30px;
+	}
+}
+.listAllBtn{
+	text-align: center;
+	clear: both;
+	padding: 40px 0;
+	a{
+		display: inline-block;
+		border: 1px solid @bdc;
+		width: 120px;
+		height: 32px;
+		line-height: 32px;
+		font-size: 14px;
+		font-weight: bold;
+		border-radius: 5px;
+		background: #fff;
+		&:hover{
+			background:@bg;
+			color:@mc;
+		}
+	}
+}
+
+@media screen and (max-width:767px) {
+	.listAllBtn{
+		a{
+			width: 100%;
+			line-height: 44px;
+			height: 44px;
+			font-size: 16px;
+		}
+	}
+	
+}
