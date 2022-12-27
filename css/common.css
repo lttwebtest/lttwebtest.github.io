@@ -348,11 +348,13 @@ a:hover {
   font-size: 14px;
   color: #9296A2;
   margin-bottom: 4px;
+  text-decoration: line-through;
 }
 .list li a .listPrice .priceOff strong {
   color: #262E46;
   display: inline-block;
   padding-right: 8px;
+  text-decoration: none;
 }
 .list li a .listPrice p {
   margin-bottom: 8px;
