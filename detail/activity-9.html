@@ -15,14 +15,21 @@
 
         $(document).ready(function(){
 
-            $(".morePhoto").bind("click",
-            function(){
+            $(".morePhoto").bind("click",function(){
                 $(".photoList").show()
             })
-            $(".close").bind("click",
-            function(){
+            $(".close").bind("click",function(){
                 $(".photoList").hide()
+                $(".photoMore").show()
             })
+
+            $(".photoMore").bind("click",function(){
+                $(".photoList").show()
+                $(".photoMore").hide()
+            })
+            
+            let morePhoto = $(".photoListBox li").length
+            $(".photoMore").html(morePhoto+"+")
 
         });
 
@@ -78,6 +85,7 @@
                 
             </div>
             <div class="photo">
+                <div class="photoMore"></div>
                 <ul>
                     <li><a href="../images/activity/activity-9/pic-1.jpg" target="_blank"><img src="../images/activity/activity-9/pic-1.jpg" alt=""></a></li>
                     <li><a href="../images/activity/activity-9/pic-2.jpg" target="_blank"><img src="../images/activity/activity-9/pic-2.jpg" alt=""></a></li>

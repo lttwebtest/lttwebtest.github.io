@@ -23,6 +23,24 @@
     clear: both;
     margin-bottom: 32px;
     overflow: hidden;
+    position: relative;
+    .photoMore{
+        position: absolute;
+        background:url(../images/common/picture.png) rgba(0,0,0,.5) no-repeat 10px center;
+        background-size: 24px;
+        border-radius: 8px;
+        color: #fff;
+        z-index: 99;
+        padding: 10px 15px 10px 45px;
+        font-size: 18px;
+        bottom: 15px;
+        right: 15px;
+        cursor: pointer;
+        &:hover{
+            background:url(../images/common/picture.png) rgba(0,0,0,.6) no-repeat 10px center;
+        background-size: 24px;
+        }
+    }
     ul{
         margin: 0 -1px;
         li{
