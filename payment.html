@@ -6,8 +6,30 @@
 	<title>Things to do in dubai</title>
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/payment.css">
+	<link rel="stylesheet" href="css/jquery-ui-1.css">
 	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jqueryui.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script>
+        $(function() {
+          $( "#datepicker" ).datepicker({dateFormat:"yy-mm-dd",minDate: new Date()});
+
+          $('.adult .payInput span').click(function(){ 
+            var sinput = $('.scroll-txt'); 
+            if($(this).hasClass('glyphicon-chevron-up')){//判断点击按钮是否有class：glyphicon-chevron-up
+            sinput.val(parseInt(sinput.val())+1);//有，为input中的值加1
+            }else{
+            if(parseInt(sinput.val()) <= 1 ) {//判断input中得值是否小于1
+            return                       //是，停止动作
+            } 
+            sinput.val(parseInt(sinput.val())-1);//否,让input中得值减1
+            }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        
+        </script>
 </head>
 <body>
 	
@@ -35,7 +57,7 @@
                     <p>Thu, Dec 29<br />1 Adult</p>
                 </div>
                 <div class="rightInfo">
-                    <p>Burj Khalifa (09:00 AM - 2:30 PM)<br />Duration 1 hour 30 minutes 1 h 30 m</p>
+                    <p>Burj Khalifa<br />Duration 1 hour 30 minutes 1 h 30 m</p>
                 </div>
                 <div class="rightInfo">
                     <p>Activity location<br />Burj Khalifa</p>
@@ -782,6 +804,17 @@
                             <div class="payInput"><input type="text" placeholder="In case we need to reach you" /></div>
                             <div class="warning">Please enter a valid phone number.</div>
                         </div>
+                        <div class="inputBox adult">
+                            <div class="inputTitle">Adult *</div>
+                            <div class="payInput"><span class="glyphicon-chevron-down">-</span><input class="scroll-txt" type="text" value="1"/><span class="glyphicon-chevron-up">+</span></div>
+                            <div class="warning">Please enter a valid travelers.</div>
+                        </div>
+                        <div class="inputBox dates">
+                            <div class="inputTitle">Dates *</div>
+                            <div class="payInput"><input type="text" id="datepicker" /></div>
+                            <div class="warning">Please enter a valid dates.</div>
+                        </div>
+
                     </div>
                 </div>   
 

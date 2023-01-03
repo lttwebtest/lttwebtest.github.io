@@ -102,6 +102,50 @@
 .inputBox .warning.show {
   display: block;
 }
+.inputBox.adult {
+  float: left;
+  clear: none;
+}
+.inputBox.adult .payInput span {
+  float: left;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
+}
+.inputBox.adult .payInput input {
+  float: left;
+  clear: none;
+  width: 100px;
+  margin: 0 5px;
+  text-align: center;
+}
+.inputBox.dates {
+  float: left;
+  clear: none;
+  padding-left: 50px;
+}
+.inputBox.dates .payInput span {
+  float: left;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
+}
+.inputBox.dates .payInput input {
+  float: left;
+  clear: none;
+  width: 210px;
+  margin: 0;
+  background: url(../images/common/date.png) 95% no-repeat #fff;
+  background-size: 14px;
+}
 .payCheck li {
   float: left;
   margin-right: 32px;
@@ -219,6 +263,15 @@
     width: 50%;
     float: left;
     padding: 0 4px;
+  }
+  .inputBox.dates {
+    clear: both;
+    padding: 0;
+    float: none;
+  }
+  .inputBox.dates .payInput input {
+    width: 100%;
+    margin: 0;
   }
   .payBtn {
     width: 100%;
