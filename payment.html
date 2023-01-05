@@ -25,6 +25,30 @@
             sinput.val(parseInt(sinput.val())-1);//否,让input中得值减1
             }
             });
+
+            $('.codeBtn a').click(function(){
+                $('.codePop').toggleClass('is-visible')
+            })
+            $('.codePop .popBox .close').click(function(){
+                console.log(111);
+                $('.codePop').toggleClass('is-visible')
+            })
+            
+            $('.errorBtn a').click(function(){
+                $('.errorPop').toggleClass('is-visible')
+            })
+            $('.errorPop .popBox .close').click(function(){
+                $('.errorPop').toggleClass('is-visible')
+            })
+            
+            $('.loadingBtn a').click(function(){
+                $('.loading').toggleClass('is-visible')
+                $('.uitk-loader').toggleClass('is-visible')
+                setTimeout(function(){
+                    $('.loading').toggleClass('is-visible')
+                    $('.uitk-loader').toggleClass('is-visible')
+                },1500)
+            })
         });
     </script>
     <script type="text/javascript">
@@ -953,12 +977,45 @@
                             <li>- Please refer to your itinerary for redemption instructions.</li>
                         </ul>
                     </div>
-                </div>   
+                </div>
+
+
+                <div class="loading">
+                    <span class="uitk-loader uitk-loader-page" title="Loading" aria-label="Loading" aria-hidden="true"></span>
+                </div>
+
+                <div class="popContainer codePop">
+                    <div class="popBox"> 
+                        <div class="close"></div>
+                        <div class="popTitle">Pin Code</div>
+                        <div class="popText">For your information security,please verify your mobile phone number,and enter the pin code you received on your mobile phone below.</div>
+                        <div class="popInput"><input type="text" placeholder="Enter pin code"></div>
+                        <div class="popBtn"><button>Submit</button></div>
+                    </div>
+                </div>
+
+                <div class="popContainer errorPop">
+                    <div class="popBox"> 
+                        <div class="close"></div>
+                        <div class="popTitle">Sorry</div>
+                        <div class="popText">Sorry, we're having a problem on your information. Please try again. To continue, please correct the error below.</div>
+                        <div class="popBtn"><button> Jump to the invalid field</button></div>
+                    </div>
+                </div>
 
                 <div class="payView">
                     <div class="payPrivacy">By clicking on the button below, I acknowledge that I have reviewed the <a href="privacy.html" target="_blank">Privacy Statement</a>. and <a href="https://www.government.ae/ar-AE/information-and-services/passports-and-traveling/travel-services-for-uae-nationals" target="_blank">Government Travel Advice</a>. and have reviewed and accept the <a href="rules.html" target="_blank">Rules & Restrictions</a> . and <a href="terms.html" target="_blank">Terms of Use</a></div>
                     <div class="payBtn">
                         <a href="confirmation.html">Complete Booking</a>
+                    </div>
+                    <div class="payBtn codeBtn">
+                        <a href="javascript:;">Code</a>
+                    </div>
+                    <div class="payBtn errorBtn">
+                        <a href="javascript:;">Error</a>
+                    </div>
+                    <div class="payBtn loadingBtn">
+                        <a href="javascript:;">loading</a>
                     </div>
                     <div class="btnText">
                         <p>We use secure transmission and encrypted storage to protect your personal information.</p>
