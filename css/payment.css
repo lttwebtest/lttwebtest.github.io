@@ -253,8 +253,18 @@
   display: none;
 }
 .loading.is-visible {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -moz-box-pack: center;
+  -webkit--moz-box-pack: center;
+  box-pack: center;
   align-items: center;
+  text-align: center;
 }
 .popContainer {
   width: 100%;
@@ -338,7 +348,6 @@
 }
 .uitk-loader {
   border-radius: 50%;
-  display: inline-block;
 }
 .uitk-loader::after {
   -webkit-animation: inner-circle 0.8s infinite linear;
@@ -349,7 +358,6 @@
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
-  display: inline-block;
   inline-size: 2.25rem;
 }
 [dir="rtl"] .uitk-loader::after {

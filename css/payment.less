@@ -260,8 +260,14 @@
     background:rgba(0,0,0,.2);
     display: none;
     &.is-visible{
-        display: flex;
+        .DF();
+        -webkit-justify-content:center;
+        justify-content:center;
+        -moz-box-pack:center;
+        -webkit--moz-box-pack:center;
+        box-pack:center;
         align-items: center;
+        text-align: center;
     }
 }
 .popContainer{
@@ -349,7 +355,6 @@
 
 .uitk-loader {
     border-radius: 50%;
-    display: inline-block
 }
 
 .uitk-loader::after {
@@ -361,7 +366,6 @@
     border-radius: 50%;
     box-sizing: border-box;
     content: "";
-    display: inline-block;
     inline-size: 2.25rem
 }
 
