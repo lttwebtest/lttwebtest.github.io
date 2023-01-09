@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>413B3F5C-83D7-40EA-8D7F-E1ECFC76263F</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M35.0944141,7.27457031 L13.2182422,29.1507422 L5.48425781,21.4167578 C5.11816406,21.0506641 4.52457031,21.0506641 4.15839844,21.4167578 L3.27457031,22.3005859 C2.90847656,22.6666797 2.90847656,23.2602734 3.27457031,23.6264453 L12.5553516,32.9072266 C12.9214453,33.2733203 13.5150391,33.2733203 13.8812109,32.9072266 L37.3041016,9.48433594 C37.6701953,9.11824219 37.6701953,8.52464844 37.3041016,8.15847656 L36.4201953,7.27457031 C36.0541016,6.90847656 35.4605078,6.90847656 35.0944141,7.27457031 Z" id="path-1"></path>
+    </defs>
+    <g id="40px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms/Icons/Custom/40px/Light/Check">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Atoms/Colors/Identity/DarkBlue" mask="url(#mask-2)" fill="#1D2028">
+                <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

