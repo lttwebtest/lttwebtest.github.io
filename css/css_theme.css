@@ -19620,7 +19620,7 @@ body iframe#launcher {
 
 @media screen and (min-width:992px) {
     #template-page-nano-x-marketing .nano-x-explode-view>.views-text .item-os:before {
-        background: url("../images/lnx-marketing-line-2.png?") 100% 100% no-repeat;
+        background: url("../images/lnx-marketing-line-2.png") 100% 100% no-repeat;
         background-size: contain;
         bottom: 88px;
         content: "";
