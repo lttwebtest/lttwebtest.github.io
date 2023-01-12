@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="37px" viewBox="0 0 32 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>TRON</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ThirdPartyWallet-Copy-3" transform="translate(-537.000000, -4519.000000)" stroke="#C72A34" stroke-width="1.8">
+            <g id="Group-3" transform="translate(175.000000, 767.000000)">
+                <g id="Stacked-Group-9" transform="translate(41.000000, 0.000000)">
+                    <g id="TRON" transform="translate(323.000000, 3754.000000)">
+                        <polygon id="Path" points="0 0 23.0311475 5.62003578 28 9.23291592 11.8081967 33"></polygon>
+                        <polyline id="Path" stroke-linecap="square" stroke-linejoin="bevel" points="21.9863281 6.45776367 13 16 27 9.46200241"></polyline>
+                        <polyline id="Path" stroke-linecap="square" stroke-linejoin="bevel" points="1.140625 1.28125 13 16.2828474 11.934082 31"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

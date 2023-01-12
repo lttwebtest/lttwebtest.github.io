@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="35px" viewBox="0 0 30 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>wanchain-picto</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ThirdPartyWallet-Copy-3" transform="translate(-540.000000, -4518.000000)" fill="#0F68AA">
+            <g id="wanchain-picto" transform="translate(540.000000, 4518.000000)">
+                <polygon id="Fill-1" points="0 24.389393 0 29 15 20.6116239 30 29 30 24.389393 15 16"></polygon>
+                <polygon id="Fill-2" points="15 0.5 0 8.89399745 4.0775313 10.5 15 4.38888889 25.9224687 10.5 30 8.89399745"></polygon>
+                <path d="M25.6177496,11.7607549 L25.6177496,25.1557848 L24.0409935,26.0556793 L27.3898655,28 L30,26.5103739 L30,10 L25.6177496,11.7607549 Z M0,26.5103739 L2.61120205,28 L5.95900648,26.0556793 L4.3694399,25.1494549 L4.3694399,11.75548 L0,10 L0,26.5103739 Z" id="Fill-3"></path>
+                <polygon id="Fill-4" points="15 31.3638173 6.86394558 27 3.5 28.83352 15 35 26.5 28.83352 23.1371261 27"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
