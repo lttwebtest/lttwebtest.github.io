@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="45px" viewBox="0 0 40 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.3553372,16 L12.0102943,5.51671689 L4.66525137,16 L12.0102943,26.4832831 L19.3553372,16 Z M0.800000191,16 L12.0102943,0 L23.2205884,16 L12.0102943,32 L0.800000191,16 Z M21.425237,14.0353766 L22.3171519,17.0727085 L12.0102943,20.0993254 L1.70343672,17.0727085 L2.59535162,14.0353766 L12.0102943,16.800082 L21.425237,14.0353766 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon" transform="translate(-8.000000, -3.000000)">
+            <g transform="translate(8.000000, 3.000000)">
+                <g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Ethereum-Classic" fill="#0EBDCD" fill-rule="nonzero" transform="translate(12.010294, 16.000000) scale(-1, 1) translate(-12.010294, -16.000000) " xlink:href="#path-1"></use>
+                </g>
+                <g id="+" transform="translate(17.000000, 21.000000)">
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="4" fill="#E2F7F9" x="-2" y="-2" width="24" height="24" rx="4"></rect>
+                    <polygon fill="#0EBDCD" fill-rule="nonzero" points="4 11.3669565 4 8.65391304 8.50549451 8.65391304 8.50549451 4 11.4945055 4 11.4945055 8.65391304 16 8.65391304 16 11.3669565 11.4945055 11.3669565 11.4945055 16 8.50549451 16 8.50549451 11.3669565"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
